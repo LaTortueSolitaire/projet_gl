@@ -1,0 +1,14 @@
+//
+
+class A{
+    int a = 1;
+    void appel(){
+    		appel();
+    }
+}
+
+{
+
+    A a = new A();
+    a.appel();
+}

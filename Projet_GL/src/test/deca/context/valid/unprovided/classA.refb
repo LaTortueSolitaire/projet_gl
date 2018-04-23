@@ -1,0 +1,213 @@
+`> [5, 0] Program
+   +> [5, 0] ListDeclClass [List with 2 elements]
+   |  []> [5, 0] DeclClass
+   |  ||  +> [5, 6] Identifier (A)
+   |  ||  |  definition: type defined at [5, 0], type=A
+   |  ||  +> [5, 7] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 2 elements]
+   |  ||  |  []> [9, 2] DeclMethod
+   |  ||  |  ||  +> [9, 2] Identifier (void)
+   |  ||  |  ||  |  definition: type (builtin), type=void
+   |  ||  |  ||  +> [9, 7] Identifier (m)
+   |  ||  |  ||  |  definition: method defined at [9, 2], type=void
+   |  ||  |  ||  +> ListDeclParam [List with 0 elements]
+   |  ||  |  ||  +> [9, 11] ListDeclVar [List with 0 elements]
+   |  ||  |  ||  `> [9, 11] ListInst [List with 0 elements]
+   |  ||  |  []> [10, 2] DeclMethod
+   |  ||  |      +> [10, 2] Identifier (void)
+   |  ||  |      |  definition: type (builtin), type=void
+   |  ||  |      +> [10, 7] Identifier (p)
+   |  ||  |      |  definition: method defined at [10, 2], type=void
+   |  ||  |      +> [10, 9] ListDeclParam [List with 1 elements]
+   |  ||  |      |  []> [10, 9] DeclParam
+   |  ||  |      |      +> [10, 9] Identifier (int)
+   |  ||  |      |      |  definition: type (builtin), type=int
+   |  ||  |      |      `> [10, 13] Identifier (coucou)
+   |  ||  |      |         definition: parameter defined at [10, 9], type=int
+   |  ||  |      +> [10, 21] ListDeclVar [List with 0 elements]
+   |  ||  |      `> [10, 21] ListInst [List with 0 elements]
+   |  ||  `> ListFieldSet [List with 3 elements]
+   |  ||     []> [6, 1] DeclFieldSet
+   |  ||     ||  +> [6, 11] Identifier (int)
+   |  ||     ||  |  definition: type (builtin), type=int
+   |  ||     ||  `> ListFields [List with 1 elements]
+   |  ||     ||     []> [6, 15] DeclFields
+   |  ||     ||         +> [6, 15] Identifier (x)
+   |  ||     ||         |  definition: field defined at [6, 15], type=int
+   |  ||     ||         `> [6, 15] NoInitialization
+   |  ||     []> [7, 1] DeclFieldSet
+   |  ||     ||  +> [7, 1] Identifier (int)
+   |  ||     ||  |  definition: type (builtin), type=int
+   |  ||     ||  `> ListFields [List with 1 elements]
+   |  ||     ||     []> [7, 5] DeclFields
+   |  ||     ||         +> [7, 5] Identifier (y)
+   |  ||     ||         |  definition: field defined at [7, 5], type=int
+   |  ||     ||         `> [7, 5] Initialization
+   |  ||     ||            `> [7, 8] Multiply
+   |  ||     ||               type: int
+   |  ||     ||               +> [7, 8] Int (1)
+   |  ||     ||               |  type: int
+   |  ||     ||               `> [7, 11] Plus
+   |  ||     ||                  type: int
+   |  ||     ||                  +> [7, 12] Int (2)
+   |  ||     ||                  |  type: int
+   |  ||     ||                  `> [7, 16] Int (4)
+   |  ||     ||                     type: int
+   |  ||     []> [8, 1] DeclFieldSet
+   |  ||         +> [8, 1] Identifier (float)
+   |  ||         |  definition: type (builtin), type=float
+   |  ||         `> ListFields [List with 1 elements]
+   |  ||            []> [8, 7] DeclFields
+   |  ||                +> [8, 7] Identifier (f)
+   |  ||                |  definition: field defined at [8, 7], type=float
+   |  ||                `> [8, 7] Initialization
+   |  ||                   `> [8, 11] Plus
+   |  ||                      type: float
+   |  ||                      +> [8, 11] Float (2.0)
+   |  ||                      |  type: float
+   |  ||                      `> [8, 17] Float (1.0)
+   |  ||                         type: float
+   |  []> [12, 0] DeclClass
+   |      +> [12, 6] Identifier (B)
+   |      |  definition: type defined at [12, 0], type=B
+   |      +> [12, 8] Identifier (A)
+   |      |  definition: type defined at [5, 0], type=A
+   |      +> ListDeclMethod [List with 2 elements]
+   |      |  []> [14, 2] DeclMethod
+   |      |  ||  +> [14, 2] Identifier (void)
+   |      |  ||  |  definition: type (builtin), type=void
+   |      |  ||  +> [14, 7] Identifier (p)
+   |      |  ||  |  definition: method defined at [14, 2], type=void
+   |      |  ||  +> [14, 9] ListDeclParam [List with 1 elements]
+   |      |  ||  |  []> [14, 9] DeclParam
+   |      |  ||  |      +> [14, 9] Identifier (int)
+   |      |  ||  |      |  definition: type (builtin), type=int
+   |      |  ||  |      `> [14, 13] Identifier (coucou)
+   |      |  ||  |         definition: parameter defined at [14, 9], type=int
+   |      |  ||  +> [15, 1] ListDeclVar [List with 2 elements]
+   |      |  ||  |  []> [15, 5] DeclVar
+   |      |  ||  |  ||  +> [15, 1] Identifier (int)
+   |      |  ||  |  ||  |  definition: type (builtin), type=int
+   |      |  ||  |  ||  +> [15, 5] Identifier (a)
+   |      |  ||  |  ||  |  definition: variable defined at [15, 5], type=int
+   |      |  ||  |  ||  `> [15, 5] Initialization
+   |      |  ||  |  ||     `> [15, 9] Int (3)
+   |      |  ||  |  ||        type: int
+   |      |  ||  |  []> [16, 7] DeclVar
+   |      |  ||  |      +> [16, 1] Identifier (float)
+   |      |  ||  |      |  definition: type (builtin), type=float
+   |      |  ||  |      +> [16, 7] Identifier (b)
+   |      |  ||  |      |  definition: variable defined at [16, 7], type=float
+   |      |  ||  |      `> [16, 7] Initialization
+   |      |  ||  |         `> [16, 11] Plus
+   |      |  ||  |            type: float
+   |      |  ||  |            +> [16, 11] Float (2.0)
+   |      |  ||  |            |  type: float
+   |      |  ||  |            `> [16, 17] Float (4.0)
+   |      |  ||  |               type: float
+   |      |  ||  `> [17, 1] ListInst [List with 1 elements]
+   |      |  ||     []> [17, 1] IfThenElse
+   |      |  ||         +> [17, 4] Equals
+   |      |  ||         |  type: boolean
+   |      |  ||         |  +> [17, 4] Identifier (a)
+   |      |  ||         |  |  definition: variable defined at [15, 5], type=int
+   |      |  ||         |  `> [17, 9] Int (3)
+   |      |  ||         |     type: int
+   |      |  ||         +> [18, 4] ListInst [List with 1 elements]
+   |      |  ||         |  []> [18, 4] Print
+   |      |  ||         |      `> [18, 10] ListExpr [List with 1 elements]
+   |      |  ||         |         []> [18, 10] Plus
+   |      |  ||         |             type: int
+   |      |  ||         |             +> [18, 10] Identifier (coucou)
+   |      |  ||         |             |  definition: parameter defined at [14, 9], type=int
+   |      |  ||         |             `> [18, 17] Int (2)
+   |      |  ||         |                type: int
+   |      |  ||         `> ListInst [List with 1 elements]
+   |      |  ||            []> IfThenElse
+   |      |  ||                +> [20, 10] Equals
+   |      |  ||                |  type: boolean
+   |      |  ||                |  +> [20, 10] Identifier (b)
+   |      |  ||                |  |  definition: variable defined at [16, 7], type=float
+   |      |  ||                |  `> [20, 15] Float (6.0)
+   |      |  ||                |     type: float
+   |      |  ||                +> [20, 20] ListInst [List with 1 elements]
+   |      |  ||                |  []> [20, 20] Print
+   |      |  ||                |      `> [20, 26] ListExpr [List with 1 elements]
+   |      |  ||                |         []> [20, 26] StringLiteral ("tout ok")
+   |      |  ||                |             type: string
+   |      |  ||                `> ListInst [List with 0 elements]
+   |      |  []> [22, 2] DeclMethod
+   |      |      +> [22, 2] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [22, 7] Identifier (q)
+   |      |      |  definition: method defined at [22, 2], type=void
+   |      |      +> [22, 9] ListDeclParam [List with 2 elements]
+   |      |      |  []> [22, 9] DeclParam
+   |      |      |  ||  +> [22, 9] Identifier (float)
+   |      |      |  ||  |  definition: type (builtin), type=float
+   |      |      |  ||  `> [22, 15] Identifier (fl)
+   |      |      |  ||     definition: parameter defined at [22, 9], type=float
+   |      |      |  []> [22, 19] DeclParam
+   |      |      |      +> [22, 19] Identifier (boolean)
+   |      |      |      |  definition: type (builtin), type=boolean
+   |      |      |      `> [22, 27] Identifier (boo)
+   |      |      |         definition: parameter defined at [22, 19], type=boolean
+   |      |      +> [23, 1] ListDeclVar [List with 1 elements]
+   |      |      |  []> [23, 9] DeclVar
+   |      |      |      +> [23, 1] Identifier (boolean)
+   |      |      |      |  definition: type (builtin), type=boolean
+   |      |      |      +> [23, 9] Identifier (bool)
+   |      |      |      |  definition: variable defined at [23, 9], type=boolean
+   |      |      |      `> [23, 9] Initialization
+   |      |      |         `> [23, 16] BooleanLiteral (true)
+   |      |      |            type: boolean
+   |      |      `> [24, 1] ListInst [List with 1 elements]
+   |      |         []> [24, 1] Print
+   |      |             `> [24, 7] ListExpr [List with 1 elements]
+   |      |                []> [24, 7] StringLiteral ("hello")
+   |      |                    type: string
+   |      `> ListFieldSet [List with 1 elements]
+   |         []> [13, 1] DeclFieldSet
+   |             +> [13, 1] Identifier (float)
+   |             |  definition: type (builtin), type=float
+   |             `> ListFields [List with 1 elements]
+   |                []> [13, 7] DeclFields
+   |                    +> [13, 7] Identifier (z)
+   |                    |  definition: field defined at [13, 7], type=float
+   |                    `> [13, 7] Initialization
+   |                       `> [13, 11] Plus
+   |                          type: float
+   |                          +> ConvFloat
+   |                          |  type: float
+   |                          |  `> [13, 11] Selection Attribut
+   |                          |     type: int
+   |                          |     +> [13, 11] This
+   |                          |     |  type: B
+   |                          |     `> [13, 16] Identifier (x)
+   |                          |        definition: field defined at [6, 15], type=int
+   |                          `> [13, 20] Multiply
+   |                             type: float
+   |                             +> [13, 20] Selection Attribut
+   |                             |  type: float
+   |                             |  +> [13, 20] This
+   |                             |  |  type: B
+   |                             |  `> [13, 25] Identifier (f)
+   |                             |     definition: field defined at [8, 7], type=float
+   |                             `> [13, 27] Float (2.3)
+   |                                type: float
+   `> [28, 0] Main
+      +> [29, 0] ListDeclVar [List with 1 elements]
+      |  []> [29, 4] DeclVar
+      |      +> [29, 0] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [29, 4] Identifier (z)
+      |      |  definition: variable defined at [29, 4], type=int
+      |      `> [29, 4] Initialization
+      |         `> [29, 7] Int (3)
+      |            type: int
+      `> [30, 0] ListInst [List with 1 elements]
+         []> [30, 0] Print
+             `> [30, 6] ListExpr [List with 1 elements]
+                []> [30, 6] StringLiteral ("coucou")
+                    type: string

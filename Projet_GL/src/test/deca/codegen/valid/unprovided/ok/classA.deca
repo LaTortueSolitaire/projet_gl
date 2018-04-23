@@ -1,0 +1,31 @@
+// Test sur les methodes avec tous les types possibles et l'uitilisation de parametres
+// Resultat
+// coucou
+
+class A{
+	protected int x;
+	int y= 1* (2 + 4);
+	float f = 2.0 + 1.0;
+  void m(){}
+  void p(int coucou){}
+}
+class B extends A{
+	float z = this.x + this.f*2.3;
+  void p(int coucou){
+	int a = 3;
+	float b = 2.0 + 4.0;
+	if(a == 3){
+	   print(coucou+2);
+	}
+	else if (b == 6.0){print("tout ok");}
+    }
+  void q(float fl, boolean boo){
+	boolean bool = true;
+	print("hello");
+	}
+}
+
+{
+int z =3 ;
+print("coucou");
+}

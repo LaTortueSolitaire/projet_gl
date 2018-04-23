@@ -1,0 +1,14 @@
+// Description:
+//    Selection sur un littéral
+//
+// Resultat: Ligne 12
+//    ContextualError : Unsupported type for this selection: Left operand must be a class instance
+//
+// Historique:
+//    Créé le 24/01/2018
+
+{
+        int a;
+	a.y = 10;
+}
+		

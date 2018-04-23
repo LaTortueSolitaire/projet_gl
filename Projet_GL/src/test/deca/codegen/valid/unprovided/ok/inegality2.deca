@@ -1,0 +1,11 @@
+// Description: Test d'une inégalité entre float et int
+// Resultat attendu: ok
+
+{
+    float a = 1.1;
+    if( 6 > a ){
+        print("Ok");
+    }else{
+        print("Raté !");
+    }
+}

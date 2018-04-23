@@ -1,0 +1,343 @@
+/*
+doc:https://docs.oracle.com/javase/6/docs/api/java/lang/Math.html#signum(float)
+    CODY AND WAIT for range reduction:
+    https://books.google.fr/books?id=eNaCDQAAQBAJ&pg=PA203&lpg=PA203&dq=cody+and+waite&source=bl&ots=1Dna2m4Q6G&sig=fQDObB8I2Xq6Jhq_QhIoq-Zdikk&hl=fr&sa=X&ved=0ahUKEwijjebQwtLYAhWEmLQKHcT8CtkQ6AEITjAJ#v=onepage&q=cody%20and%20waite&f=false
+*/
+
+class Math{
+  /* Best representation of PI by a float number */
+  float HALFPI = 1.5707963267948966f;
+  float PI = 3.1415926535897932f;
+  float TWOPI = 6.283185307179586f; // 2*PI
+  float FLOAT_MAX = _pow(2.0f, 127);
+  //float FLOAT_MIN = _pow(2.0f, -149);
+  float FLOAT_MIN = 0.00000001;
+  float C1 = 6.28125f; // nombre représentable exactement en machine
+  float C2 = 0.001935307179586f; // C = C1 + C2
+  float C3 = 1.5703125f; // nombre représentable exactement en machine (1.1001001) proche de PI/2
+  float C4 = 0.000483826794896f; // reste tel que C1 + C1 = PI/2
+
+  float _pow(float x, int n){
+    /*Power function*/
+    float res = x;
+
+    if (n == 0){
+      return 1;
+    }
+
+    else if (n < 0){
+      return 1/_pow(x, -n);
+    }
+
+    while (n > 1){
+      res = x*res;
+      n = n - 1;
+    }
+    return res;
+  }
+
+  float FMA(float a, float b, float c)
+ //   FMA dval, Rm : Rm <- V[Rm] * V[dval] + V[R1]
+    asm( "  LOAD -5(LB), R1
+  LOAD -4(LB), R0
+  FMA -3(LB), R0
+  LOAD R0, R1
+  RTS");
+
+
+  float _abs(float x){
+    /*Abs function */
+    if(x >= 0){
+      return x;
+    }
+    return -x;
+  }
+
+
+
+  float _fact(int n){
+    /* Factorial function using recursivity */
+    float res = 1;
+    if (n < 0){
+      println("Factorial function does not accept negative argument !");
+      println("Error: 0 returned");
+      return 0;
+    }
+    else if (n == 0){
+      return 1;
+    }
+    else{
+      while (n > 1){
+        res = res*n;
+        n = n -1;
+      }
+      return res;
+    }
+  }
+
+
+
+  float _sqrt(float x){
+      /* Babylonian Method for Square root
+         This is based on the fact the the serie x_{n+1} = 0.5*(x_{n} + S/x_{n})
+         converges to sqrt(S) */
+    float accuracy = _pow(2.0,-10);
+    boolean shifted = false;
+    float initialGuess;
+    if (x < 0){
+      println("Square root function does not accept negative argument !");
+      println("Error: 0 returned");
+      return 0;
+    }
+    if (x == 0.0f || x == 1.0f){
+      return x;
+    }
+
+    /* We use the trick to multiplie values < 1 by 10000 in order to improve accuracy,
+    since 10000 is the perfect square of 100 it will be easy to find the answer.*/
+    if (x < 1){
+      x = x * 10000;
+      shifted = true;
+    }
+
+    initialGuess = x/2; //Chosen arbitrary, improve it for faster convergence
+    while (_abs(initialGuess * initialGuess - x) > accuracy) {
+      initialGuess = 0.5f * (initialGuess + x / initialGuess);
+    }
+    if (shifted){
+      return initialGuess/100;
+    }
+    return initialGuess;
+  }
+
+
+  float ulp(float x){
+    //[sign] 1.[mantissa] × 2^[exponent]
+    //http://www.exploringbinary.com/the-spacing-of-binary-floating-point-numbers/
+    /* The ulp is the gap size between the floating point in argument and the next floating point.
+       All ulp between 2 floating points located in the same interval [2^e, 2^(e+1)] are the same.
+       With e the exponent, we know that x is int [2^e, 2^(e+1)[ and p the precision we know that we have 2^(p-1) gap
+       Thus, ulp = 2e/2p-1 = 2e-(p-1) = 2e+1-p*/
+    int exponent = 0;
+    int precision = 24; //single precision representation
+
+    //ulp is symetric
+    x = _abs(x);
+
+    if(x == FLOAT_MAX){
+      // 104 = 127 (max exponent) + 1 - 24 (precision)
+			return _pow(2.0, 104);
+    }
+
+    if(x == 0){
+    //  System.out.println(Float.MIN_VALUE);
+      return FLOAT_MIN;
+    }
+
+    //Now we have to compute the exponent ie in which interval [2^e, 2^(e+1)[ we are.
+    if(x >= 1){
+      //We divide it by 2 until we have smth between [1,2[
+			while (x >= 2 ) {
+				x =  x/2.0f;
+				exponent = exponent + 1 ;
+      }
+    }
+
+    else{
+      while(x < 1){
+        //We multiply it by 2 until we reach smth in [1,2[
+        x = x*2.0f;
+        exponent = exponent - 1;
+      }
+    }
+    return _pow(2.0, exponent + 1 - precision);
+  }
+
+  float _reduction3(float x){
+    /* Return x reduced in [0, pi/4] thanks to cody and waite */
+    int k = (int) (2*x / HALFPI); // x mod pi/4
+    float C1 = 0.78515625f; // representable en machine
+    float C2 = 0.00024187564849853515624f; //représentable en machine
+    float C3 = 0.000000037747668102383613583f;
+    float C4 = 0.00000000000128167207614641725f;
+    x = (((x - k*C1) - k * C2) - k * C3) - k* C4; // x mod (C=C1+C2+C3+C4)
+    return x;
+  }
+//
+//   https://stackoverflow.com/questions/30463616/payne-hanek-algorithm-implementation-in-c
+// http://www.microchip.com/stellent/groups/techpub_sg/documents/appnotes/en010982.pdf
+float cos (float x){
+    float coeff = 1.0f/1.414213562373095f;
+    int k;
+    if(x < 0){
+      x = -x;
+    }
+    k = (int) (2*x / HALFPI); //x mod pi/4
+    k = k % 8;
+    x = _reduction3(x);
+		if(k==1){
+			return (float)(coeff*(_cos_poly(x) - _sin_poly(x)));
+		}
+		else if (k==2){
+			return -_sin_poly(x);
+		}
+		else if (k==3){
+			return (float)(-coeff*(_cos_poly(x)+_sin_poly(x)));
+		}
+		else if (k==4){
+			return -_cos_poly(x);
+		}
+		else if (k==5){
+			return (float)(coeff*(-_cos_poly(x)+_sin_poly(x)));
+		}
+		else if (k==6){
+			return _sin_poly(x);
+		}
+		else if (k==7){
+			return (float)(coeff*(_cos_poly(x) + _sin_poly(x)));
+		}else{
+      return _cos_poly(x);
+    }
+}
+
+  float sin(float x){
+    int sign = 1; // sin(-x) = -sin(x)
+    float coeff = 1.0f/1.414213562373095f;
+    int k;
+    if(x < 0){
+      x = -x;
+      sign = -1;
+    }
+    k = (int) (2*x / HALFPI); //x mod pi/4
+    k = k % 8;
+    x = _reduction3(x);
+		if(k==1){
+			return (float)(sign*coeff*(_sin_poly(x)+_cos_poly(x)));
+		}
+		else if (k==2){
+			return sign*_cos_poly(x);
+		}
+		else if (k==3){
+			return (float)(sign*coeff*( -_sin_poly(x) + _cos_poly(x) ) );
+		}
+		else if (k==4){
+			return -sign*_sin_poly(x);
+		}
+		else if (k==5){
+			return (float)(-sign*coeff*(_sin_poly(x)+_cos_poly(x)));
+		}
+		else if (k==6){
+			return -sign*_cos_poly(x);
+		}
+		else if (k==7){
+			return (float)(sign*coeff*(_sin_poly(x)-_cos_poly(x)));
+		}else{
+      return sign*_sin_poly(x);
+    }
+  }
+
+  float _cos_poly (float x){
+      float r = 0;
+      float s = x*x;
+      r = 0x1.98e616p-16f;
+      r = FMA(r, s, -0x1.6c06dcp-10f);
+      r = FMA(r, s,  0x1.55553cp-05f);
+      r = FMA(r, s, -0x1.000000p-01f);
+      r = FMA(r, s,  0x1.000000p+00f);
+      return r;
+  }
+
+  float _sin_poly (float x){
+    float r = 0;
+    float s = x*x;
+    r = 0x1.7d3bbcp-19f;
+    r = FMA(r, s, -0x1.a06bbap-13f);
+    r = FMA(r, s,  0x1.11119ap-07f);
+    r = FMA(r, s, -0x1.555556p-03f);
+    r = r * s + 0.0f; // ensure -0 is passed trough
+    r = FMA(r, x, x);
+    return r;
+}
+
+
+
+  float atan(float x){
+    //atan(x) = sign(x)π/2 − atan(1/x)
+    int sign;
+    if(x < 0){
+      sign = -1;
+    }else{
+      sign = 1;
+    }
+    println(sign);
+    if (_abs(x) >= 1){
+      println(x);
+      println(1/x);
+      println(sign);
+      println("yo");
+      return sign * HALFPI - _atan_poly(1/x);
+    }else{
+      return _atan_poly(x);
+    }
+  }
+
+
+  float _atan_poly(float x){
+   //We compute the horner form of minimax polynom of atan on [-1,1]
+    float s = x * x;
+    float r = 0x1.6d2026p-9f;
+    r = FMA(r, s, -0x1.03f2d4p-6f);
+    r = FMA(r, s,  0x1.5beeb4p-5f);
+    r = FMA(r, s, -0x1.33194ep-4f);
+    r = FMA(r, s,  0x1.b403a8p-4f);
+    r = FMA(r, s, -0x1.22f5c2p-3f);
+    r = FMA(r, s,  0x1.997748p-3f);
+    r = FMA(r, s, -0x1.5554d8p-2f);
+    r = r * s;
+    r = FMA(r, x, x);
+    return r;
+  }
+
+  float asin(float x){
+    //arcsine(x)	= atan(x/√(1-x2))
+    if(x < -1 || x > 1){
+      // throw new IllegalArgumentException("Asin function does not accept argument outside [-1,1] !");
+      println("Asin function does not accept argument outside [-1,1] !");
+      return 1%0;// Stop the function
+    }
+    if (x == 1){
+      return HALFPI;
+    }
+    if (x == -1){
+      return -HALFPI;
+    }
+    return atan(x/_sqrt(1-x*x));
+  }
+
+  float acos(float x){
+    // arccosine(x)	= Π/2 - arcsine(x)
+    if(x < -1 || x > 1){
+      // throw new IllegalArgumentException("Acos function does not accept argument outside [-1,1] !");
+      println("Acos function does not accept argument outside [-1,1] !");
+      return 1%0;// Stop the function
+    }
+    if (x == 1){
+      return 0;
+    }
+    if (x == -1){
+      return PI;
+    }
+    return HALFPI - asin(x);
+  }
+}
+
+{
+  Math m = new Math();
+  println(m._pow(2.0, -10));
+  println(m.ulp(12));
+  println(m._sqrt(10000));
+  println(m.atan(2));
+  println(m.asin(0.4));
+  println(m.sin(2));
+  println(m.cos(2));
+}

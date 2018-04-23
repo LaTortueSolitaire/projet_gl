@@ -1,0 +1,15 @@
+// Encore du booleen
+// Resultat attendu: ok
+//
+
+{
+    boolean bool1 = false;
+    boolean bool2 = false;
+    boolean bool3 = true;
+    if( bool1 || bool2 && bool3 ){
+        println("raté !");
+    }else{
+        println("ok");
+    }
+
+}

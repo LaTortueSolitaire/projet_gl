@@ -1,0 +1,16 @@
+`> [3, 0] Program
+   +> [3, 0] ListDeclClass [List with 0 elements]
+   `> [3, 0] Main
+      +> [4, 4] ListDeclVar [List with 0 elements]
+      `> [4, 4] ListInst [List with 1 elements]
+         []> [4, 4] IfThenElse
+             +> [4, 8] Lower
+             |  +> [4, 8] Lower
+             |  |  +> [4, 8] Int (1)
+             |  |  `> [4, 12] Int (2)
+             |  `> [4, 16] Int (3)
+             +> [5, 8] ListInst [List with 1 elements]
+             |  []> [5, 8] Print
+             |      `> [5, 14] ListExpr [List with 1 elements]
+             |         []> [5, 14] Int (2)
+             `> ListInst [List with 0 elements]

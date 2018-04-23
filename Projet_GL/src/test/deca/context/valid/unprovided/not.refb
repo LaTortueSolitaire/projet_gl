@@ -1,0 +1,47 @@
+`> [4, 0] Program
+   +> [4, 0] ListDeclClass [List with 0 elements]
+   `> [4, 0] Main
+      +> [5, 4] ListDeclVar [List with 2 elements]
+      |  []> [5, 12] DeclVar
+      |  ||  +> [5, 4] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [5, 12] Identifier (bool1)
+      |  ||  |  definition: variable defined at [5, 12], type=boolean
+      |  ||  `> [5, 12] Initialization
+      |  ||     `> [5, 20] BooleanLiteral (false)
+      |  ||        type: boolean
+      |  []> [6, 12] DeclVar
+      |      +> [6, 4] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [6, 12] Identifier (bool2)
+      |      |  definition: variable defined at [6, 12], type=boolean
+      |      `> [6, 12] Initialization
+      |         `> [6, 20] BooleanLiteral (true)
+      |            type: boolean
+      `> [8, 4] ListInst [List with 2 elements]
+         []> [8, 4] IfThenElse
+         ||  +> [8, 8] Not
+         ||  |  type: boolean
+         ||  |  `> [8, 9] Identifier (bool1)
+         ||  |     definition: variable defined at [5, 12], type=boolean
+         ||  +> [9, 8] ListInst [List with 1 elements]
+         ||  |  []> [9, 8] Print
+         ||  |      `> [9, 14] ListExpr [List with 1 elements]
+         ||  |         []> [9, 14] StringLiteral ("Ok")
+         ||  |             type: string
+         ||  `> ListInst [List with 1 elements]
+         ||     []> [11, 8] Print
+         ||         `> [11, 14] ListExpr [List with 1 elements]
+         ||            []> [11, 14] StringLiteral ("Raté !")
+         ||                type: string
+         []> [14, 4] IfThenElse
+             +> [14, 7] Not
+             |  type: boolean
+             |  `> [14, 8] Identifier (bool2)
+             |     definition: variable defined at [6, 12], type=boolean
+             +> [15, 8] ListInst [List with 1 elements]
+             |  []> [15, 8] Print
+             |      `> [15, 14] ListExpr [List with 1 elements]
+             |         []> [15, 14] StringLiteral ("Raté !")
+             |             type: string
+             `> ListInst [List with 0 elements]

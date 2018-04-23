@@ -1,0 +1,5 @@
+{
+	//double definition de a : regle 3.17
+	int a;
+	float a;
+}

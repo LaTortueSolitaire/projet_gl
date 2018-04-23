@@ -1,0 +1,12 @@
+// Description:
+//    Declaration d'une variable de type void
+//
+// Resultat: Ligne 11
+//    ContextualError: Impossible initialization
+//
+// Historique:
+//    cree le 24/01/2018
+
+{
+	int a = true;
+}

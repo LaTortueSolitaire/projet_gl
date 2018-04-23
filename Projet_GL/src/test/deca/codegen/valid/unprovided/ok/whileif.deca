@@ -1,0 +1,11 @@
+{
+	boolean a = true;
+	int x = 1;
+	while (!(!a)) {
+		print(x);
+		x = x + 1;
+		if (x >= 10) {
+			a = false;
+		}
+	}
+}

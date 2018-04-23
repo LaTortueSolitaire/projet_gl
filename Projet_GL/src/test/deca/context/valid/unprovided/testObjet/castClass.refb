@@ -1,0 +1,37 @@
+`> [9, 0] Program
+   +> [9, 0] ListDeclClass [List with 2 elements]
+   |  []> [9, 0] DeclClass
+   |  ||  +> [9, 6] Identifier (A)
+   |  ||  |  definition: type defined at [9, 0], type=A
+   |  ||  +> [9, 8] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 0 elements]
+   |  ||  `> ListFieldSet [List with 0 elements]
+   |  []> [12, 0] DeclClass
+   |      +> [12, 6] Identifier (B)
+   |      |  definition: type defined at [12, 0], type=B
+   |      +> [12, 8] Identifier (A)
+   |      |  definition: type defined at [9, 0], type=A
+   |      +> ListDeclMethod [List with 0 elements]
+   |      `> ListFieldSet [List with 0 elements]
+   `> [15, 0] Main
+      +> [16, 1] ListDeclVar [List with 2 elements]
+      |  []> [16, 3] DeclVar
+      |  ||  +> [16, 1] Identifier (B)
+      |  ||  |  definition: type defined at [12, 0], type=B
+      |  ||  +> [16, 3] Identifier (b)
+      |  ||  |  definition: variable defined at [16, 3], type=B
+      |  ||  `> [16, 3] NoInitialization
+      |  []> [17, 3] DeclVar
+      |      +> [17, 1] Identifier (A)
+      |      |  definition: type defined at [9, 0], type=A
+      |      +> [17, 3] Identifier (a)
+      |      |  definition: variable defined at [17, 3], type=A
+      |      `> [17, 3] Initialization
+      |         `> [17, 7] Cast
+      |            type: A
+      |            +> [17, 11] Identifier (b)
+      |            |  definition: variable defined at [16, 3], type=B
+      |            `> [17, 8] Identifier (A)
+      |               definition: type defined at [9, 0], type=A
+      `> [18, 0] ListInst [List with 0 elements]

@@ -1,0 +1,11 @@
+// Description:
+//	Declaration d'une variable de type void
+//
+// Resultat: Ligne 10
+//	ContextualError: Variable cannot be declared with void type
+//
+// Historique:
+//    cree le 24/01/2018
+{
+	void a;
+}

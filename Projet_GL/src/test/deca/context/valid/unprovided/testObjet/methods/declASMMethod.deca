@@ -1,0 +1,15 @@
+// Description:
+//   Définition de méthodes asm
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 24/01/2018
+
+class A {
+      void m1(int a) asm("I hate asm");
+      int m2() asm("I like asm");
+      float m3() asm("I love asm");
+}
+

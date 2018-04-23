@@ -1,0 +1,23 @@
+// Description:
+//   Différentes affectations
+//
+// Resultats:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 24/01/2018
+
+class A {
+}
+class B extends A{
+}
+
+{
+	A a1;
+	A a2;
+
+	a1 = new A();
+	a2 = new B(); //Intervention du cast
+	
+}
+	

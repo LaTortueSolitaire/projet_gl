@@ -1,0 +1,13 @@
+// Description:
+//    Appel d'un minus sur un boolean
+//
+// Resultat: Ligne 13
+//    ContextualError: Unsupported types for this operation: Operands must be of type float or int
+//
+// Historique:
+//    cree le 24/01/2018
+
+{
+	boolean a;
+	a = -a;
+}

@@ -1,0 +1,14 @@
+// Description:
+//    Utilisation de if avec une condition de type int
+//
+// Resultat: Ligne 11
+//    ContextualError: Condition must be of type boolean
+//
+// Historique:
+//    cree le 24/01/2018
+
+{
+	int a;
+	if (a){
+	}
+}

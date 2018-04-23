@@ -1,0 +1,9 @@
+// Overflow de la pile 
+
+class A {
+    A a = new A();
+}
+
+{
+    A a = new A();
+}

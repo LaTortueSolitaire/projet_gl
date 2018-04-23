@@ -1,0 +1,15 @@
+// Description:
+//    Déclaration de deux champs de même nom dans une classe
+//
+// Resultat: Ligne 12
+//    ContextualError : Field already defined in the class
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+      int x;
+      protected int x;
+}
+
+

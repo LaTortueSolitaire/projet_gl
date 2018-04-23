@@ -1,0 +1,13 @@
+// Description:
+//    Cast d'un float à un int dans la déclaration de champs. Ca marche dans le main, ça ne marche pas dans cette situation
+//
+// Resultat:
+//	n'affiche rien
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+      float x=2.5;
+      int n = (int) (this.x);
+}

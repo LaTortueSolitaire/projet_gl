@@ -1,0 +1,84 @@
+`> [10, 0] Program
+   +> [10, 0] ListDeclClass [List with 1 elements]
+   |  []> [10, 0] DeclClass
+   |      +> [10, 6] Identifier (A)
+   |      |  definition: type defined at [10, 0], type=A
+   |      +> [10, 8] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 2 elements]
+   |      |  []> [13, 6] DeclMethod
+   |      |  ||  +> [13, 6] Identifier (int)
+   |      |  ||  |  definition: type (builtin), type=int
+   |      |  ||  +> [13, 10] Identifier (getX)
+   |      |  ||  |  definition: method defined at [13, 6], type=int
+   |      |  ||  +> ListDeclParam [List with 0 elements]
+   |      |  ||  +> [14, 9] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [14, 9] ListInst [List with 1 elements]
+   |      |  ||     []> [14, 9] Return
+   |      |  ||         `> [14, 16] Identifier (x)
+   |      |  ||            definition: field defined at [11, 20], type=int
+   |      |  []> [17, 6] DeclMethod
+   |      |      +> [17, 6] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [17, 11] Identifier (setX)
+   |      |      |  definition: method defined at [17, 6], type=void
+   |      |      +> [17, 16] ListDeclParam [List with 1 elements]
+   |      |      |  []> [17, 16] DeclParam
+   |      |      |      +> [17, 16] Identifier (int)
+   |      |      |      |  definition: type (builtin), type=int
+   |      |      |      `> [17, 20] Identifier (x)
+   |      |      |         definition: parameter defined at [17, 16], type=int
+   |      |      +> [18, 10] ListDeclVar [List with 0 elements]
+   |      |      `> [18, 10] ListInst [List with 1 elements]
+   |      |         []> [18, 10] Assign
+   |      |             type: int
+   |      |             +> [18, 10] Selection Attribut
+   |      |             |  type: int
+   |      |             |  +> [18, 10] This
+   |      |             |  |  type: A
+   |      |             |  `> [18, 15] Identifier (x)
+   |      |             |     definition: field defined at [11, 20], type=int
+   |      |             `> [18, 19] Identifier (x)
+   |      |                definition: parameter defined at [17, 16], type=int
+   |      `> ListFieldSet [List with 1 elements]
+   |         []> [11, 6] DeclFieldSet
+   |             +> [11, 16] Identifier (int)
+   |             |  definition: type (builtin), type=int
+   |             `> ListFields [List with 1 elements]
+   |                []> [11, 20] DeclFields
+   |                    +> [11, 20] Identifier (x)
+   |                    |  definition: field defined at [11, 20], type=int
+   |                    `> [11, 20] NoInitialization
+   `> [22, 0] Main
+      +> [23, 1] ListDeclVar [List with 1 elements]
+      |  []> [23, 3] DeclVar
+      |      +> [23, 1] Identifier (A)
+      |      |  definition: type defined at [10, 0], type=A
+      |      +> [23, 3] Identifier (a)
+      |      |  definition: variable defined at [23, 3], type=A
+      |      `> [23, 3] Initialization
+      |         `> [23, 7] New
+      |            type: A
+      |            `> [23, 11] Identifier (A)
+      |               definition: type defined at [10, 0], type=A
+      `> [24, 1] ListInst [List with 2 elements]
+         []> [24, 1] MethodCall (Identifier (a),Identifier (setX))
+         ||  type: void
+         ||  +> [24, 1] Identifier (a)
+         ||  |  definition: variable defined at [23, 3], type=A
+         ||  +> Identifier (setX)
+         ||  |  definition: method defined at [17, 6], type=void
+         ||  `> [24, 8] ListExpr [List with 1 elements]
+         ||     []> [24, 8] Int (1)
+         ||         type: int
+         []> [25, 1] Println
+             `> [25, 24] ListExpr [List with 2 elements]
+                []> [25, 9] StringLiteral ("a.getX() = ")
+                ||  type: string
+                []> [25, 24] MethodCall (Identifier (a),Identifier (getX))
+                    type: int
+                    +> [25, 24] Identifier (a)
+                    |  definition: variable defined at [23, 3], type=A
+                    +> Identifier (getX)
+                    |  definition: method defined at [13, 6], type=int
+                    `> ListExpr [List with 0 elements]

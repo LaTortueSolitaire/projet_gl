@@ -1,0 +1,11 @@
+// Description:
+//    Utilisation d'un identifiant indéfini
+//
+// Resultat: Ligne 11
+//    ContextualError: Undefined identifier : a
+//
+// Historique:
+//    cree le 24/01/2018
+{
+	println(a);
+}

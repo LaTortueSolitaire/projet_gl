@@ -1,0 +1,47 @@
+`> [9, 0] Program
+   +> [9, 0] ListDeclClass [List with 0 elements]
+   `> [9, 0] Main
+      +> [10, 3] ListDeclVar [List with 5 elements]
+      |  []> [10, 7] DeclVar
+      |  ||  +> [10, 3] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [10, 7] Identifier (i)
+      |  ||  |  definition: variable defined at [10, 7], type=int
+      |  ||  `> [10, 7] Initialization
+      |  ||     `> [10, 11] Int (1)
+      |  ||        type: int
+      |  []> [11, 9] DeclVar
+      |  ||  +> [11, 3] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [11, 9] Identifier (x1)
+      |  ||  |  definition: variable defined at [11, 9], type=float
+      |  ||  `> [11, 9] Initialization
+      |  ||     `> [11, 14] Float (1.0)
+      |  ||        type: float
+      |  []> [12, 9] DeclVar
+      |  ||  +> [12, 3] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [12, 9] Identifier (x2)
+      |  ||  |  definition: variable defined at [12, 9], type=float
+      |  ||  `> [12, 9] Initialization
+      |  ||     `> [12, 14] ConvFloat
+      |  ||        type: float
+      |  ||        `> [12, 14] Int (1)
+      |  ||           type: int
+      |  []> [13, 10] DeclVar
+      |  ||  +> [13, 3] Identifier (string)
+      |  ||  |  definition: type (builtin), type=string
+      |  ||  +> [13, 10] Identifier (s)
+      |  ||  |  definition: variable defined at [13, 10], type=string
+      |  ||  `> [13, 10] Initialization
+      |  ||     `> [13, 14] StringLiteral ("1")
+      |  ||        type: string
+      |  []> [14, 11] DeclVar
+      |      +> [14, 3] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [14, 11] Identifier (b)
+      |      |  definition: variable defined at [14, 11], type=boolean
+      |      `> [14, 11] Initialization
+      |         `> [14, 15] BooleanLiteral (true)
+      |            type: boolean
+      `> [15, 0] ListInst [List with 0 elements]

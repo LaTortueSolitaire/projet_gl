@@ -1,0 +1,20 @@
+// Test d'un while avec des float
+//
+//
+
+{
+    float a = 2.8;
+    float b = 5.9;
+    float c = a+b;
+    float d, e;
+    d = b-a;
+
+    while( a< b || d > a){
+        a = a + 0.2;
+        d = d - 0.1;
+        e = d;
+        println(e);
+    }
+
+
+}

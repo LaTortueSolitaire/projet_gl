@@ -1,0 +1,15 @@
+// Test sur une declaration et un test not dan sun while
+// Resultat
+// 0
+// 1
+// 2
+// 1
+//OK
+{
+    int x, y = 1;
+    while (x != 3){
+        println(x);
+        x = x+ 1;
+    }
+    println(y);
+}

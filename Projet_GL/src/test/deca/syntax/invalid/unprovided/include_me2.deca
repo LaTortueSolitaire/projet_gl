@@ -1,0 +1,3 @@
+// include d'un script qui s'include lui-même
+
+#include "include_me.deca"

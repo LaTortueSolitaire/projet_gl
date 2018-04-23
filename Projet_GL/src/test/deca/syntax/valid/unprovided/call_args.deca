@@ -1,0 +1,30 @@
+// Description: test passage d'arguments
+// Resultat attendu : 5laa33.30000e+002.40000e+00
+
+class PrintArg{
+
+    void printArgFloat(float flo){
+        print(flo);
+    }
+
+    void printArgInt(int a){
+        print(a);
+    }
+
+    void printArgSelf(PrintArg arg){
+        print("laa");
+    }
+
+
+    void printMultiArg(int a,float b){
+        print(a,b);
+    }
+}
+{
+    PrintArg arg = new PrintArg();
+    arg.printArgInt(5);
+    arg.printArgSelf(arg);
+    arg.printMultiArg(3,3.3);
+    arg.printArgFloat(2.4);
+
+}

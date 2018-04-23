@@ -1,0 +1,61 @@
+`> [7, 0] Program
+   +> [7, 0] ListDeclClass [List with 0 elements]
+   `> [7, 0] Main
+      +> [8, 4] ListDeclVar [List with 1 elements]
+      |  []> [8, 8] DeclVar
+      |      +> [8, 4] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [8, 8] Identifier (x)
+      |      |  definition: variable defined at [8, 8], type=int
+      |      `> [8, 8] Initialization
+      |         `> [8, 12] Modulo
+      |            type: int
+      |            +> [8, 12] Int (13)
+      |            |  type: int
+      |            `> [8, 15] Modulo
+      |               type: int
+      |               +> [8, 16] Int (63)
+      |               |  type: int
+      |               `> [8, 19] Int (5)
+      |                  type: int
+      `> [9, 4] ListInst [List with 5 elements]
+         []> [9, 4] Println
+         ||  `> [9, 12] ListExpr [List with 1 elements]
+         ||     []> [9, 12] Identifier (x)
+         ||         definition: variable defined at [8, 8], type=int
+         []> [10, 4] Assign
+         ||  type: int
+         ||  +> [10, 4] Identifier (x)
+         ||  |  definition: variable defined at [8, 8], type=int
+         ||  `> [10, 8] Modulo
+         ||     type: int
+         ||     +> [10, 8] Modulo
+         ||     |  type: int
+         ||     |  +> [10, 9] Int (17)
+         ||     |  |  type: int
+         ||     |  `> [10, 12] Int (6)
+         ||     |     type: int
+         ||     `> [10, 15] Int (3)
+         ||        type: int
+         []> [11, 4] Println
+         ||  `> [11, 12] ListExpr [List with 1 elements]
+         ||     []> [11, 12] Identifier (x)
+         ||         definition: variable defined at [8, 8], type=int
+         []> [12, 4] Assign
+         ||  type: int
+         ||  +> [12, 4] Identifier (x)
+         ||  |  definition: variable defined at [8, 8], type=int
+         ||  `> [12, 8] Modulo
+         ||     type: int
+         ||     +> [12, 8] Modulo
+         ||     |  type: int
+         ||     |  +> [12, 8] Int (17)
+         ||     |  |  type: int
+         ||     |  `> [12, 11] Int (6)
+         ||     |     type: int
+         ||     `> [12, 13] Int (3)
+         ||        type: int
+         []> [13, 4] Println
+             `> [13, 12] ListExpr [List with 1 elements]
+                []> [13, 12] Identifier (x)
+                    definition: variable defined at [8, 8], type=int

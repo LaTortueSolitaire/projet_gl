@@ -1,0 +1,115 @@
+`> [8, 0] Program
+   +> [8, 0] ListDeclClass [List with 0 elements]
+   `> [8, 0] Main
+      +> [10, 2] ListDeclVar [List with 5 elements]
+      |  []> [10, 6] DeclVar
+      |  ||  +> [10, 2] Identifier (int)
+      |  ||  +> [10, 6] Identifier (i)
+      |  ||  `> [10, 6] NoInitialization
+      |  []> [10, 9] DeclVar
+      |  ||  +> [10, 2] Identifier (int)
+      |  ||  +> [10, 9] Identifier (z)
+      |  ||  `> [10, 9] NoInitialization
+      |  []> [11, 6] DeclVar
+      |  ||  +> [11, 2] Identifier (int)
+      |  ||  +> [11, 6] Identifier (y)
+      |  ||  `> [11, 6] Initialization
+      |  ||     `> [11, 10] Int (3)
+      |  []> [12, 8] DeclVar
+      |  ||  +> [12, 2] Identifier (float)
+      |  ||  +> [12, 8] Identifier (f)
+      |  ||  `> [12, 8] Initialization
+      |  ||     `> [12, 10] Float (3.2)
+      |  []> [12, 15] DeclVar
+      |      +> [12, 2] Identifier (float)
+      |      +> [12, 15] Identifier (g)
+      |      `> [12, 15] NoInitialization
+      `> [14, 2] ListInst [List with 19 elements]
+         []> [14, 2] Assign
+         ||  +> [14, 2] Identifier (g)
+         ||  `> [14, 6] Float (6.5)
+         []> [15, 2] Assign
+         ||  +> [15, 2] Identifier (i)
+         ||  `> [15, 6] Int (3)
+         []> [16, 2] Assign
+         ||  +> [16, 2] Identifier (y)
+         ||  `> [16, 6] Int (4)
+         []> [19, 2] Println
+         ||  `> [19, 10] ListExpr [List with 1 elements]
+         ||     []> [19, 10] StringLiteral ("que c'est beau ;;")
+         []> [21, 2] Println
+         ||  `> [21, 10] ListExpr [List with 1 elements]
+         ||     []> [21, 10] Int (3)
+         []> [22, 2] Print
+         ||  `> [22, 9] ListExpr [List with 1 elements]
+         ||     []> [22, 9] Identifier (i)
+         []> [23, 2] Println
+         ||  `> [23, 14] ListExpr [List with 2 elements]
+         ||     []> [23, 11] Identifier (i)
+         ||     []> [23, 14] Identifier (y)
+         []> [25, 2] Int (3)
+         []> [26, 2] Return
+         ||  `> [26, 8] Plus
+         ||     +> [26, 9] Int (2)
+         ||     `> [26, 11] Int (2)
+         []> [27, 2] Return
+         ||  `> [27, 8] Identifier (y)
+         []> [29, 2] While
+         ||  +> [29, 9] Or
+         ||  |  +> [29, 9] NotEquals
+         ||  |  |  +> [29, 10] Identifier (y)
+         ||  |  |  `> [29, 15] Plus
+         ||  |  |     +> [29, 16] Int (2)
+         ||  |  |     `> [29, 18] Int (6)
+         ||  |  `> [29, 25] Equals
+         ||  |     +> [29, 26] Identifier (i)
+         ||  |     `> [29, 31] Int (3)
+         ||  `> [31, 4] ListInst [List with 2 elements]
+         ||     []> [30, 4] Assign
+         ||     ||  +> [30, 4] Identifier (y)
+         ||     ||  `> [30, 8] Identifier (i)
+         ||     []> [31, 4] Return
+         ||         `> [31, 11] Identifier (y)
+         []> [33, 2] While
+         ||  +> [33, 9] And
+         ||  |  +> [33, 9] Equals
+         ||  |  |  +> [33, 10] Identifier (y)
+         ||  |  |  `> [33, 15] Minus
+         ||  |  |     +> [33, 16] Int (2)
+         ||  |  |     `> [33, 18] Int (6)
+         ||  |  `> [33, 25] Equals
+         ||  |     +> [33, 26] Identifier (i)
+         ||  |     `> [33, 31] Int (3)
+         ||  `> [35, 4] ListInst [List with 2 elements]
+         ||     []> [34, 4] Assign
+         ||     ||  +> [34, 4] Identifier (y)
+         ||     ||  `> [34, 8] Identifier (i)
+         ||     []> [35, 4] Return
+         ||         `> [35, 11] Identifier (y)
+         []> [38, 2] Greater
+         ||  +> [38, 2] Identifier (i)
+         ||  `> [38, 6] Identifier (y)
+         []> [39, 2] LowerOrEqual
+         ||  +> [39, 2] Identifier (i)
+         ||  `> [39, 5] Identifier (i)
+         []> [40, 2] Lower
+         ||  +> [40, 2] Identifier (y)
+         ||  `> [40, 4] Identifier (i)
+         []> [41, 2] GreaterOrEqual
+         ||  +> [41, 2] Identifier (y)
+         ||  `> [41, 7] Identifier (y)
+         []> [42, 2] Plus
+         ||  +> [42, 2] Divide
+         ||  |  +> [42, 2] Multiply
+         ||  |  |  +> [42, 2] Identifier (i)
+         ||  |  |  `> [42, 6] Int (3)
+         ||  |  `> [42, 10] Plus
+         ||  |     +> [42, 11] Int (4)
+         ||  |     `> [42, 13] Int (3)
+         ||  `> [42, 18] Modulo
+         ||     +> [42, 18] Identifier (y)
+         ||     `> [42, 22] Int (5)
+         []> [43, 2] Not
+         ||  `> [43, 4] Int (3)
+         []> [44, 2] UnaryMinus
+             `> [44, 3] Int (5)

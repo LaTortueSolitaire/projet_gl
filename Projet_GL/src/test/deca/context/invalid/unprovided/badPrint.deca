@@ -1,0 +1,13 @@
+// Description:
+//    Appel d'un readFloat sur un int
+//
+// Resultat: Ligne 11
+//    ContextualError : Incorrect type of argument: Argument must be of type int, float or string 
+//
+// Historique:
+//    Créé le 24/01/2018
+
+{
+	boolean a;
+	println(a);
+}

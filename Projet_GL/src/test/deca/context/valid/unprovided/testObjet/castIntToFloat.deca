@@ -1,0 +1,12 @@
+// Description:
+//    Utilisation de cast
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    Créé le 24/01/2018
+{
+	int a;
+	float x = (float)(a);
+}

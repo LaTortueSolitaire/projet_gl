@@ -1,0 +1,21 @@
+// RESULTAT ETTENDU :  okok
+
+class A{
+
+  void declareBool(){
+    boolean a = true && true;
+    boolean b = 1 < 2 ;
+    if (a){
+    print("ok");
+    }
+    if (1 <= 2){
+    print("ok");
+    }
+  }
+}
+
+{
+  A a = new A();
+  boolean c = 2 < 1 ;
+  a.declareBool();
+}

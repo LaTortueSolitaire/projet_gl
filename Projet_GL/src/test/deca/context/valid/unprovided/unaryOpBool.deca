@@ -1,0 +1,13 @@
+// Description:
+//	Test d'opération unaire booléenne (Not)
+//
+// Resultats:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 24/01/2018
+
+{
+	boolean a;
+	boolean b = !a;
+}

@@ -1,0 +1,13 @@
+// Description:
+//	Test d'opération unaire arithmétique (Minus)
+//
+// Resultats:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 24/01/2018
+
+{
+	int a;
+	int b = -a;
+}

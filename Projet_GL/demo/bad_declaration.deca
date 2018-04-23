@@ -1,0 +1,6 @@
+{
+float y = 2.0;
+boolean b = true;
+int x = b;
+print(x);
+}

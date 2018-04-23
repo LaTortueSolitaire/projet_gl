@@ -1,0 +1,16 @@
+// Description:
+//   Définition d'une classe et initialisation d'une instance de cette classe
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 22/01/2018
+
+class A {
+}
+
+{
+	A a = new A();
+}
+	

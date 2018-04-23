@@ -1,0 +1,26 @@
+// Description:
+//    Test des opérations de comparaison	  
+//
+// Resultats:
+//    Aucune erreur attendue
+// 
+// Historique:
+//    cree le 24/01/2018
+
+{
+	int a = 5;
+	float b = 3.5;
+
+	if (a <= b){
+	}
+
+	if (a < b){
+	}
+
+	if (a >= b){
+	}
+
+	if (a > b){
+	}
+	
+}

@@ -1,0 +1,19 @@
+// Test d'un if avec beaucoup de OpBool
+// Resultat
+// Trop nul
+
+{
+
+	int i = 3;
+	int u = 6;
+	float j = 2.8;
+	float v = 10.2;
+
+	if(i==u && j==2.8 || i==3 && j==2){
+		print("Bien jouer");
+	}
+	else{
+		print("Trop nul");
+	}
+
+}

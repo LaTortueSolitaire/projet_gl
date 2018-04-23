@@ -1,0 +1,65 @@
+	TSTO #10
+	BOV stack_overflow_error
+	ADDSP #4
+; Premiere passe, construction table des methodes
+; Code de la table des méthodes de Object
+	LOAD #null, R0
+	STORE R0, 1(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 2(GB)
+; 
+; 
+; 
+; Main program
+; Beginning of main instructions:
+	LOAD #0, R2
+	STORE R2, 3(GB)
+	LOAD #2, R2
+	LOAD 3(GB), R3
+	QUO R3, R2
+	LOAD 3(GB), R4
+	CMP #0, R4
+	BOV division_or_modulo_per_zero
+	STORE R2, 4(GB)
+	LOAD 4(GB), R1
+	WINT
+	HALT
+; End of Main Programm
+; 
+; 
+; Messages d'erreurs
+io_error:
+	WSTR "Error: Input/Output error"
+	WNL
+	ERROR
+; Les debordements
+stack_overflow_error:
+	WSTR "Error: Stack overflow"
+	WNL
+	ERROR
+heap_overflow_error:
+	WSTR "Error: Heap overflow"
+	WNL
+	ERROR
+overflow_error:
+	WSTR "Error: Overflow during arithmetical operation"
+	WNL
+	ERROR
+division_or_modulo_per_zero:
+	WSTR "Error : Division or modulo by zero"
+	WNL
+	ERROR
+dereferencement.null:
+	WSTR "Error : Dereferencing null object"
+	WNL
+	ERROR
+; 
+; 
+; Deuxieme passe, initialisation des champs
+; 
+; Deuxième passe, génération de code des méthodes
+code.Object.equals:
+	LOAD -2(LB), R0
+	LOAD -3(LB), R1
+	CMP R0, R1
+	SEQ R0

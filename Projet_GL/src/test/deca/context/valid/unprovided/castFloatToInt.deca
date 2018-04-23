@@ -1,0 +1,12 @@
+// Description:
+//    Cast d'un float vers un int
+//
+// Resultat: Ligne 12
+//    Aucune erreur attendue
+//
+// Historique:
+//    Créé le 24/01/2018
+{
+	float x;
+	int a = (int)(x);
+}

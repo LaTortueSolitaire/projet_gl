@@ -1,0 +1,23 @@
+// Test la generation de code pour une method avec des variables locales
+//
+//
+
+
+class A{
+    int x = 1;
+
+}
+
+class B extends A{
+    float b = 2.3;
+    float changeB(){
+        float a =1.9;
+        return a + b;
+    }
+}
+
+{
+	B bb = new B();
+	A aa = new A();
+	println(bb.changeB() - aa.x);
+}

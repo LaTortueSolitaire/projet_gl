@@ -1,0 +1,17 @@
+// Description:
+//    Selection d'une méthode en tant que champ
+//
+// Resultat: Ligne 16
+//    ContextualError : Forbidden access to protected field
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+      protected int x;
+}
+
+{
+	A a = new A();
+	a.x = 10;
+}

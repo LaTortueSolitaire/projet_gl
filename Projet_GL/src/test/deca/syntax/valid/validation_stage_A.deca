@@ -1,0 +1,46 @@
+// Test pour voir s'il verifie bien la syntaxe pour un programme deca correct
+// Test de toutes les fonctions print
+//
+//
+// Resultat :
+// Ne doit pas relever d'erreur et donner l'arbre abstrait correspondant
+
+{
+  // Tests de declaration et d'instanciation
+  int i, z;
+  int y = 3;
+  float f=3.2, g;
+
+  g = 6.5;
+  i = 3;
+  y = 4;
+
+  // Tests d'affichage
+  println("que c'est beau ;;");
+  // print("i" , i);
+  println(3);
+  printx(i);
+  printlnx(i, y);
+
+  3;
+  return(2+2);
+  return(y);
+
+  while( (y != (2+6)) || (i == 3)){
+    y = i ;
+    return y;
+  }
+  while( (y == (2-6)) && (i == 3)){
+    y = i ;
+    return y;
+  }
+
+  i > y;
+  i<=i;
+  y<i;
+  y >= y;
+  i * 3 / (4+3) + y % 5;
+  ! 3 ;
+  -5;
+
+}

@@ -1,0 +1,3 @@
+//Tests de include sans fichier
+
+#include "blabla"

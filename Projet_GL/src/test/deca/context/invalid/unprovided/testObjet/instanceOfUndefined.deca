@@ -1,0 +1,15 @@
+// Description:
+//    Utilisation de instanceof sur un littéral
+//
+// Resultat: Ligne 12
+//    ContextualError : Undefined type : A
+//
+// Historique:
+//    Créé le 24/01/2018
+
+{
+        int a;
+	if (a instanceof A){
+	}
+}
+		

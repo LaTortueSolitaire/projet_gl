@@ -1,0 +1,31 @@
+// Test d'un return NEW
+// Resultat :
+// A
+// 10
+// OK
+
+
+
+class A {
+	int z = 2;
+	void monPrint() {
+		println("A");
+		println(z);
+	}
+	void changeZ(){
+		z = z + 8;
+	}
+}
+
+class B {
+	A createA() {
+		return new A();
+	}
+}
+
+{
+	B b = new B();
+	A a = b.createA();
+	a.changeZ();
+	a.monPrint();
+}

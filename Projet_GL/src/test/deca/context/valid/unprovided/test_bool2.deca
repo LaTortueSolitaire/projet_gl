@@ -1,0 +1,14 @@
+// Test booleen 2
+// Resultat attendu: ok
+//
+
+{
+    boolean bool1 = true;
+    boolean bool2 = false;
+    if( bool2 || bool1 ){
+        println("ok");
+    }else{
+        println("non");
+    }
+
+}

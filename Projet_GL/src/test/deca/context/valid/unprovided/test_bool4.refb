@@ -1,0 +1,50 @@
+`> [5, 0] Program
+   +> [5, 0] ListDeclClass [List with 0 elements]
+   `> [5, 0] Main
+      +> [6, 4] ListDeclVar [List with 3 elements]
+      |  []> [6, 12] DeclVar
+      |  ||  +> [6, 4] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [6, 12] Identifier (bool1)
+      |  ||  |  definition: variable defined at [6, 12], type=boolean
+      |  ||  `> [6, 12] Initialization
+      |  ||     `> [6, 20] BooleanLiteral (false)
+      |  ||        type: boolean
+      |  []> [7, 12] DeclVar
+      |  ||  +> [7, 4] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [7, 12] Identifier (bool2)
+      |  ||  |  definition: variable defined at [7, 12], type=boolean
+      |  ||  `> [7, 12] Initialization
+      |  ||     `> [7, 20] BooleanLiteral (false)
+      |  ||        type: boolean
+      |  []> [8, 12] DeclVar
+      |      +> [8, 4] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [8, 12] Identifier (bool3)
+      |      |  definition: variable defined at [8, 12], type=boolean
+      |      `> [8, 12] Initialization
+      |         `> [8, 20] BooleanLiteral (true)
+      |            type: boolean
+      `> [9, 4] ListInst [List with 1 elements]
+         []> [9, 4] IfThenElse
+             +> [9, 8] Or
+             |  type: boolean
+             |  +> [9, 8] Identifier (bool1)
+             |  |  definition: variable defined at [6, 12], type=boolean
+             |  `> [9, 17] And
+             |     type: boolean
+             |     +> [9, 17] Identifier (bool2)
+             |     |  definition: variable defined at [7, 12], type=boolean
+             |     `> [9, 26] Identifier (bool3)
+             |        definition: variable defined at [8, 12], type=boolean
+             +> [10, 8] ListInst [List with 1 elements]
+             |  []> [10, 8] Println
+             |      `> [10, 16] ListExpr [List with 1 elements]
+             |         []> [10, 16] StringLiteral ("raté !")
+             |             type: string
+             `> ListInst [List with 1 elements]
+                []> [12, 8] Println
+                    `> [12, 16] ListExpr [List with 1 elements]
+                       []> [12, 16] StringLiteral ("ok")
+                           type: string

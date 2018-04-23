@@ -1,0 +1,14 @@
+
+class A{
+
+  void testAnais(int x){
+    return 2.2/0;
+  }
+
+}
+
+{
+  A a = new A();
+  a.testAnais();
+
+}

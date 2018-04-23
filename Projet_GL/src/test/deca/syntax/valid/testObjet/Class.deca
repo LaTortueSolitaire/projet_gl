@@ -1,0 +1,14 @@
+/*test pour une classe avec extends, plusieurs méthodes contenant un ou plusieurs arguments, déclération d'attributs et utilisation de la sélection.
+Test de AND*/
+
+class A extends B{
+protected int att1 = 2;
+protected boolean att2;
+  int getAtt1(){
+    return this.att1;
+  }
+  boolean method2(boolean y){
+    this.att2 = y;
+    return this.att2 && y;
+  }
+}

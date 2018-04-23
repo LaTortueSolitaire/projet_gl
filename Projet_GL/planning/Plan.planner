@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<project name="" company="" manager="" phase="" project-start="20180109T000000Z" mrproject-version="2" calendar="1">
+  <properties/>
+  <phases>
+    <phase name="1&#xE8;re phase : Sans objet (SO)"/>
+  </phases>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Travaill&#xE9;" description="Un jour de travail normal"/>
+      <day-type id="1" name="Ch&#xF4;m&#xE9;" description="Un jour ch&#xF4;m&#xE9; normal"/>
+      <day-type id="2" name="Utiliser la base" description="Utilise un jour du calendrier de base"/>
+    </day-types>
+    <calendar id="1" name="Default">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days>
+        <day date="20180113" type="day-type" id="0"/>
+        <day date="20180114" type="day-type" id="0"/>
+      </days>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="A - Lexer" note="" work="28800" start="20180109T000000Z" end="20180109T170000Z" work-start="20180109T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20180109T000000Z"/>
+    </task>
+    <task id="2" name="A - Parser HW+SO" note="" work="64800" start="20180110T000000Z" end="20180112T100000Z" work-start="20180110T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20180110T000000Z"/>
+    </task>
+    <task id="3" name="A - Parser AO" note="" work="108000" start="20180112T100000Z" end="20180115T170000Z" work-start="20180112T100000Z" percent-complete="90" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="2" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="4" name="B - Hello Word" note="" work="86400" start="20180109T000000Z" end="20180111T170000Z" work-start="20180109T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20180109T000000Z"/>
+    </task>
+    <task id="5" name="A -Test Lexer" note="" work="57600" start="20180109T000000Z" end="20180110T170000Z" work-start="20180109T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20180109T000000Z"/>
+    </task>
+    <task id="6" name="A - Test Parser" note="" work="28800" start="20180111T000000Z" end="20180111T170000Z" work-start="20180111T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20180111T000000Z"/>
+      <predecessors>
+        <predecessor id="1" predecessor-id="5" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="7" name="EXT - " note="- Documentation sur l'erreur machine, repr&#xE9;sentation des nombres flottants&#10;- Mise en place d'une classe d'affichage graphique pour comparer les futurs r&#xE9;sultats obtenus&#10;&#10;- Fonctions de base : power, fact, abs&#10;- Mise en place des tests de travail sur sqrt() et ulp()&#10;" work="460800" start="20180110T000000Z" end="20180129T170000Z" work-start="20180110T080000Z" percent-complete="40" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20180110T000000Z"/>
+    </task>
+    <task id="8" name="B - SO" note="" work="86400" start="20180111T170000Z" end="20180114T170000Z" work-start="20180112T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="4" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="9" name="B - Tests" note="" work="28800" start="20180115T000000Z" end="20180115T170000Z" work-start="20180115T080000Z" percent-complete="80" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="start-no-earlier-than" time="20180115T000000Z"/>
+      <predecessors>
+        <predecessor id="1" predecessor-id="8" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="10" name="C - HW + Options decac" note="" work="144000" start="20180112T000000Z" end="20180116T170000Z" work-start="20180112T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20180112T000000Z"/>
+    </task>
+    <task id="11" name="Gestion du projet" note="" work="230400" start="20180109T000000Z" end="20180116T170000Z" work-start="20180109T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+  </tasks>
+  <resource-groups/>
+  <resources>
+    <resource id="1" name="C&#xE9;sar" short-name="C&#xE9;sar" type="1" units="0" email="cesar.dumas@grenoble-inp.fr" note="" std-rate="0"/>
+    <resource id="2" name="Ana&#xEF;s" short-name="Ana&#xEF;s" type="1" units="0" email="anais.hadjazem@grenoble-inp.org" note="" std-rate="0"/>
+    <resource id="3" name="Cl&#xE9;ment" short-name="Cl&#xE9;ment" type="1" units="0" email="celement.vanhemelryck@grenoble-inp.fr" note="" std-rate="0"/>
+    <resource id="4" name="Th&#xE9;o" short-name="Th&#xE9;o" type="1" units="0" email="theo.cachet@grnoble-inp.org" note="" std-rate="0"/>
+    <resource id="5" name="Lucas" short-name="Lucas" type="1" units="0" email="lucas.grellier@grenoble-inp.org" note="" std-rate="0"/>
+  </resources>
+  <allocations>
+    <allocation task-id="11" resource-id="1" units="20"/>
+    <allocation task-id="8" resource-id="1" units="40"/>
+    <allocation task-id="4" resource-id="1" units="50"/>
+    <allocation task-id="11" resource-id="2" units="20"/>
+    <allocation task-id="3" resource-id="2" units="100"/>
+    <allocation task-id="2" resource-id="2" units="100"/>
+    <allocation task-id="1" resource-id="2" units="50"/>
+    <allocation task-id="11" resource-id="3" units="20"/>
+    <allocation task-id="9" resource-id="3" units="100"/>
+    <allocation task-id="8" resource-id="3" units="60"/>
+    <allocation task-id="4" resource-id="3" units="50"/>
+    <allocation task-id="11" resource-id="4" units="20"/>
+    <allocation task-id="7" resource-id="4" units="100"/>
+    <allocation task-id="1" resource-id="4" units="50"/>
+    <allocation task-id="11" resource-id="5" units="20"/>
+    <allocation task-id="10" resource-id="5" units="100"/>
+    <allocation task-id="6" resource-id="5" units="100"/>
+    <allocation task-id="5" resource-id="5" units="100"/>
+  </allocations>
+</project>

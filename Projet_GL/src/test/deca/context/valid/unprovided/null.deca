@@ -1,0 +1,15 @@
+// Description:
+//    Mise en jeu de null
+//
+// Resultats:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 24/01/2018
+
+{
+	int a;
+	if (a == null){
+	   println("");
+	}
+}

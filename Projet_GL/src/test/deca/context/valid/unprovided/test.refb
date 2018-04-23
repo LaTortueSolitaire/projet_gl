@@ -1,0 +1,96 @@
+`> [1, 0] Program
+   +> [1, 0] ListDeclClass [List with 1 elements]
+   |  []> [1, 0] DeclClass
+   |      +> [1, 6] Identifier (A)
+   |      |  definition: type defined at [1, 0], type=A
+   |      +> [1, 7] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [3, 4] DeclMethod
+   |      |      +> [3, 4] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [3, 9] Identifier (calc)
+   |      |      |  definition: method defined at [3, 4], type=void
+   |      |      +> [3, 14] ListDeclParam [List with 1 elements]
+   |      |      |  []> [3, 14] DeclParam
+   |      |      |      +> [3, 14] Identifier (int)
+   |      |      |      |  definition: type (builtin), type=int
+   |      |      |      `> [3, 18] Identifier (i)
+   |      |      |         definition: parameter defined at [3, 14], type=int
+   |      |      +> [4, 8] ListDeclVar [List with 0 elements]
+   |      |      `> [4, 8] ListInst [List with 1 elements]
+   |      |         []> [4, 8] Assign
+   |      |             type: int
+   |      |             +> [4, 8] Identifier (x)
+   |      |             |  definition: field defined at [2, 8], type=int
+   |      |             `> [4, 12] Plus
+   |      |                type: int
+   |      |                +> [4, 12] Identifier (x)
+   |      |                |  definition: field defined at [2, 8], type=int
+   |      |                `> [4, 16] Identifier (i)
+   |      |                   definition: parameter defined at [3, 14], type=int
+   |      `> ListFieldSet [List with 1 elements]
+   |         []> [2, 4] DeclFieldSet
+   |             +> [2, 4] Identifier (int)
+   |             |  definition: type (builtin), type=int
+   |             `> ListFields [List with 1 elements]
+   |                []> [2, 8] DeclFields
+   |                    +> [2, 8] Identifier (x)
+   |                    |  definition: field defined at [2, 8], type=int
+   |                    `> [2, 8] Initialization
+   |                       `> [2, 10] Int (2)
+   |                          type: int
+   `> [9, 0] Main
+      +> [10, 2] ListDeclVar [List with 2 elements]
+      |  []> [10, 4] DeclVar
+      |  ||  +> [10, 2] Identifier (A)
+      |  ||  |  definition: type defined at [1, 0], type=A
+      |  ||  +> [10, 4] Identifier (p1)
+      |  ||  |  definition: variable defined at [10, 4], type=A
+      |  ||  `> [10, 4] NoInitialization
+      |  []> [11, 4] DeclVar
+      |      +> [11, 2] Identifier (A)
+      |      |  definition: type defined at [1, 0], type=A
+      |      +> [11, 4] Identifier (p2)
+      |      |  definition: variable defined at [11, 4], type=A
+      |      `> [11, 4] NoInitialization
+      `> [13, 2] ListInst [List with 5 elements]
+         []> [13, 2] Assign
+         ||  type: A
+         ||  +> [13, 2] Identifier (p1)
+         ||  |  definition: variable defined at [10, 4], type=A
+         ||  `> [13, 7] New
+         ||     type: A
+         ||     `> [13, 11] Identifier (A)
+         ||        definition: type defined at [1, 0], type=A
+         []> [14, 2] MethodCall (Identifier (p1),Identifier (calc))
+         ||  type: void
+         ||  +> [14, 2] Identifier (p1)
+         ||  |  definition: variable defined at [10, 4], type=A
+         ||  +> Identifier (calc)
+         ||  |  definition: method defined at [3, 4], type=void
+         ||  `> [14, 10] ListExpr [List with 1 elements]
+         ||     []> [14, 10] Int (3)
+         ||         type: int
+         []> [16, 1] Assign
+         ||  type: A
+         ||  +> [16, 1] Identifier (p2)
+         ||  |  definition: variable defined at [11, 4], type=A
+         ||  `> [16, 6] Identifier (p1)
+         ||     definition: variable defined at [10, 4], type=A
+         []> [17, 2] Println
+         ||  `> [17, 10] ListExpr [List with 1 elements]
+         ||     []> [17, 10] Selection Attribut
+         ||         type: int
+         ||         +> [17, 10] Identifier (p1)
+         ||         |  definition: variable defined at [10, 4], type=A
+         ||         `> [17, 13] Identifier (x)
+         ||            definition: field defined at [2, 8], type=int
+         []> [18, 2] Println
+             `> [18, 10] ListExpr [List with 1 elements]
+                []> [18, 10] Selection Attribut
+                    type: int
+                    +> [18, 10] Identifier (p2)
+                    |  definition: variable defined at [11, 4], type=A
+                    `> [18, 13] Identifier (x)
+                       definition: field defined at [2, 8], type=int

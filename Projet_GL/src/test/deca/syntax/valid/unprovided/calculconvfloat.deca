@@ -1,0 +1,21 @@
+{   
+//OK MAIS A GERER LE DIV POUR CONV FLOAT PAR O
+	float x = 2;
+	float y = 2.0;
+	float z = 2.0F;
+	float a = 4;
+	float b = 4.0;
+	float c = 4.0f;
+	println(x/a);
+	println(y/a);
+	println(z/a);
+	println(x/b);
+	println(y/b);
+	println(z/b);
+	println(x/c);
+	println(y/c);
+	println(z/c);
+	println(x/4);
+	println(y/4);
+	println(z/4);
+}

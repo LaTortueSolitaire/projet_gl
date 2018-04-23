@@ -1,0 +1,9 @@
+// Description: test modulo
+// Resultat attendu: 0
+//
+
+{
+    int x = 234152;
+    x = x % 2;
+    println(x);
+}

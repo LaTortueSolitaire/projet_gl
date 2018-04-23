@@ -1,0 +1,107 @@
+`> [6, 0] Program
+   +> [6, 0] ListDeclClass [List with 0 elements]
+   `> [6, 0] Main
+      +> [7, 1] ListDeclVar [List with 3 elements]
+      |  []> [7, 5] DeclVar
+      |  ||  +> [7, 1] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [7, 5] Identifier (x)
+      |  ||  |  definition: variable defined at [7, 5], type=int
+      |  ||  `> [7, 5] Initialization
+      |  ||     `> [7, 9] Int (1)
+      |  ||        type: int
+      |  []> [8, 5] DeclVar
+      |  ||  +> [8, 1] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [8, 5] Identifier (y)
+      |  ||  |  definition: variable defined at [8, 5], type=int
+      |  ||  `> [8, 5] Initialization
+      |  ||     `> [8, 9] Int (2)
+      |  ||        type: int
+      |  []> [9, 5] DeclVar
+      |      +> [9, 1] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [9, 5] Identifier (z)
+      |      |  definition: variable defined at [9, 5], type=int
+      |      `> [9, 5] NoInitialization
+      `> [10, 1] ListInst [List with 4 elements]
+         []> [10, 1] Assign
+         ||  type: int
+         ||  +> [10, 1] Identifier (z)
+         ||  |  definition: variable defined at [9, 5], type=int
+         ||  `> [10, 5] Minus
+         ||     type: int
+         ||     +> [10, 5] Plus
+         ||     |  type: int
+         ||     |  +> [10, 5] Plus
+         ||     |  |  type: int
+         ||     |  |  +> [10, 5] Modulo
+         ||     |  |  |  type: int
+         ||     |  |  |  +> [10, 5] Int (12)
+         ||     |  |  |  |  type: int
+         ||     |  |  |  `> [10, 8] Int (3)
+         ||     |  |  |     type: int
+         ||     |  |  `> [10, 12] Divide
+         ||     |  |     type: int
+         ||     |  |     +> [10, 13] Multiply
+         ||     |  |     |  type: int
+         ||     |  |     |  +> [10, 13] Int (3)
+         ||     |  |     |  |  type: int
+         ||     |  |     |  `> [10, 15] Int (5)
+         ||     |  |     |     type: int
+         ||     |  |     `> [10, 17] Int (2)
+         ||     |  |        type: int
+         ||     |  `> [10, 22] Int (11)
+         ||     |     type: int
+         ||     `> [10, 27] Multiply
+         ||        type: int
+         ||        +> [10, 27] Multiply
+         ||        |  type: int
+         ||        |  +> [10, 27] Multiply
+         ||        |  |  type: int
+         ||        |  |  +> [10, 27] Multiply
+         ||        |  |  |  type: int
+         ||        |  |  |  +> [10, 27] Int (2)
+         ||        |  |  |  |  type: int
+         ||        |  |  |  `> [10, 29] Minus
+         ||        |  |  |     type: int
+         ||        |  |  |     +> [10, 30] Identifier (x)
+         ||        |  |  |     |  definition: variable defined at [7, 5], type=int
+         ||        |  |  |     `> [10, 34] Int (3)
+         ||        |  |  |        type: int
+         ||        |  |  `> [10, 39] Identifier (y)
+         ||        |  |     definition: variable defined at [8, 5], type=int
+         ||        |  `> [10, 43] Minus
+         ||        |     type: int
+         ||        |     +> [10, 44] Int (8)
+         ||        |     |  type: int
+         ||        |     `> [10, 48] Int (6)
+         ||        |        type: int
+         ||        `> [10, 53] Int (4)
+         ||           type: int
+         []> [11, 1] Println
+         ||  `> [11, 9] ListExpr [List with 1 elements]
+         ||     []> [11, 9] Identifier (z)
+         ||         definition: variable defined at [9, 5], type=int
+         []> [12, 1] Assign
+         ||  type: int
+         ||  +> [12, 1] Identifier (z)
+         ||  |  definition: variable defined at [9, 5], type=int
+         ||  `> [12, 5] Divide
+         ||     type: int
+         ||     +> [12, 5] Identifier (z)
+         ||     |  definition: variable defined at [9, 5], type=int
+         ||     `> [12, 8] Plus
+         ||        type: int
+         ||        +> [12, 9] Int (2)
+         ||        |  type: int
+         ||        `> [12, 12] Divide
+         ||           type: int
+         ||           +> [12, 12] Int (4)
+         ||           |  type: int
+         ||           `> [12, 14] Int (2)
+         ||              type: int
+         []> [13, 1] Println
+             `> [13, 9] ListExpr [List with 1 elements]
+                []> [13, 9] Identifier (z)
+                    definition: variable defined at [9, 5], type=int

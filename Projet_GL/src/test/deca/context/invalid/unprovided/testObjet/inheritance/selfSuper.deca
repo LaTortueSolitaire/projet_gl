@@ -1,0 +1,11 @@
+// Description:
+//    Déclaration d'une class héritant de int
+//
+// Resultat: Ligne 10
+//    ContextualError : Class cannot inherit from litteral type
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A extends A{
+}

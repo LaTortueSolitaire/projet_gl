@@ -1,0 +1,13 @@
+// test sur les divisions
+// Resultat
+// 2
+//OK
+
+{
+int x = 600/(10/2)/12/(2+3) ;
+float f = 2.0 + 1.0 + (5.0 - 2.0);
+float z = f / 1.0;
+println(x);
+
+
+}

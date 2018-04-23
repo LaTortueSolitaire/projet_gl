@@ -1,0 +1,25 @@
+// Test avec un champ de type classe A dans la classe B
+// Resultat : 
+// A
+// B
+//OK
+
+class A {
+	void monPrint() {
+		println("A");
+	}
+}
+
+class B {
+	A a = new A();
+
+	void monPrint() {
+		a.monPrint();
+		println("B");
+	}
+}
+
+{
+	B b = new B();
+	b.monPrint();
+}

@@ -1,0 +1,31 @@
+// Description:
+//   
+//
+// Resultats:
+//    Ligne :
+// 
+// Historique:
+//    cree le 13/01/2018
+
+class MaClasse {
+      protected int x;
+      
+      int getX() {
+      	     return x;
+      }
+
+      void setMultipleX(int n){
+      	   x = n*x;
+      }
+}
+
+class MaClasse2 extends MaClasse {
+
+      void setMultipleX(int n){
+	x = n*n*x;  
+      }
+
+      int coucou(int a){
+      	  print("coucou");
+      }
+}

@@ -1,0 +1,15 @@
+// Description: Test inégalités
+// Resultat attendu: ok
+
+{
+    if( 12 != 1 ){
+        print("Ok");
+    }else{
+        print("Raté !");
+    }
+
+    if(3 != 3){
+        print("Raté !");
+    }
+
+}

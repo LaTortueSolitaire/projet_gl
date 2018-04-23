@@ -1,0 +1,45 @@
+`> [8, 0] Program
+   +> [8, 0] ListDeclClass [List with 0 elements]
+   `> [8, 0] Main
+      +> [9, 4] ListDeclVar [List with 2 elements]
+      |  []> [9, 8] DeclVar
+      |  ||  +> [9, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [9, 8] Identifier (x)
+      |  ||  |  definition: variable defined at [9, 8], type=int
+      |  ||  `> [9, 8] NoInitialization
+      |  []> [9, 11] DeclVar
+      |      +> [9, 4] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [9, 11] Identifier (y)
+      |      |  definition: variable defined at [9, 11], type=int
+      |      `> [9, 11] Initialization
+      |         `> [9, 15] Int (1)
+      |            type: int
+      `> [10, 4] ListInst [List with 2 elements]
+         []> [10, 4] While
+         ||  +> [10, 11] NotEquals
+         ||  |  type: boolean
+         ||  |  +> [10, 11] Identifier (x)
+         ||  |  |  definition: variable defined at [9, 8], type=int
+         ||  |  `> [10, 16] Int (3)
+         ||  |     type: int
+         ||  `> [12, 8] ListInst [List with 2 elements]
+         ||     []> [11, 8] Println
+         ||     ||  `> [11, 16] ListExpr [List with 1 elements]
+         ||     ||     []> [11, 16] Identifier (x)
+         ||     ||         definition: variable defined at [9, 8], type=int
+         ||     []> [12, 8] Assign
+         ||         type: int
+         ||         +> [12, 8] Identifier (x)
+         ||         |  definition: variable defined at [9, 8], type=int
+         ||         `> [12, 12] Plus
+         ||            type: int
+         ||            +> [12, 12] Identifier (x)
+         ||            |  definition: variable defined at [9, 8], type=int
+         ||            `> [12, 15] Int (1)
+         ||               type: int
+         []> [14, 4] Println
+             `> [14, 12] ListExpr [List with 1 elements]
+                []> [14, 12] Identifier (y)
+                    definition: variable defined at [9, 11], type=int

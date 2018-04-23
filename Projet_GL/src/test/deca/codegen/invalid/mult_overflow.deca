@@ -1,0 +1,5 @@
+// Overflow dans la multiplication
+{
+    float b = 3.2 * 25234623563457634563.1234;
+    b = b*b*b*b*b;
+}

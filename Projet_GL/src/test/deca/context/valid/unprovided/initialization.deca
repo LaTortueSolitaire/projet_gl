@@ -1,0 +1,15 @@
+// Description:
+//    Diverses initialisations
+//
+// Resultats:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 13/01/2018
+{   
+   int i = 1;
+   float x1 = 1.0;
+   float x2 = 1;   //Intervention de ConvFloat
+   string s = "1";
+   boolean b = true;
+}

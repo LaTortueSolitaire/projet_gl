@@ -1,0 +1,172 @@
+`> [1, 0] Program
+   +> [1, 0] ListDeclClass [List with 1 elements]
+   |  []> [1, 0] DeclClass
+   |      +> [1, 6] Identifier (A)
+   |      |  definition: type defined at [1, 0], type=A
+   |      +> [1, 8] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 3 elements]
+   |      |  []> [5, 1] DeclMethod
+   |      |  ||  +> [5, 1] Identifier (void)
+   |      |  ||  |  definition: type (builtin), type=void
+   |      |  ||  +> [5, 6] Identifier (incrX)
+   |      |  ||  |  definition: method defined at [5, 1], type=void
+   |      |  ||  +> ListDeclParam [List with 0 elements]
+   |      |  ||  +> [6, 2] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [6, 2] ListInst [List with 1 elements]
+   |      |  ||     []> [6, 2] IfThenElse
+   |      |  ||         +> [6, 6] Identifier (b)
+   |      |  ||         |  definition: field defined at [3, 9], type=boolean
+   |      |  ||         +> [7, 3] ListInst [List with 1 elements]
+   |      |  ||         |  []> [7, 3] Assign
+   |      |  ||         |      type: int
+   |      |  ||         |      +> [7, 3] Identifier (x)
+   |      |  ||         |      |  definition: field defined at [2, 5], type=int
+   |      |  ||         |      `> [7, 7] Plus
+   |      |  ||         |         type: int
+   |      |  ||         |         +> [7, 7] Identifier (x)
+   |      |  ||         |         |  definition: field defined at [2, 5], type=int
+   |      |  ||         |         `> [7, 11] Int (1)
+   |      |  ||         |            type: int
+   |      |  ||         `> ListInst [List with 0 elements]
+   |      |  []> [11, 1] DeclMethod
+   |      |  ||  +> [11, 1] Identifier (int)
+   |      |  ||  |  definition: type (builtin), type=int
+   |      |  ||  +> [11, 5] Identifier (getX)
+   |      |  ||  |  definition: method defined at [11, 1], type=int
+   |      |  ||  +> ListDeclParam [List with 0 elements]
+   |      |  ||  +> [12, 2] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [12, 2] ListInst [List with 1 elements]
+   |      |  ||     []> [12, 2] Return
+   |      |  ||         `> [12, 9] Identifier (x)
+   |      |  ||            definition: field defined at [2, 5], type=int
+   |      |  []> [15, 1] DeclMethod
+   |      |      +> [15, 1] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [15, 6] Identifier (setB)
+   |      |      |  definition: method defined at [15, 1], type=void
+   |      |      +> ListDeclParam [List with 0 elements]
+   |      |      +> [16, 2] ListDeclVar [List with 0 elements]
+   |      |      `> [16, 2] ListInst [List with 1 elements]
+   |      |         []> [16, 2] Assign
+   |      |             type: boolean
+   |      |             +> [16, 2] Identifier (b)
+   |      |             |  definition: field defined at [3, 9], type=boolean
+   |      |             `> [16, 6] BooleanLiteral (false)
+   |      |                type: boolean
+   |      `> ListFieldSet [List with 2 elements]
+   |         []> [2, 1] DeclFieldSet
+   |         ||  +> [2, 1] Identifier (int)
+   |         ||  |  definition: type (builtin), type=int
+   |         ||  `> ListFields [List with 1 elements]
+   |         ||     []> [2, 5] DeclFields
+   |         ||         +> [2, 5] Identifier (x)
+   |         ||         |  definition: field defined at [2, 5], type=int
+   |         ||         `> [2, 5] Initialization
+   |         ||            `> [2, 9] Int (1)
+   |         ||               type: int
+   |         []> [3, 1] DeclFieldSet
+   |             +> [3, 1] Identifier (boolean)
+   |             |  definition: type (builtin), type=boolean
+   |             `> ListFields [List with 1 elements]
+   |                []> [3, 9] DeclFields
+   |                    +> [3, 9] Identifier (b)
+   |                    |  definition: field defined at [3, 9], type=boolean
+   |                    `> [3, 9] Initialization
+   |                       `> [3, 13] BooleanLiteral (true)
+   |                          type: boolean
+   `> [20, 0] Main
+      +> [21, 1] ListDeclVar [List with 1 elements]
+      |  []> [21, 3] DeclVar
+      |      +> [21, 1] Identifier (A)
+      |      |  definition: type defined at [1, 0], type=A
+      |      +> [21, 3] Identifier (a)
+      |      |  definition: variable defined at [21, 3], type=A
+      |      `> [21, 3] Initialization
+      |         `> [21, 7] New
+      |            type: A
+      |            `> [21, 11] Identifier (A)
+      |               definition: type defined at [1, 0], type=A
+      `> [22, 1] ListInst [List with 8 elements]
+         []> [22, 1] Println
+         ||  `> [22, 9] ListExpr [List with 1 elements]
+         ||     []> [22, 9] MethodCall (Identifier (a),Identifier (getX))
+         ||         type: int
+         ||         +> [22, 9] Identifier (a)
+         ||         |  definition: variable defined at [21, 3], type=A
+         ||         +> Identifier (getX)
+         ||         |  definition: method defined at [11, 1], type=int
+         ||         `> ListExpr [List with 0 elements]
+         []> [23, 1] IfThenElse
+         ||  +> [23, 4] Equals
+         ||  |  type: boolean
+         ||  |  +> [23, 4] Selection Attribut
+         ||  |  |  type: int
+         ||  |  |  +> [23, 4] Identifier (a)
+         ||  |  |  |  definition: variable defined at [21, 3], type=A
+         ||  |  |  `> [23, 6] Identifier (x)
+         ||  |  |     definition: field defined at [2, 5], type=int
+         ||  |  `> [23, 10] Int (1)
+         ||  |     type: int
+         ||  +> [24, 2] ListInst [List with 1 elements]
+         ||  |  []> [24, 2] Println
+         ||  |      `> [24, 10] ListExpr [List with 1 elements]
+         ||  |         []> [24, 10] StringLiteral ("c'est bon pour les int")
+         ||  |             type: string
+         ||  `> ListInst [List with 0 elements]
+         []> [26, 1] MethodCall (Identifier (a),Identifier (incrX))
+         ||  type: void
+         ||  +> [26, 1] Identifier (a)
+         ||  |  definition: variable defined at [21, 3], type=A
+         ||  +> Identifier (incrX)
+         ||  |  definition: method defined at [5, 1], type=void
+         ||  `> ListExpr [List with 0 elements]
+         []> [27, 1] Println
+         ||  `> [27, 9] ListExpr [List with 1 elements]
+         ||     []> [27, 9] MethodCall (Identifier (a),Identifier (getX))
+         ||         type: int
+         ||         +> [27, 9] Identifier (a)
+         ||         |  definition: variable defined at [21, 3], type=A
+         ||         +> Identifier (getX)
+         ||         |  definition: method defined at [11, 1], type=int
+         ||         `> ListExpr [List with 0 elements]
+         []> [28, 1] MethodCall (Identifier (a),Identifier (setB))
+         ||  type: void
+         ||  +> [28, 1] Identifier (a)
+         ||  |  definition: variable defined at [21, 3], type=A
+         ||  +> Identifier (setB)
+         ||  |  definition: method defined at [15, 1], type=void
+         ||  `> ListExpr [List with 0 elements]
+         []> [29, 1] IfThenElse
+         ||  +> [29, 4] Selection Attribut
+         ||  |  type: boolean
+         ||  |  +> [29, 4] Identifier (a)
+         ||  |  |  definition: variable defined at [21, 3], type=A
+         ||  |  `> [29, 6] Identifier (b)
+         ||  |     definition: field defined at [3, 9], type=boolean
+         ||  +> [30, 2] ListInst [List with 1 elements]
+         ||  |  []> [30, 2] Println
+         ||  |      `> [30, 10] ListExpr [List with 1 elements]
+         ||  |         []> [30, 10] StringLiteral ("b est true")
+         ||  |             type: string
+         ||  `> ListInst [List with 1 elements]
+         ||     []> [33, 2] Println
+         ||         `> [33, 10] ListExpr [List with 1 elements]
+         ||            []> [33, 10] StringLiteral ("b est false")
+         ||                type: string
+         []> [35, 1] MethodCall (Identifier (a),Identifier (incrX))
+         ||  type: void
+         ||  +> [35, 1] Identifier (a)
+         ||  |  definition: variable defined at [21, 3], type=A
+         ||  +> Identifier (incrX)
+         ||  |  definition: method defined at [5, 1], type=void
+         ||  `> ListExpr [List with 0 elements]
+         []> [36, 1] Println
+             `> [36, 9] ListExpr [List with 1 elements]
+                []> [36, 9] MethodCall (Identifier (a),Identifier (getX))
+                    type: int
+                    +> [36, 9] Identifier (a)
+                    |  definition: variable defined at [21, 3], type=A
+                    +> Identifier (getX)
+                    |  definition: method defined at [11, 1], type=int
+                    `> ListExpr [List with 0 elements]

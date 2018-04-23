@@ -1,0 +1,35 @@
+// Test de l'utilisation d'une methode héritée
+// Resultat : hehehe
+//						a : 1:
+// OK
+
+
+class A {
+	int a =1 ;
+
+	void monPrint() {
+		println(a);
+	}
+
+	void monDeuxiemePrint() {
+		println("a : ", a);
+	}
+}
+
+class B extends A {
+	int a = 6;
+
+	void monPrint() {
+		println("hehehe");
+	}
+
+	// void monDeuxiemePrint() {
+	// 	println("a : ", a);
+	// }
+}
+
+{
+	B b = new B();
+	b.monPrint();
+	b.monDeuxiemePrint();
+}

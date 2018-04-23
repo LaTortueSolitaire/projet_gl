@@ -1,0 +1,238 @@
+`> [9, 0] Program
+   +> [9, 0] ListDeclClass [List with 1 elements]
+   |  []> [9, 0] DeclClass
+   |      +> [9, 6] Identifier (PGCD)
+   |      |  definition: type defined at [9, 0], type=PGCD
+   |      +> [9, 10] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 5 elements]
+   |      |  []> [13, 6] DeclMethod
+   |      |  ||  +> [13, 6] Identifier (void)
+   |      |  ||  |  definition: type (builtin), type=void
+   |      |  ||  +> [13, 11] Identifier (setA)
+   |      |  ||  |  definition: method defined at [13, 6], type=void
+   |      |  ||  +> [13, 16] ListDeclParam [List with 1 elements]
+   |      |  ||  |  []> [13, 16] DeclParam
+   |      |  ||  |      +> [13, 16] Identifier (int)
+   |      |  ||  |      |  definition: type (builtin), type=int
+   |      |  ||  |      `> [13, 20] Identifier (a)
+   |      |  ||  |         definition: parameter defined at [13, 16], type=int
+   |      |  ||  +> [14, 10] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [14, 10] ListInst [List with 1 elements]
+   |      |  ||     []> [14, 10] Assign
+   |      |  ||         type: int
+   |      |  ||         +> [14, 10] Selection Attribut
+   |      |  ||         |  type: int
+   |      |  ||         |  +> [14, 10] This
+   |      |  ||         |  |  type: PGCD
+   |      |  ||         |  `> [14, 15] Identifier (a)
+   |      |  ||         |     definition: field defined at [10, 20], type=int
+   |      |  ||         `> [14, 19] Identifier (a)
+   |      |  ||            definition: parameter defined at [13, 16], type=int
+   |      |  []> [17, 6] DeclMethod
+   |      |  ||  +> [17, 6] Identifier (int)
+   |      |  ||  |  definition: type (builtin), type=int
+   |      |  ||  +> [17, 10] Identifier (getA)
+   |      |  ||  |  definition: method defined at [17, 6], type=int
+   |      |  ||  +> ListDeclParam [List with 0 elements]
+   |      |  ||  +> [18, 9] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [18, 9] ListInst [List with 1 elements]
+   |      |  ||     []> [18, 9] Return
+   |      |  ||         `> [18, 16] Identifier (a)
+   |      |  ||            definition: field defined at [10, 20], type=int
+   |      |  []> [21, 6] DeclMethod
+   |      |  ||  +> [21, 6] Identifier (void)
+   |      |  ||  |  definition: type (builtin), type=void
+   |      |  ||  +> [21, 11] Identifier (setB)
+   |      |  ||  |  definition: method defined at [21, 6], type=void
+   |      |  ||  +> [21, 16] ListDeclParam [List with 1 elements]
+   |      |  ||  |  []> [21, 16] DeclParam
+   |      |  ||  |      +> [21, 16] Identifier (int)
+   |      |  ||  |      |  definition: type (builtin), type=int
+   |      |  ||  |      `> [21, 20] Identifier (b)
+   |      |  ||  |         definition: parameter defined at [21, 16], type=int
+   |      |  ||  +> [22, 10] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [22, 10] ListInst [List with 1 elements]
+   |      |  ||     []> [22, 10] Assign
+   |      |  ||         type: int
+   |      |  ||         +> [22, 10] Selection Attribut
+   |      |  ||         |  type: int
+   |      |  ||         |  +> [22, 10] This
+   |      |  ||         |  |  type: PGCD
+   |      |  ||         |  `> [22, 15] Identifier (b)
+   |      |  ||         |     definition: field defined at [11, 20], type=int
+   |      |  ||         `> [22, 19] Identifier (b)
+   |      |  ||            definition: parameter defined at [21, 16], type=int
+   |      |  []> [25, 6] DeclMethod
+   |      |  ||  +> [25, 6] Identifier (int)
+   |      |  ||  |  definition: type (builtin), type=int
+   |      |  ||  +> [25, 10] Identifier (getB)
+   |      |  ||  |  definition: method defined at [25, 6], type=int
+   |      |  ||  +> ListDeclParam [List with 0 elements]
+   |      |  ||  +> [26, 9] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [26, 9] ListInst [List with 1 elements]
+   |      |  ||     []> [26, 9] Return
+   |      |  ||         `> [26, 16] Identifier (b)
+   |      |  ||            definition: field defined at [11, 20], type=int
+   |      |  []> [29, 6] DeclMethod
+   |      |      +> [29, 6] Identifier (int)
+   |      |      |  definition: type (builtin), type=int
+   |      |      +> [29, 10] Identifier (calcPGCD)
+   |      |      |  definition: method defined at [29, 6], type=int
+   |      |      +> ListDeclParam [List with 0 elements]
+   |      |      +> [30, 7] ListDeclVar [List with 3 elements]
+   |      |      |  []> [30, 11] DeclVar
+   |      |      |  ||  +> [30, 7] Identifier (int)
+   |      |      |  ||  |  definition: type (builtin), type=int
+   |      |      |  ||  +> [30, 11] Identifier (a)
+   |      |      |  ||  |  definition: variable defined at [30, 11], type=int
+   |      |      |  ||  `> [30, 11] Initialization
+   |      |      |  ||     `> [30, 15] Selection Attribut
+   |      |      |  ||        type: int
+   |      |      |  ||        +> [30, 15] This
+   |      |      |  ||        |  type: PGCD
+   |      |      |  ||        `> [30, 20] Identifier (a)
+   |      |      |  ||           definition: field defined at [10, 20], type=int
+   |      |      |  []> [31, 5] DeclVar
+   |      |      |  ||  +> [31, 1] Identifier (int)
+   |      |      |  ||  |  definition: type (builtin), type=int
+   |      |      |  ||  +> [31, 5] Identifier (b)
+   |      |      |  ||  |  definition: variable defined at [31, 5], type=int
+   |      |      |  ||  `> [31, 5] Initialization
+   |      |      |  ||     `> [31, 9] Selection Attribut
+   |      |      |  ||        type: int
+   |      |      |  ||        +> [31, 9] This
+   |      |      |  ||        |  type: PGCD
+   |      |      |  ||        `> [31, 14] Identifier (b)
+   |      |      |  ||           definition: field defined at [11, 20], type=int
+   |      |      |  []> [32, 5] DeclVar
+   |      |      |      +> [32, 1] Identifier (int)
+   |      |      |      |  definition: type (builtin), type=int
+   |      |      |      +> [32, 5] Identifier (c)
+   |      |      |      |  definition: variable defined at [32, 5], type=int
+   |      |      |      `> [32, 5] Initialization
+   |      |      |         `> [32, 9] Int (1)
+   |      |      |            type: int
+   |      |      `> [33, 1] ListInst [List with 2 elements]
+   |      |         []> [33, 1] While
+   |      |         ||  +> [33, 8] NotEquals
+   |      |         ||  |  type: boolean
+   |      |         ||  |  +> [33, 8] Identifier (c)
+   |      |         ||  |  |  definition: variable defined at [32, 5], type=int
+   |      |         ||  |  `> [33, 13] Int (0)
+   |      |         ||  |     type: int
+   |      |         ||  `> [36, 7] ListInst [List with 3 elements]
+   |      |         ||     []> [34, 7] Assign
+   |      |         ||     ||  type: int
+   |      |         ||     ||  +> [34, 7] Identifier (c)
+   |      |         ||     ||  |  definition: variable defined at [32, 5], type=int
+   |      |         ||     ||  `> [34, 11] Modulo
+   |      |         ||     ||     type: int
+   |      |         ||     ||     +> [34, 11] Identifier (a)
+   |      |         ||     ||     |  definition: variable defined at [30, 11], type=int
+   |      |         ||     ||     `> [34, 13] Identifier (b)
+   |      |         ||     ||        definition: variable defined at [31, 5], type=int
+   |      |         ||     []> [35, 7] Assign
+   |      |         ||     ||  type: int
+   |      |         ||     ||  +> [35, 7] Identifier (a)
+   |      |         ||     ||  |  definition: variable defined at [30, 11], type=int
+   |      |         ||     ||  `> [35, 11] Identifier (b)
+   |      |         ||     ||     definition: variable defined at [31, 5], type=int
+   |      |         ||     []> [36, 7] Assign
+   |      |         ||         type: int
+   |      |         ||         +> [36, 7] Identifier (b)
+   |      |         ||         |  definition: variable defined at [31, 5], type=int
+   |      |         ||         `> [36, 11] Identifier (c)
+   |      |         ||            definition: variable defined at [32, 5], type=int
+   |      |         []> [38, 1] Return
+   |      |             `> [38, 8] Identifier (a)
+   |      |                definition: variable defined at [30, 11], type=int
+   |      `> ListFieldSet [List with 2 elements]
+   |         []> [10, 6] DeclFieldSet
+   |         ||  +> [10, 16] Identifier (int)
+   |         ||  |  definition: type (builtin), type=int
+   |         ||  `> ListFields [List with 1 elements]
+   |         ||     []> [10, 20] DeclFields
+   |         ||         +> [10, 20] Identifier (a)
+   |         ||         |  definition: field defined at [10, 20], type=int
+   |         ||         `> [10, 20] NoInitialization
+   |         []> [11, 6] DeclFieldSet
+   |             +> [11, 16] Identifier (int)
+   |             |  definition: type (builtin), type=int
+   |             `> ListFields [List with 1 elements]
+   |                []> [11, 20] DeclFields
+   |                    +> [11, 20] Identifier (b)
+   |                    |  definition: field defined at [11, 20], type=int
+   |                    `> [11, 20] NoInitialization
+   `> [41, 0] Main
+      +> [42, 1] ListDeclVar [List with 2 elements]
+      |  []> [42, 6] DeclVar
+      |  ||  +> [42, 1] Identifier (PGCD)
+      |  ||  |  definition: type defined at [9, 0], type=PGCD
+      |  ||  +> [42, 6] Identifier (p)
+      |  ||  |  definition: variable defined at [42, 6], type=PGCD
+      |  ||  `> [42, 6] Initialization
+      |  ||     `> [42, 10] New
+      |  ||        type: PGCD
+      |  ||        `> [42, 14] Identifier (PGCD)
+      |  ||           definition: type defined at [9, 0], type=PGCD
+      |  []> [43, 5] DeclVar
+      |      +> [43, 1] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [43, 5] Identifier (pgcd)
+      |      |  definition: variable defined at [43, 5], type=int
+      |      `> [43, 5] NoInitialization
+      `> [44, 1] ListInst [List with 4 elements]
+         []> [44, 1] MethodCall (Identifier (p),Identifier (setA))
+         ||  type: void
+         ||  +> [44, 1] Identifier (p)
+         ||  |  definition: variable defined at [42, 6], type=PGCD
+         ||  +> Identifier (setA)
+         ||  |  definition: method defined at [13, 6], type=void
+         ||  `> [44, 8] ListExpr [List with 1 elements]
+         ||     []> [44, 8] Int (123567891)
+         ||         type: int
+         []> [45, 1] MethodCall (Identifier (p),Identifier (setB))
+         ||  type: void
+         ||  +> [45, 1] Identifier (p)
+         ||  |  definition: variable defined at [42, 6], type=PGCD
+         ||  +> Identifier (setB)
+         ||  |  definition: method defined at [21, 6], type=void
+         ||  `> [45, 8] ListExpr [List with 1 elements]
+         ||     []> [45, 8] Int (46)
+         ||         type: int
+         []> [46, 1] Assign
+         ||  type: int
+         ||  +> [46, 1] Identifier (pgcd)
+         ||  |  definition: variable defined at [43, 5], type=int
+         ||  `> [46, 8] MethodCall (Identifier (p),Identifier (calcPGCD))
+         ||     type: int
+         ||     +> [46, 8] Identifier (p)
+         ||     |  definition: variable defined at [42, 6], type=PGCD
+         ||     +> Identifier (calcPGCD)
+         ||     |  definition: method defined at [29, 6], type=int
+         ||     `> ListExpr [List with 0 elements]
+         []> [47, 1] Println
+             `> [47, 62] ListExpr [List with 6 elements]
+                []> [47, 9] StringLiteral ("Le pgcd de ")
+                ||  type: string
+                []> [47, 24] MethodCall (Identifier (p),Identifier (getA))
+                ||  type: int
+                ||  +> [47, 24] Identifier (p)
+                ||  |  definition: variable defined at [42, 6], type=PGCD
+                ||  +> Identifier (getA)
+                ||  |  definition: method defined at [17, 6], type=int
+                ||  `> ListExpr [List with 0 elements]
+                []> [47, 34] StringLiteral (" et ")
+                ||  type: string
+                []> [47, 42] MethodCall (Identifier (p),Identifier (getB))
+                ||  type: int
+                ||  +> [47, 42] Identifier (p)
+                ||  |  definition: variable defined at [42, 6], type=PGCD
+                ||  +> Identifier (getB)
+                ||  |  definition: method defined at [25, 6], type=int
+                ||  `> ListExpr [List with 0 elements]
+                []> [47, 52] StringLiteral (" vaut ")
+                ||  type: string
+                []> [47, 62] Identifier (pgcd)
+                    definition: variable defined at [43, 5], type=int

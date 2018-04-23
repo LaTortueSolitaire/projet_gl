@@ -1,0 +1,27 @@
+{
+
+//OK
+	int a = 1;
+	float b = 2;
+	float d = 1.0;
+
+	boolean e = (a==d);
+
+	boolean f = (b==d);
+
+	boolean g = true;
+	boolean h = false;
+
+	if (a == d) {
+		println("ok");
+	}
+	if (b == d) {
+		println("no");
+	}
+	if (h) {
+		println("no");
+	}
+	if (h || g) {
+		println("ok");
+	}
+}

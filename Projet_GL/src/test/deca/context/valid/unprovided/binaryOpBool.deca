@@ -1,0 +1,21 @@
+// Description:
+//   Test des opérations binaires booléennes
+//
+// Resultats:
+//    Aucun erreur attendue
+// 
+// Historique:
+//    cree le 13/01/2018
+
+{
+	boolean a;
+	boolean b;
+
+	if (a && b){
+	      println("");   
+	}
+	else if (a || b){
+	     println("");   	
+	}
+	
+}

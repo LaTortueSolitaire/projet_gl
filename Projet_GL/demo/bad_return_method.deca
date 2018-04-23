@@ -1,0 +1,5 @@
+class A{
+  void badReturn(int x){
+    return x;
+  }
+}

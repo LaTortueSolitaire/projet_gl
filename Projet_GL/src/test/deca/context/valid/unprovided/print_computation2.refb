@@ -1,0 +1,27 @@
+`> [4, 0] Program
+   +> [4, 0] ListDeclClass [List with 0 elements]
+   `> [4, 0] Main
+      +> [5, 4] ListDeclVar [List with 0 elements]
+      `> [5, 4] ListInst [List with 3 elements]
+         []> [5, 4] Println
+         ||  `> [5, 12] ListExpr [List with 1 elements]
+         ||     []> [5, 12] Plus
+         ||         type: int
+         ||         +> [5, 12] Int (12)
+         ||         |  type: int
+         ||         `> [5, 18] UnaryMinus
+         ||            type: int
+         ||            `> [5, 18] Int (2)
+         ||               type: int
+         []> [6, 4] Println
+         ||  `> [6, 12] ListExpr [List with 1 elements]
+         ||     []> [6, 12] UnaryMinus
+         ||         type: int
+         ||         `> [6, 13] Int (2)
+         ||            type: int
+         []> [7, 4] Println
+             `> [7, 12] ListExpr [List with 1 elements]
+                []> [7, 12] UnaryMinus
+                    type: float
+                    `> [7, 13] Float (3.5)
+                       type: float

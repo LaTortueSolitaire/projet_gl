@@ -1,0 +1,10 @@
+// Test de la decompilation sur un simple if
+
+
+{
+	int i = 3;
+
+	if(i==3){
+		print("OK");
+	}
+}

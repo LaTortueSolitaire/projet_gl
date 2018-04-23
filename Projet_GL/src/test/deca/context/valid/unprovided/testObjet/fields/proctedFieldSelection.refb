@@ -1,0 +1,53 @@
+`> [10, 0] Program
+   +> [10, 0] ListDeclClass [List with 2 elements]
+   |  []> [10, 0] DeclClass
+   |  ||  +> [10, 6] Identifier (A)
+   |  ||  |  definition: type defined at [10, 0], type=A
+   |  ||  +> [10, 8] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 1 elements]
+   |  ||  |  []> [15, 6] DeclMethod
+   |  ||  |      +> [15, 6] Identifier (B)
+   |  ||  |      |  definition: type defined at [21, 0], type=B
+   |  ||  |      +> [15, 8] Identifier (newB)
+   |  ||  |      |  definition: method defined at [15, 6], type=B
+   |  ||  |      +> ListDeclParam [List with 0 elements]
+   |  ||  |      +> [16, 13] ListDeclVar [List with 1 elements]
+   |  ||  |      |  []> [16, 15] DeclVar
+   |  ||  |      |      +> [16, 13] Identifier (B)
+   |  ||  |      |      |  definition: type defined at [21, 0], type=B
+   |  ||  |      |      +> [16, 15] Identifier (b)
+   |  ||  |      |      |  definition: variable defined at [16, 15], type=B
+   |  ||  |      |      `> [16, 15] Initialization
+   |  ||  |      |         `> [16, 19] New
+   |  ||  |      |            type: B
+   |  ||  |      |            `> [16, 23] Identifier (B)
+   |  ||  |      |               definition: type defined at [21, 0], type=B
+   |  ||  |      `> [17, 6] ListInst [List with 1 elements]
+   |  ||  |         []> [17, 6] Assign
+   |  ||  |             type: int
+   |  ||  |             +> [17, 6] Selection Attribut
+   |  ||  |             |  type: int
+   |  ||  |             |  +> [17, 6] Identifier (b)
+   |  ||  |             |  |  definition: variable defined at [16, 15], type=B
+   |  ||  |             |  `> [17, 8] Identifier (x)
+   |  ||  |             |     definition: field defined at [12, 21], type=int
+   |  ||  |             `> [17, 12] Int (1)
+   |  ||  |                type: int
+   |  ||  `> ListFieldSet [List with 1 elements]
+   |  ||     []> [12, 7] DeclFieldSet
+   |  ||         +> [12, 17] Identifier (int)
+   |  ||         |  definition: type (builtin), type=int
+   |  ||         `> ListFields [List with 1 elements]
+   |  ||            []> [12, 21] DeclFields
+   |  ||                +> [12, 21] Identifier (x)
+   |  ||                |  definition: field defined at [12, 21], type=int
+   |  ||                `> [12, 21] NoInitialization
+   |  []> [21, 0] DeclClass
+   |      +> [21, 6] Identifier (B)
+   |      |  definition: type defined at [21, 0], type=B
+   |      +> [21, 8] Identifier (A)
+   |      |  definition: type defined at [10, 0], type=A
+   |      +> ListDeclMethod [List with 0 elements]
+   |      `> ListFieldSet [List with 0 elements]
+   `> EmptyMain

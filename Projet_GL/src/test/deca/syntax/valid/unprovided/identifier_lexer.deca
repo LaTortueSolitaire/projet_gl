@@ -1,0 +1,11 @@
+// Test des identifiers lexer
+
+salut
+_salut
+sa_lut
+$sa_lut
+$salut
+SALUT
+$Sd__LUT
+$5$_lut
+_55_LUT$

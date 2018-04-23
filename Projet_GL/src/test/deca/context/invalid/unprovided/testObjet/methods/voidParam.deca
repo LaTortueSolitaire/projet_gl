@@ -1,0 +1,13 @@
+// Description:
+//    Déclaration d'une méthode ayant un paramètre de type void
+//
+// Resultat: Ligne 11
+//    ContextualError : Unsupported type in method arguments: Parameter cannot be of type void
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+      void m(void x){
+      }
+}

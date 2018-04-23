@@ -1,0 +1,25 @@
+// Description:
+//    Déclaration d'une méthode ayant deux paramètres de même nom
+//
+// Resultat: Ligne 22
+//    ContextualError : Returned type of overriden method must be a subtype of the parent method return type
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+
+      int x;
+      
+      int getX(){
+      	  return x;
+      }
+}
+
+class B extends A{
+
+      	string getX(){
+              return "x";
+	}
+}
+		      

@@ -1,0 +1,15 @@
+// Description:
+//   Utilisation du this en RValue
+//
+// Resultat:
+//    Aucune erreur attendue
+// 
+// Historique:
+//    cree le 18/01/2018
+class A{
+      A parent;
+      
+      void grow(){
+      	   parent = this;
+      }
+}

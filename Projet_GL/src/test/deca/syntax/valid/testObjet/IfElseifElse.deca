@@ -1,0 +1,15 @@
+/* Test sur le cas de IfElseifElse
+Test de LT, GT*/
+
+{
+int x = 2;
+if (x < 2){
+  println("x est strictement inferieur a 2");
+}
+else if (x > 3){
+  return true;
+}
+else{
+  printx("je suis dans le else");
+}
+}

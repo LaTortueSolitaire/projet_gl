@@ -1,0 +1,10 @@
+// Description:
+//    Déclaration d'une méthode ayant deux paramètres de même nom
+//
+// Resultat: Ligne 10
+//    ContextualError : Undefined type
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class B extends A{}

@@ -1,0 +1,10 @@
+// Description: test while
+// Resultat attendu : 1471013
+
+{
+    int val = 1;
+    while(val < 15){
+        print(val);
+        val = val + 3;
+    }
+}

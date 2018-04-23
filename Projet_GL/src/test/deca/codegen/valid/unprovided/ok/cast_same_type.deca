@@ -1,0 +1,8 @@
+// Description: test cast of the same type
+// Resultat attendu: Ok
+
+{
+    float a = (float) (123.23);
+    int b = (int) (8);
+    print("Ok");
+}

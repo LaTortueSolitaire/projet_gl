@@ -1,0 +1,6 @@
+{
+	float x = 0000.000000e+1000;
+	float a = 0x0000.00000p00F;
+	float y = 0.0;
+	float z = 0;
+}

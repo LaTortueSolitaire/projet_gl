@@ -1,0 +1,12 @@
+// Test declaration simple
+// Resultat
+// 3 8.9000
+//OK
+
+{
+    int x=3;
+    float y=8.9;
+    boolean b = true || false;
+
+    println(x, " ", y);
+}

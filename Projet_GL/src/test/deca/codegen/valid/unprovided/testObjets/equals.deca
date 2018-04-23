@@ -1,0 +1,11 @@
+{
+	Object a = new Object();
+	Object b = new Object();
+
+	if (a.equals(a)) {
+		print("a est bien a");
+	}
+	if (a.equals(b)) {
+		print("a est b wtf");
+	}
+}

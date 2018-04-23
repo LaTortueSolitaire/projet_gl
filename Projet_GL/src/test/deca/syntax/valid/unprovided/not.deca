@@ -1,0 +1,19 @@
+// Description: test de not
+// Resultat attendu: Ok
+
+{
+    boolean bool1 = false;
+    boolean bool2 = true;
+
+    if( !bool1 ){
+        print("Ok");
+    }else{
+        print("Raté !");
+    }
+
+    if(!bool2){
+        print("Raté !");
+    }else{
+
+    }
+}

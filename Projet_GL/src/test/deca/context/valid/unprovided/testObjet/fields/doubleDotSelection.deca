@@ -1,0 +1,18 @@
+// Description:
+//   Utilisation de deux dot selection consécutives
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 24/01/2018
+class A{
+      int x;
+}
+class B{
+      A a;
+}
+{
+	B b;
+	int y = b.a.x; 
+}

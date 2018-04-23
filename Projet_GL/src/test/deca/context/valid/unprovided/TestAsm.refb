@@ -1,0 +1,109 @@
+`> [3, 0] Program
+   +> [3, 0] ListDeclClass [List with 1 elements]
+   |  []> [3, 0] DeclClass
+   |      +> [3, 6] Identifier (TestAsm)
+   |      |  definition: type defined at [3, 0], type=TestAsm
+   |      +> [3, 13] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 2 elements]
+   |      |  []> [4, 3] DeclAsmMethod
+   |      |  ||  +> [4, 3] Identifier (float)
+   |      |  ||  |  definition: type (builtin), type=float
+   |      |  ||  +> [4, 9] Identifier (doFMA)
+   |      |  ||  |  definition: method defined at [4, 3], type=float
+   |      |  ||  `> [4, 15] ListDeclParam [List with 3 elements]
+   |      |  ||     []> [4, 15] DeclParam
+   |      |  ||     ||  +> [4, 15] Identifier (float)
+   |      |  ||     ||  |  definition: type (builtin), type=float
+   |      |  ||     ||  `> [4, 21] Identifier (a)
+   |      |  ||     ||     definition: parameter defined at [4, 15], type=float
+   |      |  ||     []> [4, 24] DeclParam
+   |      |  ||     ||  +> [4, 24] Identifier (float)
+   |      |  ||     ||  |  definition: type (builtin), type=float
+   |      |  ||     ||  `> [4, 30] Identifier (b)
+   |      |  ||     ||     definition: parameter defined at [4, 24], type=float
+   |      |  ||     []> [4, 33] DeclParam
+   |      |  ||         +> [4, 33] Identifier (float)
+   |      |  ||         |  definition: type (builtin), type=float
+   |      |  ||         `> [4, 39] Identifier (c)
+   |      |  ||            definition: parameter defined at [4, 33], type=float
+   |      |  []> [13, 2] DeclMethod
+   |      |      +> [13, 2] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [13, 7] Identifier (testFMA)
+   |      |      |  definition: method defined at [13, 2], type=void
+   |      |      +> ListDeclParam [List with 0 elements]
+   |      |      +> [14, 4] ListDeclVar [List with 3 elements]
+   |      |      |  []> [14, 10] DeclVar
+   |      |      |  ||  +> [14, 4] Identifier (float)
+   |      |      |  ||  |  definition: type (builtin), type=float
+   |      |      |  ||  +> [14, 10] Identifier (a)
+   |      |      |  ||  |  definition: variable defined at [14, 10], type=float
+   |      |      |  ||  `> [14, 10] Initialization
+   |      |      |  ||     `> [14, 14] ConvFloat
+   |      |      |  ||        type: float
+   |      |      |  ||        `> [14, 14] Int (1)
+   |      |      |  ||           type: int
+   |      |      |  []> [15, 10] DeclVar
+   |      |      |  ||  +> [15, 4] Identifier (float)
+   |      |      |  ||  |  definition: type (builtin), type=float
+   |      |      |  ||  +> [15, 10] Identifier (b)
+   |      |      |  ||  |  definition: variable defined at [15, 10], type=float
+   |      |      |  ||  `> [15, 10] Initialization
+   |      |      |  ||     `> [15, 14] ConvFloat
+   |      |      |  ||        type: float
+   |      |      |  ||        `> [15, 14] Int (2)
+   |      |      |  ||           type: int
+   |      |      |  []> [16, 10] DeclVar
+   |      |      |      +> [16, 4] Identifier (float)
+   |      |      |      |  definition: type (builtin), type=float
+   |      |      |      +> [16, 10] Identifier (c)
+   |      |      |      |  definition: variable defined at [16, 10], type=float
+   |      |      |      `> [16, 10] Initialization
+   |      |      |         `> [16, 14] ConvFloat
+   |      |      |            type: float
+   |      |      |            `> [16, 14] Int (3)
+   |      |      |               type: int
+   |      |      `> [17, 4] ListInst [List with 2 elements]
+   |      |         []> [17, 4] Assign
+   |      |         ||  type: float
+   |      |         ||  +> [17, 4] Identifier (a)
+   |      |         ||  |  definition: variable defined at [14, 10], type=float
+   |      |         ||  `> [17, 8] MethodCall (This,Identifier (doFMA))
+   |      |         ||     type: float
+   |      |         ||     +> [17, 8] This
+   |      |         ||     |  type: TestAsm
+   |      |         ||     +> Identifier (doFMA)
+   |      |         ||     |  definition: method defined at [4, 3], type=float
+   |      |         ||     `> [17, 25] ListExpr [List with 3 elements]
+   |      |         ||        []> [17, 19] Identifier (a)
+   |      |         ||        ||  definition: variable defined at [14, 10], type=float
+   |      |         ||        []> [17, 22] Identifier (b)
+   |      |         ||        ||  definition: variable defined at [15, 10], type=float
+   |      |         ||        []> [17, 25] Identifier (c)
+   |      |         ||            definition: variable defined at [16, 10], type=float
+   |      |         []> [18, 4] Print
+   |      |             `> [18, 10] ListExpr [List with 1 elements]
+   |      |                []> [18, 10] Identifier (a)
+   |      |                    definition: variable defined at [14, 10], type=float
+   |      `> ListFieldSet [List with 0 elements]
+   `> [22, 0] Main
+      +> [23, 2] ListDeclVar [List with 1 elements]
+      |  []> [23, 10] DeclVar
+      |      +> [23, 2] Identifier (TestAsm)
+      |      |  definition: type defined at [3, 0], type=TestAsm
+      |      +> [23, 10] Identifier (t)
+      |      |  definition: variable defined at [23, 10], type=TestAsm
+      |      `> [23, 10] Initialization
+      |         `> [23, 14] New
+      |            type: TestAsm
+      |            `> [23, 18] Identifier (TestAsm)
+      |               definition: type defined at [3, 0], type=TestAsm
+      `> [24, 2] ListInst [List with 1 elements]
+         []> [24, 2] MethodCall (Identifier (t),Identifier (testFMA))
+             type: void
+             +> [24, 2] Identifier (t)
+             |  definition: variable defined at [23, 10], type=TestAsm
+             +> Identifier (testFMA)
+             |  definition: method defined at [13, 2], type=void
+             `> ListExpr [List with 0 elements]

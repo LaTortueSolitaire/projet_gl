@@ -1,0 +1,12 @@
+// Description:
+//    Déclaration d'un champ de type inconnu
+//
+// Resultat: Ligne 11
+//    ContextualError : Undefined type : B
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+      B b;
+}

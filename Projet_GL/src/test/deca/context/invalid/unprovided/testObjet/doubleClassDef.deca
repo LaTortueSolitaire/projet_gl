@@ -1,0 +1,14 @@
+// Description:
+//    Déclaration de deux classes de même nom
+//
+// Resultat: Ligne 13
+//    ContextualError : Class already defined
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+}
+
+class A{
+}

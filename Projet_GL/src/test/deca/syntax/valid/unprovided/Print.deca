@@ -1,0 +1,12 @@
+// Test sur les print simples
+// Resultat
+// 23
+// 2 3
+
+{
+  int x = 2;
+  int y = 3;
+  println(x, y);
+  println(x, " ", y);
+
+}

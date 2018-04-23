@@ -1,0 +1,139 @@
+`> [6, 0] Program
+   +> [6, 0] ListDeclClass [List with 1 elements]
+   |  []> [6, 0] DeclClass
+   |      +> [6, 6] Identifier (TestOpRetourMethod)
+   |      |  definition: type defined at [6, 0], type=TestOpRetourMethod
+   |      +> [6, 24] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [8, 2] DeclMethod
+   |      |      +> [8, 2] Identifier (float)
+   |      |      |  definition: type (builtin), type=float
+   |      |      +> [8, 8] Identifier (_pow)
+   |      |      |  definition: method defined at [8, 2], type=float
+   |      |      +> [8, 13] ListDeclParam [List with 2 elements]
+   |      |      |  []> [8, 13] DeclParam
+   |      |      |  ||  +> [8, 13] Identifier (float)
+   |      |      |  ||  |  definition: type (builtin), type=float
+   |      |      |  ||  `> [8, 19] Identifier (x)
+   |      |      |  ||     definition: parameter defined at [8, 13], type=float
+   |      |      |  []> [8, 22] DeclParam
+   |      |      |      +> [8, 22] Identifier (int)
+   |      |      |      |  definition: type (builtin), type=int
+   |      |      |      `> [8, 26] Identifier (n)
+   |      |      |         definition: parameter defined at [8, 22], type=int
+   |      |      +> [10, 6] ListDeclVar [List with 1 elements]
+   |      |      |  []> [10, 12] DeclVar
+   |      |      |      +> [10, 6] Identifier (float)
+   |      |      |      |  definition: type (builtin), type=float
+   |      |      |      +> [10, 12] Identifier (res)
+   |      |      |      |  definition: variable defined at [10, 12], type=float
+   |      |      |      `> [10, 12] Initialization
+   |      |      |         `> [10, 18] Identifier (x)
+   |      |      |            definition: parameter defined at [8, 13], type=float
+   |      |      `> [12, 4] ListInst [List with 3 elements]
+   |      |         []> [12, 4] IfThenElse
+   |      |         ||  +> [12, 8] Equals
+   |      |         ||  |  type: boolean
+   |      |         ||  |  +> [12, 8] Identifier (n)
+   |      |         ||  |  |  definition: parameter defined at [8, 22], type=int
+   |      |         ||  |  `> [12, 13] Int (0)
+   |      |         ||  |     type: int
+   |      |         ||  +> [13, 6] ListInst [List with 1 elements]
+   |      |         ||  |  []> [13, 6] Return
+   |      |         ||  |      `> [13, 13] ConvFloat
+   |      |         ||  |         type: float
+   |      |         ||  |         `> [13, 13] Int (1)
+   |      |         ||  |            type: int
+   |      |         ||  `> ListInst [List with 1 elements]
+   |      |         ||     []> IfThenElse
+   |      |         ||         +> [16, 13] Lower
+   |      |         ||         |  type: boolean
+   |      |         ||         |  +> [16, 13] Identifier (n)
+   |      |         ||         |  |  definition: parameter defined at [8, 22], type=int
+   |      |         ||         |  `> [16, 17] Int (0)
+   |      |         ||         |     type: int
+   |      |         ||         +> [17, 6] ListInst [List with 1 elements]
+   |      |         ||         |  []> [17, 6] Return
+   |      |         ||         |      `> [17, 13] Divide
+   |      |         ||         |         type: float
+   |      |         ||         |         +> ConvFloat
+   |      |         ||         |         |  type: float
+   |      |         ||         |         |  `> [17, 13] Int (1)
+   |      |         ||         |         |     type: int
+   |      |         ||         |         `> [17, 17] MethodCall (This,Identifier (_pow))
+   |      |         ||         |            type: float
+   |      |         ||         |            +> [17, 17] This
+   |      |         ||         |            |  type: TestOpRetourMethod
+   |      |         ||         |            +> Identifier (_pow)
+   |      |         ||         |            |  definition: method defined at [8, 2], type=float
+   |      |         ||         |            `> [17, 30] ListExpr [List with 2 elements]
+   |      |         ||         |               []> [17, 27] Identifier (x)
+   |      |         ||         |               ||  definition: parameter defined at [8, 13], type=float
+   |      |         ||         |               []> [17, 30] UnaryMinus
+   |      |         ||         |                   type: int
+   |      |         ||         |                   `> [17, 31] Identifier (n)
+   |      |         ||         |                      definition: parameter defined at [8, 22], type=int
+   |      |         ||         `> ListInst [List with 0 elements]
+   |      |         []> [20, 4] While
+   |      |         ||  +> [20, 11] Greater
+   |      |         ||  |  type: boolean
+   |      |         ||  |  +> [20, 11] Identifier (n)
+   |      |         ||  |  |  definition: parameter defined at [8, 22], type=int
+   |      |         ||  |  `> [20, 15] Int (1)
+   |      |         ||  |     type: int
+   |      |         ||  `> [22, 6] ListInst [List with 2 elements]
+   |      |         ||     []> [21, 6] Assign
+   |      |         ||     ||  type: float
+   |      |         ||     ||  +> [21, 6] Identifier (res)
+   |      |         ||     ||  |  definition: variable defined at [10, 12], type=float
+   |      |         ||     ||  `> [21, 12] Multiply
+   |      |         ||     ||     type: float
+   |      |         ||     ||     +> [21, 12] Identifier (res)
+   |      |         ||     ||     |  definition: variable defined at [10, 12], type=float
+   |      |         ||     ||     `> [21, 16] Identifier (x)
+   |      |         ||     ||        definition: parameter defined at [8, 13], type=float
+   |      |         ||     []> [22, 6] Assign
+   |      |         ||         type: int
+   |      |         ||         +> [22, 6] Identifier (n)
+   |      |         ||         |  definition: parameter defined at [8, 22], type=int
+   |      |         ||         `> [22, 10] Minus
+   |      |         ||            type: int
+   |      |         ||            +> [22, 10] Identifier (n)
+   |      |         ||            |  definition: parameter defined at [8, 22], type=int
+   |      |         ||            `> [22, 14] Int (1)
+   |      |         ||               type: int
+   |      |         []> [24, 4] Return
+   |      |             `> [24, 11] Identifier (res)
+   |      |                definition: variable defined at [10, 12], type=float
+   |      `> ListFieldSet [List with 0 elements]
+   `> [28, 0] Main
+      +> [29, 4] ListDeclVar [List with 1 elements]
+      |  []> [29, 23] DeclVar
+      |      +> [29, 4] Identifier (TestOpRetourMethod)
+      |      |  definition: type defined at [6, 0], type=TestOpRetourMethod
+      |      +> [29, 23] Identifier (op)
+      |      |  definition: variable defined at [29, 23], type=TestOpRetourMethod
+      |      `> [29, 23] NoInitialization
+      `> [31, 4] ListInst [List with 2 elements]
+         []> [31, 4] Assign
+         ||  type: TestOpRetourMethod
+         ||  +> [31, 4] Identifier (op)
+         ||  |  definition: variable defined at [29, 23], type=TestOpRetourMethod
+         ||  `> [31, 9] New
+         ||     type: TestOpRetourMethod
+         ||     `> [31, 13] Identifier (TestOpRetourMethod)
+         ||        definition: type defined at [6, 0], type=TestOpRetourMethod
+         []> [33, 4] Println
+             `> [33, 12] ListExpr [List with 1 elements]
+                []> [33, 12] MethodCall (Identifier (op),Identifier (_pow))
+                    type: float
+                    +> [33, 12] Identifier (op)
+                    |  definition: variable defined at [29, 23], type=TestOpRetourMethod
+                    +> Identifier (_pow)
+                    |  definition: method defined at [8, 2], type=float
+                    `> [33, 25] ListExpr [List with 2 elements]
+                       []> [33, 20] Float (2.0)
+                       ||  type: float
+                       []> [33, 25] Int (2)
+                           type: int

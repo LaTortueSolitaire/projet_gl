@@ -1,0 +1,15 @@
+// Description:
+//    Utilisation de this en dehors d'une classe
+//
+// Resultat: Ligne 13
+//    ContextualError : Cannot use "this" identifier outside of a method
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+}
+{       A a = new A();
+        a = this;
+}
+	

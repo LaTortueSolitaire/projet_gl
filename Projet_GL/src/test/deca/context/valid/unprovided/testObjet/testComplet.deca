@@ -1,0 +1,26 @@
+// Description:
+//   Test objet complet contenu dans le poly
+//
+// Resultat:
+//    Aucune erreur attendue
+// 
+// Historique:
+//    cree le 22/01/2018
+
+class A {
+      protected int x ;
+
+      int getX() {
+      	  return x;
+      }
+
+      void setX(int x) {
+      	   this.x = x ;
+      }
+}
+
+{
+	A a = new A() ;
+	a.setX(1) ;
+	println("a.getX() = ", a.getX()) ;
+}

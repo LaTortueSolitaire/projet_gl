@@ -1,0 +1,6 @@
+// Description: print de plusieurs elements
+// Resultat : 22.033
+
+{
+    print(2,2.0,3,3);
+}

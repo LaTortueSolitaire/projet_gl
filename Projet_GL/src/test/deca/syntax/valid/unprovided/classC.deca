@@ -1,0 +1,22 @@
+class C {
+	int x = 0;
+	int y = 1;
+	
+	int getX() {
+		return x;
+	}
+
+	void incrX() {
+		x = x + 1;
+	}
+}
+
+{
+	C c = new C();
+	int a;
+	a = c.getX();
+	println(c.getX());
+	println(a);
+	c.incrX();
+	println(c.getX());
+}

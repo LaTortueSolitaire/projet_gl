@@ -1,0 +1,13 @@
+// Description: affichage des fields de l'objet
+// Resultat attendu: 113.10000e+00
+//
+
+class A {
+	int field1 = 11;
+	float field2 = 3.1;
+}
+
+{
+	A b = new A();
+	print(b.field1,b.field2);
+}

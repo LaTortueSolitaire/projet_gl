@@ -1,0 +1,29 @@
+// Description:
+//   Redéfinition d'une méthode avec n type de retour sous-type du type de retour de la méthode parente
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 22/01/2018
+
+class A {
+}
+
+class B extends A {
+}
+
+class C{
+      B b;
+
+      B getB(){
+      	return b;
+      }
+}
+
+class D extends C{
+
+      A getA(){
+      	return b;
+      }
+}

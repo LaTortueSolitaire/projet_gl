@@ -1,0 +1,33 @@
+// test rapide et simple sur des booleens
+// Resultat
+// 1
+// 6
+//OK
+
+{
+	boolean a = true;
+	boolean b = true;
+	boolean c = false;
+	boolean d = false;
+
+	if (a && b && !c) {
+		println(1);
+	}
+	else if (!c) {
+		println(2);
+	}
+	else {
+		println(3);
+	}
+	if (d) {
+		println(4);
+	}
+	else {
+		if (c) {
+			println(5);
+		}
+		else {
+			println(6);
+		}
+	}
+}

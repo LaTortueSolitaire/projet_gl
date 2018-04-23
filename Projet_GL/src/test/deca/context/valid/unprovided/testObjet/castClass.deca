@@ -1,0 +1,18 @@
+// Description:
+//    Utilisation de cast
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    Créé le 24/01/2018
+class A {
+
+}
+class B extends A{
+}
+
+{
+	B b;
+	A a = (A)(b);
+}

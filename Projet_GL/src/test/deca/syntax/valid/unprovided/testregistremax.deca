@@ -1,0 +1,14 @@
+// Test specifique pour l'option -r
+// Doit donner  comme résultat
+// 82
+// 20
+
+{
+	int x = 1;
+	int y = 2;
+	int z;
+	z = 12%3 + (3*5/2) + 11 - 2*(x - 3) * y * (8 - 6) * 4;
+	println(z);
+	z = z /(2 +4/2);
+	println(z);
+}

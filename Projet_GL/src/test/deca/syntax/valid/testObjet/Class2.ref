@@ -1,0 +1,50 @@
+`> [3, 0] Program
+   +> [3, 0] ListDeclClass [List with 1 elements]
+   |  []> [3, 0] DeclClass
+   |      +> [3, 6] Identifier (A)
+   |      +> [3, 7] Identifier (object)
+   |      +> ListDeclMethod [List with 3 elements]
+   |      |  []> [6, 0] DeclAsmMethod
+   |      |  ||  +> [6, 0] Identifier (int)
+   |      |  ||  +> [6, 4] Identifier (function)
+   |      |  ||  `> [6, 13] ListDeclParam [List with 1 elements]
+   |      |  ||     []> [6, 13] DeclParam
+   |      |  ||         +> [6, 13] Identifier (int)
+   |      |  ||         `> [6, 17] Identifier (x)
+   |      |  []> [7, 0] DeclMethod
+   |      |  ||  +> [7, 0] Identifier (void)
+   |      |  ||  +> [7, 5] Identifier (convert)
+   |      |  ||  +> ListDeclParam [List with 0 elements]
+   |      |  ||  +> [8, 0] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [8, 0] ListInst [List with 1 elements]
+   |      |  ||     []> [8, 0] Assign
+   |      |  ||         +> [8, 0] Identifier (x)
+   |      |  ||         `> [8, 4] Cast
+   |      |  ||            +> [8, 11] Identifier (y)
+   |      |  ||            `> [8, 5] Identifier (int)
+   |      |  []> [10, 0] DeclMethod
+   |      |      +> [10, 0] Identifier (A)
+   |      |      +> [10, 2] Identifier (newUse)
+   |      |      +> ListDeclParam [List with 0 elements]
+   |      |      +> [11, 0] ListDeclVar [List with 0 elements]
+   |      |      `> [11, 0] ListInst [List with 2 elements]
+   |      |         []> [11, 0] Assign
+   |      |         ||  +> [11, 0] Identifier (x)
+   |      |         ||  `> [11, 4] New
+   |      |         ||     `> [11, 8] Identifier (A)
+   |      |         []> [12, 0] Return
+   |      |             `> [12, 7] Identifier (x)
+   |      `> ListFieldSet [List with 2 elements]
+   |         []> [4, 0] DeclFieldSet
+   |         ||  +> [4, 10] Identifier (boolean)
+   |         ||  `> ListFields [List with 1 elements]
+   |         ||     []> [4, 18] DeclFields
+   |         ||         +> [4, 18] Identifier (a)
+   |         ||         `> [4, 18] NoInitialization
+   |         []> [5, 0] DeclFieldSet
+   |             +> [5, 10] Identifier (float)
+   |             `> ListFields [List with 1 elements]
+   |                []> [5, 16] DeclFields
+   |                    +> [5, 16] Identifier (y)
+   |                    `> [5, 16] NoInitialization
+   `> EmptyMain

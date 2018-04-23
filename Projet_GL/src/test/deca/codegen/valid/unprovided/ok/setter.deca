@@ -1,0 +1,38 @@
+class A {
+	int x = 1;
+	boolean b = true;
+
+	void incrX() {
+		if (b) {
+			x = x + 1;
+		}
+	}
+
+	int getX() {
+		return x;
+	}
+
+	void setB() {
+		b = false;
+	}
+}
+
+{
+	A a = new A();
+	println(a.getX());
+	if(a.x ==1){
+		println("c'est bon pour les int");
+	}
+	a.incrX();
+	println(a.getX());
+	a.setB();
+	if(a.b){
+		println("b est true"); // censer etre false
+	}
+	else{
+		println("b est false");
+	}
+	a.incrX();
+	println(a.getX());
+
+}

@@ -1,0 +1,43 @@
+`> [10, 0] Program
+   +> [10, 0] ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> [11, 1] ListDeclVar [List with 2 elements]
+      |  []> [11, 9] DeclVar
+      |  ||  +> [11, 1] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [11, 9] Identifier (a)
+      |  ||  |  definition: variable defined at [11, 9], type=boolean
+      |  ||  `> [11, 9] NoInitialization
+      |  []> [12, 9] DeclVar
+      |      +> [12, 1] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [12, 9] Identifier (b)
+      |      |  definition: variable defined at [12, 9], type=boolean
+      |      `> [12, 9] NoInitialization
+      `> [14, 1] ListInst [List with 1 elements]
+         []> [14, 1] IfThenElse
+             +> [14, 5] And
+             |  type: boolean
+             |  +> [14, 5] Identifier (a)
+             |  |  definition: variable defined at [11, 9], type=boolean
+             |  `> [14, 10] Identifier (b)
+             |     definition: variable defined at [12, 9], type=boolean
+             +> [15, 7] ListInst [List with 1 elements]
+             |  []> [15, 7] Println
+             |      `> [15, 15] ListExpr [List with 1 elements]
+             |         []> [15, 15] StringLiteral ("")
+             |             type: string
+             `> ListInst [List with 1 elements]
+                []> IfThenElse
+                    +> [17, 10] Or
+                    |  type: boolean
+                    |  +> [17, 10] Identifier (a)
+                    |  |  definition: variable defined at [11, 9], type=boolean
+                    |  `> [17, 15] Identifier (b)
+                    |     definition: variable defined at [12, 9], type=boolean
+                    +> [18, 6] ListInst [List with 1 elements]
+                    |  []> [18, 6] Println
+                    |      `> [18, 14] ListExpr [List with 1 elements]
+                    |         []> [18, 14] StringLiteral ("")
+                    |             type: string
+                    `> ListInst [List with 0 elements]

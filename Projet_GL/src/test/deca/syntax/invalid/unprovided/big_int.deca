@@ -1,0 +1,5 @@
+// Test très gros entier
+
+{
+    int grosInt = 325246353452;
+}

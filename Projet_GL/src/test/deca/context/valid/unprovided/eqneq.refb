@@ -1,0 +1,123 @@
+`> [1, 0] Program
+   +> [1, 0] ListDeclClass [List with 0 elements]
+   `> [1, 0] Main
+      +> [4, 1] ListDeclVar [List with 7 elements]
+      |  []> [4, 5] DeclVar
+      |  ||  +> [4, 1] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [4, 5] Identifier (a)
+      |  ||  |  definition: variable defined at [4, 5], type=int
+      |  ||  `> [4, 5] Initialization
+      |  ||     `> [4, 9] Int (1)
+      |  ||        type: int
+      |  []> [5, 7] DeclVar
+      |  ||  +> [5, 1] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [5, 7] Identifier (b)
+      |  ||  |  definition: variable defined at [5, 7], type=float
+      |  ||  `> [5, 7] Initialization
+      |  ||     `> [5, 11] ConvFloat
+      |  ||        type: float
+      |  ||        `> [5, 11] Int (2)
+      |  ||           type: int
+      |  []> [6, 7] DeclVar
+      |  ||  +> [6, 1] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [6, 7] Identifier (d)
+      |  ||  |  definition: variable defined at [6, 7], type=float
+      |  ||  `> [6, 7] Initialization
+      |  ||     `> [6, 11] Float (1.0)
+      |  ||        type: float
+      |  []> [8, 9] DeclVar
+      |  ||  +> [8, 1] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [8, 9] Identifier (e)
+      |  ||  |  definition: variable defined at [8, 9], type=boolean
+      |  ||  `> [8, 9] Initialization
+      |  ||     `> [8, 13] Equals
+      |  ||        type: boolean
+      |  ||        +> ConvFloat
+      |  ||        |  type: float
+      |  ||        |  `> [8, 14] Identifier (a)
+      |  ||        |     definition: variable defined at [4, 5], type=int
+      |  ||        `> [8, 17] Identifier (d)
+      |  ||           definition: variable defined at [6, 7], type=float
+      |  []> [10, 9] DeclVar
+      |  ||  +> [10, 1] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [10, 9] Identifier (f)
+      |  ||  |  definition: variable defined at [10, 9], type=boolean
+      |  ||  `> [10, 9] Initialization
+      |  ||     `> [10, 13] Equals
+      |  ||        type: boolean
+      |  ||        +> [10, 14] Identifier (b)
+      |  ||        |  definition: variable defined at [5, 7], type=float
+      |  ||        `> [10, 17] Identifier (d)
+      |  ||           definition: variable defined at [6, 7], type=float
+      |  []> [12, 9] DeclVar
+      |  ||  +> [12, 1] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [12, 9] Identifier (g)
+      |  ||  |  definition: variable defined at [12, 9], type=boolean
+      |  ||  `> [12, 9] Initialization
+      |  ||     `> [12, 13] BooleanLiteral (true)
+      |  ||        type: boolean
+      |  []> [13, 9] DeclVar
+      |      +> [13, 1] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [13, 9] Identifier (h)
+      |      |  definition: variable defined at [13, 9], type=boolean
+      |      `> [13, 9] Initialization
+      |         `> [13, 13] BooleanLiteral (false)
+      |            type: boolean
+      `> [15, 1] ListInst [List with 4 elements]
+         []> [15, 1] IfThenElse
+         ||  +> [15, 5] Equals
+         ||  |  type: boolean
+         ||  |  +> ConvFloat
+         ||  |  |  type: float
+         ||  |  |  `> [15, 5] Identifier (a)
+         ||  |  |     definition: variable defined at [4, 5], type=int
+         ||  |  `> [15, 10] Identifier (d)
+         ||  |     definition: variable defined at [6, 7], type=float
+         ||  +> [16, 2] ListInst [List with 1 elements]
+         ||  |  []> [16, 2] Println
+         ||  |      `> [16, 10] ListExpr [List with 1 elements]
+         ||  |         []> [16, 10] StringLiteral ("ok")
+         ||  |             type: string
+         ||  `> ListInst [List with 0 elements]
+         []> [18, 1] IfThenElse
+         ||  +> [18, 5] Equals
+         ||  |  type: boolean
+         ||  |  +> [18, 5] Identifier (b)
+         ||  |  |  definition: variable defined at [5, 7], type=float
+         ||  |  `> [18, 10] Identifier (d)
+         ||  |     definition: variable defined at [6, 7], type=float
+         ||  +> [19, 2] ListInst [List with 1 elements]
+         ||  |  []> [19, 2] Println
+         ||  |      `> [19, 10] ListExpr [List with 1 elements]
+         ||  |         []> [19, 10] StringLiteral ("no")
+         ||  |             type: string
+         ||  `> ListInst [List with 0 elements]
+         []> [21, 1] IfThenElse
+         ||  +> [21, 5] Identifier (h)
+         ||  |  definition: variable defined at [13, 9], type=boolean
+         ||  +> [22, 2] ListInst [List with 1 elements]
+         ||  |  []> [22, 2] Println
+         ||  |      `> [22, 10] ListExpr [List with 1 elements]
+         ||  |         []> [22, 10] StringLiteral ("no")
+         ||  |             type: string
+         ||  `> ListInst [List with 0 elements]
+         []> [24, 1] IfThenElse
+             +> [24, 5] Or
+             |  type: boolean
+             |  +> [24, 5] Identifier (h)
+             |  |  definition: variable defined at [13, 9], type=boolean
+             |  `> [24, 10] Identifier (g)
+             |     definition: variable defined at [12, 9], type=boolean
+             +> [25, 2] ListInst [List with 1 elements]
+             |  []> [25, 2] Println
+             |      `> [25, 10] ListExpr [List with 1 elements]
+             |         []> [25, 10] StringLiteral ("ok")
+             |             type: string
+             `> ListInst [List with 0 elements]

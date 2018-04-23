@@ -1,0 +1,9 @@
+{
+	int x;
+	x = readInt();
+	if (x >= 0 && x <= 5) {
+		print("x est dans l'intervalle");
+	} else {
+		print("x n'est pas dans l'intervalle");
+	}
+}

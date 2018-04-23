@@ -1,0 +1,24 @@
+// Description:
+//   Définition d'une méthode prenant en argument une instance de A et appelée sur une
+//   instance de B, sous classe de A
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 22/01/2018
+
+class A {
+
+      A fils;
+
+      void setFils(A a){
+      	   fils = a;
+      }
+}
+class B extends A{
+}
+{
+        A a = new A();
+	a.setFils(new B()); //Intervention du cast
+}

@@ -1,0 +1,1336 @@
+	TSTO #8
+	BOV stack_overflow_error
+	ADDSP #3
+; Premiere passe, construction table des methodes
+; Code de la table des méthodes de Object
+	LOAD #null, R0
+	STORE R0, 1(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 2(GB)
+; 
+; 
+; 
+; Main program
+; Beginning of main instructions:
+	LOAD #1, R2
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	MUL R3, R2
+	BOV overflow_error
+	LOAD #1, R3
+	ADD R3, R2
+	BOV overflow_error
+	STORE R2, 3(GB)
+	LOAD 3(GB), R1
+	WINT
+	HALT
+; End of Main Programm
+; 
+; 
+; Messages d'erreurs
+; Les debordements
+io_error:
+	WSTR "Error: Input/Output error"
+	WNL
+	ERROR
+stack_overflow_error:
+	WSTR "Error: Stack OverFlow"
+	WNL
+	ERROR
+heap_overflow_error:
+	WSTR "Error: Heap OverFlow"
+	WNL
+	ERROR
+overflow_error:
+	WSTR "Error: OverFlow during arithmetic operation"
+	WNL
+	ERROR
+division_or_modulo_per_zero:
+	WSTR "Error : division or modulo per zero"
+	WNL
+	ERROR
+dereferencement.null:
+	WSTR "Error : dereferencement de null"
+	WNL
+	ERROR
+; 
+; 
+; Deuxieme passe, initialisation des champs
+; 
+; Deuxième passe, génération de code des méthodes
+code.Object.equals:
+	WSTR "code à faire"

@@ -1,0 +1,13 @@
+// Description:
+//    Déclaration d'une nouvelle instance avec un type litteral
+//
+// Resultat: Ligne 11
+//    ContextualError : Cannot declare a new instance with litteral type 
+//
+// Historique:
+//    Créé le 24/01/2018
+
+{
+        float n = new float();
+}
+	

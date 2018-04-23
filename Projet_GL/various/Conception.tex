@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\geometry{hmargin=3cm,vmargin=3.5cm}
+
+\title{\vspace{\fill} Documentation de conception \vspace{\fill}}
+
+\author{Équipe 17 \\\\ Anaïs Hadj-Azzem - Lucas Grellier - Théo Cachet - Clément Vanhemelryck - César Dumas}
+
+\date{\\}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=red,
+  linktoc=all
+}
+% don't need the following. simply use defaults
+\setlength{\baselineskip}{16.0pt}    % 16 pt usual spacing between lines
+
+\setlength{\parskip}{3pt plus 2pt}
+\setlength{\parindent}{20pt}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\evensidemargin}{1cm}
+\setlength{\marginparsep}{0.75cm}
+\setlength{\marginparwidth}{2.5cm}
+\setlength{\marginparpush}{1.0cm}
+\setlength{\textwidth}{150mm}
+\renewcommand{\contentsname}{Table des matières}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\setcounter{page}{0}
+\newpage
+
+\tableofcontents
+\thispagestyle{empty}
+%\setcounter{page}{0}
+\newpage
+
+\section{États du compilateur}
+\subsection{Vérification syntaxique}
+Le compilateur reconnaît les programmes déca selon la spécification qui nous a été fournie. \newline
+Il lève une erreur lorsque le flottant ou entier est trop grand, ou lorsque le flottant entré est trop proche de zéro. \newline
+En revanche, nous ne rattrapons pas les erreurs en cas d'\textit{overflow}, par exemple lorsqu'il y a une expression arithmétique avec
+trop de parenthèses. Une amélioration possible de cette partie serait donc de rattraper ces erreurs afin de gérer les débordement de pile.
+\subsection{Vérification contextuelle}
+    Nous considérons que le compilateur effectue une analyse contextuelle correcte.
+    Nous avons effectué une base de test que nous pensons suffisamment complète et l'analyse contextuelle passe sur l'ensemble de ces tests.
+    Sauf certains bugs que nous n'aurions pas décelé, nous pensons que cette partie est correctement traitée.
+    De même, l'enrichissement et la décoration d'arbre, la mise à jour des différents attributs utilisés pour la partie C (par exemple, l'indexage pour la création de la table des méthodes, les labels...) sont effectués.
+\\\\
+    Toutefois, le code implémentant cette partie aurait pu être optimisé et peut-être mieux factorisé: Nous n'avons pas systématiquement eu recours à l'utilisation de classes abstraites, ce qui peut entraîner des contraintes supplémentaires si l'on veut modifier ou faire évoluer notre compilateur, en ajoutant des règles à la grammaire par exemple.
+\subsection{Génération de code}
+\underline{Partie sans objet} \newline
+\\
+Il est possible de déclarer plusieurs variables, sans initialisation, ou avec initialisation (opérations, entiers, flottants ou booléens).
+Il est aussi possible d’effectuer tous types d’instructions : assignation, boucle, comparaison, affichage, opérations arithmétiques etc… \newline
+\\
+\underline{Partie avec objet} \newline
+\\
+Il est possible de générer le code de programme simple.\newline
+En effet, plusieurs classes peuvent être déclarés, et peuvent hériter d’autres : les attributs et méthodes peuvent être redéfinis.
+Quelque soit le cas, la création de la table des méthodes ainsi que l'initialisation des attributs s’effectuent correctement.
+Dans le programme principal ou dans une méthode, il est possible de faire des appels de fonctions avec des paramètres qui peuvent être :
+\begin{itemize}
+\item des entiers, flottants, ou booléens
+\item des variables globales ou locales
+\item des paramètres de la fonction dans laquelle elle est appelée
+\item des opérations arithmétiques
+\end{itemize}
+Il est également possible, au sein d’une méthode, de retourner un nouvel élément d’une autre classe.
+
+Cependant, nous ne couvrons pas l’ensemble des cas possibles. En effet, certains cas provoquent des erreurs inattendues à l'exécution.
+Le code assembleur dans sa structure semble être le bon, mais la gestion des registres provoque des erreurs.
+Par exemple, il est possible que lors d’un appel de fonction, le registre utilisé précédemment pour stocker une valeur, soit utilisé, écrasant ainsi la valeur précédente, pourtant nécessaire à la suite du programme. Une voie d’amélioration serait de revoir les appels aux instructions PUSH et POP qui sont faits dans le code.
+\newline
+De plus, le cas d’une division ou d’un modulo par un appel de fonction ne vérifie pas que le retour de cette fonction ne vaut pas zéro. \newline
+Pour finir, les \textit{casts} entre littéraux sont possibles, mais le cas des \textit{casts} de classe n'a pas été traité.
+
+
+\section{Implémentation et architecture}
+\subsection{Vérification contextuelle}
+
+    La vérification contextuelle démarre à l'appel de la méthode \textit{verifyProgram} dans la  classe \textbf{\textit{DecacCompiler}}.
+    Celle-ci appelle à sont tour les différentes méthodes \textit{verify} des attributs de l'instance \textit{Program} (ici, sur la \textit{ListDeclClass} et le \textit{Main}). De cette manière, les appels sur ces méthodes se déroulent sur l'arbre abstrait du programme: Chaque règle de la grammaire est traduite dans ces méthodes, qui sont implémentées dans toutes les classes de \texttt{fr.ensimag.deca.tree}, ou, si ce n'est pas le cas, dans une classe abstraite parente.
+
+    Par analogie, les attributs hérités sont traduits comme les arguments des méthodes \textit{verify}, et les attributs synthétisés, lorsqu'ils sont utilisés dans la règle, sont traduits comme les éléments renvoyés par ces méthodes (en général, ces attributs sont soient des types, soit des signatures).
+    De cette manière, les règles de la grammaire soumises à des conditions donnent lieu, lorsque ces dernières ne sont effectivement pas respectées, à la levée d'erreurs contextuelles, par le biais de la classe \textit{ContextualError} du package \texttt{fr.ensimag.deca.context}.
+    Les différentes passes de la vérification donnent lieu, pour certaines classes (les classes concernant la partie objet notamment : \textit{DeclClass}, \textit{DeclMethod}, \textit{DeclFields}...) à deux, voire 3 méthodes \textit{verify} (\textit{verifyMembers} ou \textit{verifyBody}, par exemple) correspondant à la règle de la grammaire attribuée de la passe correspondante.
+    C'est pendant ce parcours de l'arbre que la décoration et l'enrichissement sont effectués.
+
+
+   \paragraph{Gestion des environnements :} 
+    Le premier choix d'implémentation auquel nous avons été confrontés est le choix de structure de données pour la gestion de l'environnement des identificateurs d'expressions et l'environnement des types.
+    Ainsi, dans le package \texttt{fr.ensimag.deca.context}, nous avons créé une classe \textbf{\textit{EnvironmentType}}, semblable à la classe \textbf{\textit{EnvironmentExp}} déjà fournie.
+    Dans ces deux classes, nous avons choisi de représenter les dits environnements avec la structure \textit{HashMap}:
+    Cette structure de donnée est bien adaptée pour garantir l'unicité des éléments ainsi que l'ajout et l'accès rapide à ces derniers via leur clés.
+    Les spécifications de ces classes sont données en figure \ref{Env}. Le \textit{HashMap} est alors déclaré dans le constructeur de ces classes.
+
+    \begin{figure}[h]
+    \centering
+      \begin{minipage}[h]{.43\linewidth}
+        \includegraphics[scale=0.5]{EnvironmentExp.png}
+      \end{minipage} \hfill
+      \begin{minipage}[h]{.44\linewidth}
+        \includegraphics[scale=0.5]{EnvironmentType.png}
+      \end{minipage}
+      \caption{Squelettes des classes \textbf{\textit{EnvironmentExp}} et \textbf{\textit{EnvironmentType}}}
+      \label{Env}
+    \end{figure}
+
+\newpage
+
+    \paragraph{Ajout des non-terminaux non-fournis :}
+     Certains éléments de la grammaire ont été omis dans les sources de base, nous avons donc du ajouter diverses classes au package \texttt{fr.ensimag.deca.tree}.
+     La figure \ref{classes} précise les classes qui ont été rajoutées dans la hiérarchie de la classe racine \textit{Tree}.
+     On y voit l'ajout de certains terminaux intervenant dans la règle des non-terminaux \textbf{inst} et \textbf{expr} : \textit{Cast}, \textit{Instanceof}, \textit{Return}, \textit{New}, \textit{This}, etc. De même, on voit l'apparition de classes traduisant les non-terminaux permettant la déclaration de classe : \textit{DeclMethod}, \textit{DeclFieldSet}, \textit{DecFields}...
+
+    \begin{figure}
+        \centering
+        \includegraphics[angle=90, scale=0.45]{Classes.png}
+        \caption{Les classes ajoutées}
+        \label{classes}
+    \end{figure}
+    
+    \paragraph{Implémentation des méthodes utiles :}
+    La partie \textbf{[SyntaxeContextuelle]} du polycopié introduit les différentes grammaires attribuées en définissant des notions propres au langage deca, telles que les règles de sous-typage, la compatibilité pour la conversion, etc.
+    Pour optimiser et factoriser au mieux notre code, nous avons donc été amenés à implémenter des méthodes statiques telles que \textit{subtype} dans la classe \textbf{\textit{AbstractExpr}}, \textit{correctCast} dans la classe \textbf{\textit{Cast}}, etc.
+    
+    \paragraph{Égalité des signatures :} Lors de la redéfinition d'une méthode dans une classe fille, la règle 2.7 de la grammaire attribuée à la passe 2 impose à la méthode d'avoir la même signature que la méthode parente. Ainsi il a fallu implémenter une méthode \textit{equals} pour les éléments de cette classe.
+
+
+
+
+\subsection{Génération de code}
+\begin{itemize}
+\item \textbf{La gestion des registres} \newline
+\\
+Pour gérer les registres, c'est à dire pour savoir quel registre utiliser et ainsi éviter
+les problèmes de mémoire,  nous avons créer une classe \textit{\textbf{RegisterManager}}. Celle-ci contient différents attributs :
+\begin{itemize}
+\item \textit{registerCourant}, qui nous indique le numéro du premier registre libre. Ce numéro peut être incrémenté lors d'une
+instruction LOAD par exemple, et décrémenté lors d'une instruction STORE à l'aide des fonctions \textit{incrementCompteurCourant()} et \textit{decrementRegisterCourant()}
+
+\item \textit{registerMax}, utilisé lorsque l'option -r du compilateur est activée. Cette variable, par défaut, vaut 15 (nombre de registre maximum que nous pouvons utiliser). 
+Elle est utile notamment dans les fonctions \textit{verify(int nbPlaceNecessaire)} et \textit{getMaxAtteint()} qui sont utilisées lors de l'activation de -r.
+
+\item \textit{varGlobale}, utilisé pour connaître le nombre de variables globales déclarées dans un programme principal, et donc utile à l'ajout des instructions ADDSP en début de bloc.
+
+\item \textit{maxTempo} permet de savoir combien de registres temporaires on utilise au maximum dans le programme principal. 
+Cela est nécessaire à l'ajout de l'instruction TSTO en début de bloc.
+
+\item \textit{varLocal} correspond au nombre de variables locales d'un méthode, nécessaire pour déclarer le TSTO et le ADDSP en début de méthode.
+\end{itemize}
+
+\noindent Un objet de type \textit{RegisterManager} est déclaré en tant qu'attribut dans le classe \textit{\textbf{CompilerOptions}}, lui même attribut
+de la classe \textit{\textbf{DecacCompiler}}. On utilise donc ces deux classes pour accéder
+aux valeurs des registres évoqués précédemment.\newline
+\textbf{\textit{RegisterManager}} nous a permis de régler nos problèmes de mémoire pour la partie sans objet. 
+En revanche, pour la partie objet, il aurait été possible d'effectuer une fonction dans la classe \textbf{\textit{RegisterManager}}, indiquant si l'on devait PUSH ou POP le registre courant.
+Par manque de temps, ce type de fonction n'a pas été implémenté. Ainsi, lorsqu'un programme effectue un grand nombre d'appels de fonctions, certains registres clés sont écrasés, déclenchant alors des erreurs à l'exécution, tel que des opérations ou comparaisons avec des registres indéfinis.
+
+\item \textbf{La classe \textit{DecacCompiler}} \newline
+\\
+Certains attributs ont été ajoutés à la classe \textit{\textbf{DecacCompiler}}.\newline
+Lors de la déclaration de plusieurs booléens à la suite, qui nécessite des opérations booléennes (ex : \textit{boolean b = true ou false}), différentes étiquettes
+sont nécessaires. Ainsi, on introduit un compteur d'étiquettes \textit{iLabel} dédié à cet effet. 
+De même pour les déclarations de méthodes : on utilise le compteur \textit{nombreMethod}.
+Le même principe est appliqué dans les classes \textbf{\textit{While}} et \textbf{\textit{IfThenElse}}, mais cette fois-ci, les attributs sont
+à l'intérieur des classes. \newline
+\\
+On remarque aussi, dans \textbf{\textit{DecacCompiler}}, la présence d'autres attributs : \textit{compteur}, qui représente un compteur pour les variables globales (3(GB), 4(GB) etc...), \textit{compteurLB}, pour les déclarations de variables locales aux méthodes (1(LB), 2(LB) etc..), et \textit{compteurParam} pour empiler les paramètres lors d'un appel de fonction (-3(LB), -4(LB) etc...). 
+Ces trois attributs ainsi que leurs accesseurs et mutateurs, auraient du être déclaré dans la classe \textbf{\textit{RegisterManager}} pour plus de cohérence. 
+Il est possible de corriger rapidement cet oubli, en remplaçant les appels \textit{compiler.get...()} par \textit{compiler.getCompilerOptions().getRegisterManager().get...()}, par exemple.\newline
+\\
+Pour finir, lors de la génération de code pour la partie avec objet, et plus particulièrement pour
+la génération de code des méthodes, il est nécessaire d'effectuer des instructions ADDSP x en début de code par exemple.
+La variable x étant connue uniquement à la fin de la génération de code, nous devons utiliser la méthode \textit{addFirst} sur un objet de type IMAPProgram pour que ces instructions soient placées au bon endroit dans le fichier assembleur.
+Pour remédier à ce problème, nous avons créé une liste chaînée d'objet IMAPProgram. À chaque fois que nous générons du code pour une méthode, nous créons un nouveau IMAPProgram, que nous ajoutons à la fin de la liste chaînée. On ajoute alors nos instructions, toujours dans le dernier IMAPProgram de cette liste, de la manière suivante : \textit{compiler.getLinkedList().getLast().addInstruction(\_\_)}.
+
+\item \textbf{Particularité de l'utilisation des registres} \newline
+\\
+Nous avons choisi, dans certains cas, de ne pas faire appel au registre courant, mais d'utiliser toujours le même registre pour effectuer une suite d'instructions.
+Ces cas sont les suivants :
+\begin{itemize}
+\item Lors de la création d'un objet, le registre utilisé avant et après l'appel à l'initialisation des paramètres (BSR init.) est R2.
+\item Lors d'un appel de méthode, les instructions LOAD, CMP, BEQ, LOAD, BSR utilisent le registre R2.
+\item Pour la création de la table des méthodes, on utilise R0 pour stocker les labels puis les placer au bon endroit dans la pile.
+\item Le retour d'une fonction est toujours stocké dans R0.
+\end{itemize}
+
+\item \textbf{Table des étiquettes et des méthodes} \newline
+\\
+Comme le conseillait le sujet, nous avons créé une table des étiquettes. 
+Pour cela, nous avons ajouté un attribut \textit{ArrayList<Label> tableEtiquette} dans la classe \textit{\textbf{ClassDefinition}}. 
+C'est à ce moment que nous prenons en compte l'héritage ou la redéfinition des méthodes.
+Une fois l'\textit{ArrayList} correctement construit, la génération de code pour la table des méthodes est beaucoup plus simple : il suffit de parcourir les éléments de l'\textit{ArrayList} généré.
+
+\item \textbf{Généralité sur le code} \newline
+\\
+Dans l'ensemble, les fonctions que nous avons implémenté dans les classes mères sont ensuite redéfinies dans les classes filles, car spécifiques à chacune d'entre elles. Par exemple,
+une initialisation ne s'effectue pas de la même manière pour un entier, un identifier ou un booléen. \newline
+Dans la majorité du temps nous distinguons la génération de code dans le cas d'une méthode et d'un programme principal, car les registres utilisés sont différents. 
+Une voie d'amélioration aurait été de passer les registres en paramètres des fonctions. \newline
+Cependant, nous avons tenté de mettre à profit l'abstraction de certaines classes pour éviter le code redondant. 
+C'est le cas par exemple dans la classe \textit{\textbf{AbstractOpArith}}. \newline
+\end{itemize}
+
+\end{document}

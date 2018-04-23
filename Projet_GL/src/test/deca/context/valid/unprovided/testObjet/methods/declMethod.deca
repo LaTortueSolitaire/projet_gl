@@ -1,0 +1,15 @@
+// Description:
+//   Définition d'une classe avec une méthode
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 22/01/2018
+
+class A {       
+      int getX(int x){
+      	  return x;      	   
+      }
+}
+

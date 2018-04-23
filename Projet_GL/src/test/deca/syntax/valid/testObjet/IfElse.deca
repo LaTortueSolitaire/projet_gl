@@ -1,0 +1,13 @@
+/*Test pour le cas basique d'un if else
+Test du EXCLAM, TIMES*/
+{
+	boolean y = true;
+	int x = 2;
+	if (!y){
+		x = x*2;
+		return y;
+	}
+	else{
+		return false;
+	}
+}

@@ -1,0 +1,65 @@
+`> [10, 0] Program
+   +> [10, 0] ListDeclClass [List with 2 elements]
+   |  []> [10, 0] DeclClass
+   |  ||  +> [10, 6] Identifier (A)
+   |  ||  |  definition: type defined at [10, 0], type=A
+   |  ||  +> [10, 7] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 0 elements]
+   |  ||  `> ListFieldSet [List with 0 elements]
+   |  []> [13, 0] DeclClass
+   |      +> [13, 6] Identifier (B)
+   |      |  definition: type defined at [13, 0], type=B
+   |      +> [13, 7] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 0 elements]
+   |      `> ListFieldSet [List with 0 elements]
+   `> [16, 0] Main
+      +> [17, 1] ListDeclVar [List with 2 elements]
+      |  []> [17, 3] DeclVar
+      |  ||  +> [17, 1] Identifier (A)
+      |  ||  |  definition: type defined at [10, 0], type=A
+      |  ||  +> [17, 3] Identifier (a)
+      |  ||  |  definition: variable defined at [17, 3], type=A
+      |  ||  `> [17, 3] Initialization
+      |  ||     `> [17, 7] New
+      |  ||        type: A
+      |  ||        `> [17, 11] Identifier (A)
+      |  ||           definition: type defined at [10, 0], type=A
+      |  []> [18, 3] DeclVar
+      |      +> [18, 1] Identifier (B)
+      |      |  definition: type defined at [13, 0], type=B
+      |      +> [18, 3] Identifier (b)
+      |      |  definition: variable defined at [18, 3], type=B
+      |      `> [18, 3] Initialization
+      |         `> [18, 7] New
+      |            type: B
+      |            `> [18, 11] Identifier (B)
+      |               definition: type defined at [13, 0], type=B
+      `> [20, 1] ListInst [List with 2 elements]
+         []> [20, 1] IfThenElse
+         ||  +> [20, 5] Equals
+         ||  |  type: boolean
+         ||  |  +> [20, 5] Identifier (a)
+         ||  |  |  definition: variable defined at [17, 3], type=A
+         ||  |  `> [20, 10] Identifier (b)
+         ||  |     definition: variable defined at [18, 3], type=B
+         ||  +> [21, 4] ListInst [List with 1 elements]
+         ||  |  []> [21, 4] Println
+         ||  |      `> [21, 12] ListExpr [List with 1 elements]
+         ||  |         []> [21, 12] StringLiteral ("")
+         ||  |             type: string
+         ||  `> ListInst [List with 0 elements]
+         []> [24, 1] IfThenElse
+             +> [24, 5] NotEquals
+             |  type: boolean
+             |  +> [24, 5] Identifier (a)
+             |  |  definition: variable defined at [17, 3], type=A
+             |  `> [24, 10] Identifier (b)
+             |     definition: variable defined at [18, 3], type=B
+             +> [25, 4] ListInst [List with 1 elements]
+             |  []> [25, 4] Println
+             |      `> [25, 12] ListExpr [List with 1 elements]
+             |         []> [25, 12] StringLiteral ("")
+             |             type: string
+             `> ListInst [List with 0 elements]

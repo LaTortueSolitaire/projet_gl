@@ -1,0 +1,20 @@
+class A {
+	int x = 1;
+
+	int double(int a) {
+		return a*2;
+	}
+
+	int quadruple(int a) {
+		int b = double(a);
+		int c = double(a);
+		int d = b + c;
+		return d;
+	}
+}
+
+{
+	A a = new A();
+	int c = a.quadruple(2);
+	println(c);
+}

@@ -1,0 +1,101 @@
+`> [5, 0] Program
+   +> [5, 0] ListDeclClass [List with 0 elements]
+   `> [5, 0] Main
+      +> [6, 4] ListDeclVar [List with 5 elements]
+      |  []> [6, 10] DeclVar
+      |  ||  +> [6, 4] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [6, 10] Identifier (a)
+      |  ||  |  definition: variable defined at [6, 10], type=float
+      |  ||  `> [6, 10] Initialization
+      |  ||     `> [6, 14] Float (2.8)
+      |  ||        type: float
+      |  []> [7, 10] DeclVar
+      |  ||  +> [7, 4] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [7, 10] Identifier (b)
+      |  ||  |  definition: variable defined at [7, 10], type=float
+      |  ||  `> [7, 10] Initialization
+      |  ||     `> [7, 14] Float (5.9)
+      |  ||        type: float
+      |  []> [8, 10] DeclVar
+      |  ||  +> [8, 4] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [8, 10] Identifier (c)
+      |  ||  |  definition: variable defined at [8, 10], type=float
+      |  ||  `> [8, 10] Initialization
+      |  ||     `> [8, 14] Plus
+      |  ||        type: float
+      |  ||        +> [8, 14] Identifier (a)
+      |  ||        |  definition: variable defined at [6, 10], type=float
+      |  ||        `> [8, 16] Identifier (b)
+      |  ||           definition: variable defined at [7, 10], type=float
+      |  []> [9, 10] DeclVar
+      |  ||  +> [9, 4] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [9, 10] Identifier (d)
+      |  ||  |  definition: variable defined at [9, 10], type=float
+      |  ||  `> [9, 10] NoInitialization
+      |  []> [9, 13] DeclVar
+      |      +> [9, 4] Identifier (float)
+      |      |  definition: type (builtin), type=float
+      |      +> [9, 13] Identifier (e)
+      |      |  definition: variable defined at [9, 13], type=float
+      |      `> [9, 13] NoInitialization
+      `> [10, 4] ListInst [List with 2 elements]
+         []> [10, 4] Assign
+         ||  type: float
+         ||  +> [10, 4] Identifier (d)
+         ||  |  definition: variable defined at [9, 10], type=float
+         ||  `> [10, 8] Minus
+         ||     type: float
+         ||     +> [10, 8] Identifier (b)
+         ||     |  definition: variable defined at [7, 10], type=float
+         ||     `> [10, 10] Identifier (a)
+         ||        definition: variable defined at [6, 10], type=float
+         []> [12, 4] While
+             +> [12, 11] Or
+             |  type: boolean
+             |  +> [12, 11] Lower
+             |  |  type: boolean
+             |  |  +> [12, 11] Identifier (a)
+             |  |  |  definition: variable defined at [6, 10], type=float
+             |  |  `> [12, 14] Identifier (b)
+             |  |     definition: variable defined at [7, 10], type=float
+             |  `> [12, 19] Greater
+             |     type: boolean
+             |     +> [12, 19] Identifier (d)
+             |     |  definition: variable defined at [9, 10], type=float
+             |     `> [12, 23] Identifier (a)
+             |        definition: variable defined at [6, 10], type=float
+             `> [16, 8] ListInst [List with 4 elements]
+                []> [13, 8] Assign
+                ||  type: float
+                ||  +> [13, 8] Identifier (a)
+                ||  |  definition: variable defined at [6, 10], type=float
+                ||  `> [13, 12] Plus
+                ||     type: float
+                ||     +> [13, 12] Identifier (a)
+                ||     |  definition: variable defined at [6, 10], type=float
+                ||     `> [13, 16] Float (0.2)
+                ||        type: float
+                []> [14, 8] Assign
+                ||  type: float
+                ||  +> [14, 8] Identifier (d)
+                ||  |  definition: variable defined at [9, 10], type=float
+                ||  `> [14, 12] Minus
+                ||     type: float
+                ||     +> [14, 12] Identifier (d)
+                ||     |  definition: variable defined at [9, 10], type=float
+                ||     `> [14, 16] Float (0.1)
+                ||        type: float
+                []> [15, 8] Assign
+                ||  type: float
+                ||  +> [15, 8] Identifier (e)
+                ||  |  definition: variable defined at [9, 13], type=float
+                ||  `> [15, 12] Identifier (d)
+                ||     definition: variable defined at [9, 10], type=float
+                []> [16, 8] Println
+                    `> [16, 16] ListExpr [List with 1 elements]
+                       []> [16, 16] Identifier (e)
+                           definition: variable defined at [9, 13], type=float

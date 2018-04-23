@@ -1,0 +1,57 @@
+`> [9, 0] Program
+   +> [9, 0] ListDeclClass [List with 2 elements]
+   |  []> [9, 0] DeclClass
+   |  ||  +> [9, 6] Identifier (A)
+   |  ||  |  definition: type defined at [9, 0], type=A
+   |  ||  +> [9, 7] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 0 elements]
+   |  ||  `> ListFieldSet [List with 1 elements]
+   |  ||     []> [10, 6] DeclFieldSet
+   |  ||         +> [10, 6] Identifier (int)
+   |  ||         |  definition: type (builtin), type=int
+   |  ||         `> ListFields [List with 1 elements]
+   |  ||            []> [10, 10] DeclFields
+   |  ||                +> [10, 10] Identifier (x)
+   |  ||                |  definition: field defined at [10, 10], type=int
+   |  ||                `> [10, 10] NoInitialization
+   |  []> [12, 0] DeclClass
+   |      +> [12, 6] Identifier (B)
+   |      |  definition: type defined at [12, 0], type=B
+   |      +> [12, 7] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 0 elements]
+   |      `> ListFieldSet [List with 1 elements]
+   |         []> [13, 6] DeclFieldSet
+   |             +> [13, 6] Identifier (A)
+   |             |  definition: type defined at [9, 0], type=A
+   |             `> ListFields [List with 1 elements]
+   |                []> [13, 8] DeclFields
+   |                    +> [13, 8] Identifier (a)
+   |                    |  definition: field defined at [13, 8], type=A
+   |                    `> [13, 8] NoInitialization
+   `> [15, 0] Main
+      +> [16, 1] ListDeclVar [List with 2 elements]
+      |  []> [16, 3] DeclVar
+      |  ||  +> [16, 1] Identifier (B)
+      |  ||  |  definition: type defined at [12, 0], type=B
+      |  ||  +> [16, 3] Identifier (b)
+      |  ||  |  definition: variable defined at [16, 3], type=B
+      |  ||  `> [16, 3] NoInitialization
+      |  []> [17, 5] DeclVar
+      |      +> [17, 1] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [17, 5] Identifier (y)
+      |      |  definition: variable defined at [17, 5], type=int
+      |      `> [17, 5] Initialization
+      |         `> [17, 9] Selection Attribut
+      |            type: int
+      |            +> [17, 9] Selection Attribut
+      |            |  type: A
+      |            |  +> [17, 9] Identifier (b)
+      |            |  |  definition: variable defined at [16, 3], type=B
+      |            |  `> [17, 11] Identifier (a)
+      |            |     definition: field defined at [13, 8], type=A
+      |            `> [17, 13] Identifier (x)
+      |               definition: field defined at [10, 10], type=int
+      `> [18, 0] ListInst [List with 0 elements]

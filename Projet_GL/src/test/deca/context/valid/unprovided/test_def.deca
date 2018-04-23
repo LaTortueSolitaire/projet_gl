@@ -1,0 +1,6 @@
+// Test des definitions pour la partie C
+
+{
+    int i = 1;
+    float y;
+}

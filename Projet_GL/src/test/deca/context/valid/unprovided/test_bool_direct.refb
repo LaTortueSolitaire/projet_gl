@@ -1,0 +1,26 @@
+`> [5, 0] Program
+   +> [5, 0] ListDeclClass [List with 0 elements]
+   `> [5, 0] Main
+      +> [6, 4] ListDeclVar [List with 1 elements]
+      |  []> [6, 12] DeclVar
+      |      +> [6, 4] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [6, 12] Identifier (b)
+      |      |  definition: variable defined at [6, 12], type=boolean
+      |      `> [6, 12] Initialization
+      |         `> [6, 16] BooleanLiteral (false)
+      |            type: boolean
+      `> [8, 4] ListInst [List with 1 elements]
+         []> [8, 4] IfThenElse
+             +> [8, 7] Identifier (b)
+             |  definition: variable defined at [6, 12], type=boolean
+             +> [9, 8] ListInst [List with 1 elements]
+             |  []> [9, 8] Println
+             |      `> [9, 16] ListExpr [List with 1 elements]
+             |         []> [9, 16] StringLiteral ("je suis pas bon ")
+             |             type: string
+             `> ListInst [List with 1 elements]
+                []> [12, 8] Println
+                    `> [12, 16] ListExpr [List with 1 elements]
+                       []> [12, 16] StringLiteral ("je suis bon ")
+                           type: string

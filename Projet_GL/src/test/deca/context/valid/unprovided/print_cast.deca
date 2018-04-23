@@ -1,0 +1,7 @@
+// Description: print d'un cast
+// Resultat attendu: 12
+
+
+{
+    print((int) (12.3));
+}

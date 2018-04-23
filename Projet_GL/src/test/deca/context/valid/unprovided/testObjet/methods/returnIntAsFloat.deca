@@ -1,0 +1,13 @@
+// Description:
+//    ConvFloat de l'expression retournée
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    Créé le 24/01/2018
+class A {
+      float m(){
+      	  return 1 ;
+      }
+}

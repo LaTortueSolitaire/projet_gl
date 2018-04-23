@@ -1,0 +1,204 @@
+`> [6, 0] Program
+   +> [6, 0] ListDeclClass [List with 2 elements]
+   |  []> [6, 0] DeclClass
+   |  ||  +> [6, 6] Identifier (Point2D)
+   |  ||  |  definition: type defined at [6, 0], type=Point2D
+   |  ||  +> [6, 14] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 1 elements]
+   |  ||  |  []> [11, 4] DeclMethod
+   |  ||  |      +> [11, 4] Identifier (void)
+   |  ||  |      |  definition: type (builtin), type=void
+   |  ||  |      +> [11, 9] Identifier (diag)
+   |  ||  |      |  definition: method defined at [11, 4], type=void
+   |  ||  |      +> [11, 14] ListDeclParam [List with 1 elements]
+   |  ||  |      |  []> [11, 14] DeclParam
+   |  ||  |      |      +> [11, 14] Identifier (int)
+   |  ||  |      |      |  definition: type (builtin), type=int
+   |  ||  |      |      `> [11, 18] Identifier (a)
+   |  ||  |      |         definition: parameter defined at [11, 14], type=int
+   |  ||  |      +> [12, 4] ListDeclVar [List with 0 elements]
+   |  ||  |      `> [12, 4] ListInst [List with 2 elements]
+   |  ||  |         []> [12, 4] Assign
+   |  ||  |         ||  type: int
+   |  ||  |         ||  +> [12, 4] Identifier (x)
+   |  ||  |         ||  |  definition: field defined at [7, 8], type=int
+   |  ||  |         ||  `> [12, 8] Plus
+   |  ||  |         ||     type: int
+   |  ||  |         ||     +> [12, 8] Identifier (x)
+   |  ||  |         ||     |  definition: field defined at [7, 8], type=int
+   |  ||  |         ||     `> [12, 12] Identifier (a)
+   |  ||  |         ||        definition: parameter defined at [11, 14], type=int
+   |  ||  |         []> [13, 4] Assign
+   |  ||  |             type: int
+   |  ||  |             +> [13, 4] Identifier (y)
+   |  ||  |             |  definition: field defined at [8, 8], type=int
+   |  ||  |             `> [13, 8] Plus
+   |  ||  |                type: int
+   |  ||  |                +> [13, 8] Identifier (y)
+   |  ||  |                |  definition: field defined at [8, 8], type=int
+   |  ||  |                `> [13, 12] Identifier (a)
+   |  ||  |                   definition: parameter defined at [11, 14], type=int
+   |  ||  `> ListFieldSet [List with 2 elements]
+   |  ||     []> [7, 4] DeclFieldSet
+   |  ||     ||  +> [7, 4] Identifier (int)
+   |  ||     ||  |  definition: type (builtin), type=int
+   |  ||     ||  `> ListFields [List with 1 elements]
+   |  ||     ||     []> [7, 8] DeclFields
+   |  ||     ||         +> [7, 8] Identifier (x)
+   |  ||     ||         |  definition: field defined at [7, 8], type=int
+   |  ||     ||         `> [7, 8] NoInitialization
+   |  ||     []> [8, 4] DeclFieldSet
+   |  ||         +> [8, 4] Identifier (int)
+   |  ||         |  definition: type (builtin), type=int
+   |  ||         `> ListFields [List with 1 elements]
+   |  ||            []> [8, 8] DeclFields
+   |  ||                +> [8, 8] Identifier (y)
+   |  ||                |  definition: field defined at [8, 8], type=int
+   |  ||                `> [8, 8] NoInitialization
+   |  []> [17, 0] DeclClass
+   |      +> [17, 6] Identifier (Point3D)
+   |      |  definition: type defined at [17, 0], type=Point3D
+   |      +> [17, 14] Identifier (Point2D)
+   |      |  definition: type defined at [6, 0], type=Point2D
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [21, 4] DeclMethod
+   |      |      +> [21, 4] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [21, 9] Identifier (diag)
+   |      |      |  definition: method defined at [21, 4], type=void
+   |      |      +> [21, 14] ListDeclParam [List with 1 elements]
+   |      |      |  []> [21, 14] DeclParam
+   |      |      |      +> [21, 14] Identifier (int)
+   |      |      |      |  definition: type (builtin), type=int
+   |      |      |      `> [21, 18] Identifier (a)
+   |      |      |         definition: parameter defined at [21, 14], type=int
+   |      |      +> [22, 4] ListDeclVar [List with 0 elements]
+   |      |      `> [22, 4] ListInst [List with 3 elements]
+   |      |         []> [22, 4] Assign
+   |      |         ||  type: int
+   |      |         ||  +> [22, 4] Identifier (x)
+   |      |         ||  |  definition: field defined at [7, 8], type=int
+   |      |         ||  `> [22, 8] Plus
+   |      |         ||     type: int
+   |      |         ||     +> [22, 8] Identifier (x)
+   |      |         ||     |  definition: field defined at [7, 8], type=int
+   |      |         ||     `> [22, 12] Identifier (a)
+   |      |         ||        definition: parameter defined at [21, 14], type=int
+   |      |         []> [23, 4] Assign
+   |      |         ||  type: int
+   |      |         ||  +> [23, 4] Identifier (y)
+   |      |         ||  |  definition: field defined at [8, 8], type=int
+   |      |         ||  `> [23, 8] Plus
+   |      |         ||     type: int
+   |      |         ||     +> [23, 8] Identifier (y)
+   |      |         ||     |  definition: field defined at [8, 8], type=int
+   |      |         ||     `> [23, 12] Identifier (a)
+   |      |         ||        definition: parameter defined at [21, 14], type=int
+   |      |         []> [24, 4] Assign
+   |      |             type: int
+   |      |             +> [24, 4] Identifier (z)
+   |      |             |  definition: field defined at [18, 8], type=int
+   |      |             `> [24, 8] Plus
+   |      |                type: int
+   |      |                +> [24, 8] Identifier (z)
+   |      |                |  definition: field defined at [18, 8], type=int
+   |      |                `> [24, 12] Identifier (a)
+   |      |                   definition: parameter defined at [21, 14], type=int
+   |      `> ListFieldSet [List with 1 elements]
+   |         []> [18, 4] DeclFieldSet
+   |             +> [18, 4] Identifier (int)
+   |             |  definition: type (builtin), type=int
+   |             `> ListFields [List with 1 elements]
+   |                []> [18, 8] DeclFields
+   |                    +> [18, 8] Identifier (z)
+   |                    |  definition: field defined at [18, 8], type=int
+   |                    `> [18, 8] NoInitialization
+   `> [28, 0] Main
+      +> [29, 2] ListDeclVar [List with 3 elements]
+      |  []> [29, 10] DeclVar
+      |  ||  +> [29, 2] Identifier (Point2D)
+      |  ||  |  definition: type defined at [6, 0], type=Point2D
+      |  ||  +> [29, 10] Identifier (p1)
+      |  ||  |  definition: variable defined at [29, 10], type=Point2D
+      |  ||  `> [29, 10] NoInitialization
+      |  []> [29, 14] DeclVar
+      |  ||  +> [29, 2] Identifier (Point2D)
+      |  ||  |  definition: type defined at [6, 0], type=Point2D
+      |  ||  +> [29, 14] Identifier (p2)
+      |  ||  |  definition: variable defined at [29, 14], type=Point2D
+      |  ||  `> [29, 14] NoInitialization
+      |  []> [30, 10] DeclVar
+      |      +> [30, 2] Identifier (Point3D)
+      |      |  definition: type defined at [17, 0], type=Point3D
+      |      +> [30, 10] Identifier (p3)
+      |      |  definition: variable defined at [30, 10], type=Point3D
+      |      `> [30, 10] NoInitialization
+      `> [32, 2] ListInst [List with 7 elements]
+         []> [32, 2] Assign
+         ||  type: Point2D
+         ||  +> [32, 2] Identifier (p1)
+         ||  |  definition: variable defined at [29, 10], type=Point2D
+         ||  `> [32, 7] New
+         ||     type: Point2D
+         ||     `> [32, 11] Identifier (Point2D)
+         ||        definition: type defined at [6, 0], type=Point2D
+         []> [33, 2] MethodCall (Identifier (p1),Identifier (diag))
+         ||  type: void
+         ||  +> [33, 2] Identifier (p1)
+         ||  |  definition: variable defined at [29, 10], type=Point2D
+         ||  +> Identifier (diag)
+         ||  |  definition: method defined at [11, 4], type=void
+         ||  `> [33, 10] ListExpr [List with 1 elements]
+         ||     []> [33, 10] Int (2)
+         ||         type: int
+         []> [35, 2] Assign
+         ||  type: Point3D
+         ||  +> [35, 2] Identifier (p3)
+         ||  |  definition: variable defined at [30, 10], type=Point3D
+         ||  `> [35, 7] New
+         ||     type: Point3D
+         ||     `> [35, 11] Identifier (Point3D)
+         ||        definition: type defined at [17, 0], type=Point3D
+         []> [36, 2] MethodCall (Identifier (p3),Identifier (diag))
+         ||  type: void
+         ||  +> [36, 2] Identifier (p3)
+         ||  |  definition: variable defined at [30, 10], type=Point3D
+         ||  +> Identifier (diag)
+         ||  |  definition: method defined at [21, 4], type=void
+         ||  `> [36, 10] ListExpr [List with 1 elements]
+         ||     []> [36, 10] Int (2)
+         ||         type: int
+         []> [38, 2] Assign
+         ||  type: Point2D
+         ||  +> [38, 2] Identifier (p2)
+         ||  |  definition: variable defined at [29, 14], type=Point2D
+         ||  `> [38, 7] Identifier (p1)
+         ||     definition: variable defined at [29, 10], type=Point2D
+         []> [39, 2] MethodCall (Identifier (p2),Identifier (diag))
+         ||  type: void
+         ||  +> [39, 2] Identifier (p2)
+         ||  |  definition: variable defined at [29, 14], type=Point2D
+         ||  +> Identifier (diag)
+         ||  |  definition: method defined at [11, 4], type=void
+         ||  `> [39, 10] ListExpr [List with 1 elements]
+         ||     []> [39, 10] Int (3)
+         ||         type: int
+         []> [41, 2] Println
+             `> [41, 38] ListExpr [List with 4 elements]
+                []> [41, 10] StringLiteral ("p3.z = ")
+                ||  type: string
+                []> [41, 21] Selection Attribut
+                ||  type: int
+                ||  +> [41, 21] Identifier (p3)
+                ||  |  definition: variable defined at [30, 10], type=Point3D
+                ||  `> [41, 24] Identifier (z)
+                ||     definition: field defined at [18, 8], type=int
+                []> [41, 27] StringLiteral ("p2.x = ")
+                ||  type: string
+                []> [41, 38] Selection Attribut
+                    type: int
+                    +> [41, 38] Identifier (p2)
+                    |  definition: variable defined at [29, 14], type=Point2D
+                    `> [41, 41] Identifier (x)
+                       definition: field defined at [7, 8], type=int

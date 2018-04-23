@@ -1,0 +1,101 @@
+`> [6, 0] Program
+   +> [6, 0] ListDeclClass [List with 2 elements]
+   |  []> [6, 0] DeclClass
+   |  ||  +> [6, 6] Identifier (A)
+   |  ||  |  definition: type defined at [6, 0], type=A
+   |  ||  +> [6, 7] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 0 elements]
+   |  ||  `> ListFieldSet [List with 1 elements]
+   |  ||     []> [7, 4] DeclFieldSet
+   |  ||         +> [7, 4] Identifier (int)
+   |  ||         |  definition: type (builtin), type=int
+   |  ||         `> ListFields [List with 1 elements]
+   |  ||            []> [7, 8] DeclFields
+   |  ||                +> [7, 8] Identifier (x)
+   |  ||                |  definition: field defined at [7, 8], type=int
+   |  ||                `> [7, 8] Initialization
+   |  ||                   `> [7, 12] Int (1)
+   |  ||                      type: int
+   |  []> [11, 0] DeclClass
+   |      +> [11, 6] Identifier (B)
+   |      |  definition: type defined at [11, 0], type=B
+   |      +> [11, 8] Identifier (A)
+   |      |  definition: type defined at [6, 0], type=A
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [13, 4] DeclMethod
+   |      |      +> [13, 4] Identifier (float)
+   |      |      |  definition: type (builtin), type=float
+   |      |      +> [13, 10] Identifier (changeB)
+   |      |      |  definition: method defined at [13, 4], type=float
+   |      |      +> ListDeclParam [List with 0 elements]
+   |      |      +> [14, 8] ListDeclVar [List with 1 elements]
+   |      |      |  []> [14, 14] DeclVar
+   |      |      |      +> [14, 8] Identifier (float)
+   |      |      |      |  definition: type (builtin), type=float
+   |      |      |      +> [14, 14] Identifier (a)
+   |      |      |      |  definition: variable defined at [14, 14], type=float
+   |      |      |      `> [14, 14] Initialization
+   |      |      |         `> [14, 17] Float (1.9)
+   |      |      |            type: float
+   |      |      `> [15, 8] ListInst [List with 1 elements]
+   |      |         []> [15, 8] Return
+   |      |             `> [15, 15] Plus
+   |      |                type: float
+   |      |                +> [15, 15] Identifier (a)
+   |      |                |  definition: variable defined at [14, 14], type=float
+   |      |                `> [15, 19] Identifier (b)
+   |      |                   definition: field defined at [12, 10], type=float
+   |      `> ListFieldSet [List with 1 elements]
+   |         []> [12, 4] DeclFieldSet
+   |             +> [12, 4] Identifier (float)
+   |             |  definition: type (builtin), type=float
+   |             `> ListFields [List with 1 elements]
+   |                []> [12, 10] DeclFields
+   |                    +> [12, 10] Identifier (b)
+   |                    |  definition: field defined at [12, 10], type=float
+   |                    `> [12, 10] Initialization
+   |                       `> [12, 14] Float (2.3)
+   |                          type: float
+   `> [19, 0] Main
+      +> [20, 1] ListDeclVar [List with 2 elements]
+      |  []> [20, 3] DeclVar
+      |  ||  +> [20, 1] Identifier (B)
+      |  ||  |  definition: type defined at [11, 0], type=B
+      |  ||  +> [20, 3] Identifier (bb)
+      |  ||  |  definition: variable defined at [20, 3], type=B
+      |  ||  `> [20, 3] Initialization
+      |  ||     `> [20, 8] New
+      |  ||        type: B
+      |  ||        `> [20, 12] Identifier (B)
+      |  ||           definition: type defined at [11, 0], type=B
+      |  []> [21, 3] DeclVar
+      |      +> [21, 1] Identifier (A)
+      |      |  definition: type defined at [6, 0], type=A
+      |      +> [21, 3] Identifier (aa)
+      |      |  definition: variable defined at [21, 3], type=A
+      |      `> [21, 3] Initialization
+      |         `> [21, 8] New
+      |            type: A
+      |            `> [21, 12] Identifier (A)
+      |               definition: type defined at [6, 0], type=A
+      `> [22, 1] ListInst [List with 1 elements]
+         []> [22, 1] Println
+             `> [22, 9] ListExpr [List with 1 elements]
+                []> [22, 9] Minus
+                    type: float
+                    +> [22, 9] MethodCall (Identifier (bb),Identifier (changeB))
+                    |  type: float
+                    |  +> [22, 9] Identifier (bb)
+                    |  |  definition: variable defined at [20, 3], type=B
+                    |  +> Identifier (changeB)
+                    |  |  definition: method defined at [13, 4], type=float
+                    |  `> ListExpr [List with 0 elements]
+                    `> ConvFloat
+                       type: float
+                       `> [22, 24] Selection Attribut
+                          type: int
+                          +> [22, 24] Identifier (aa)
+                          |  definition: variable defined at [21, 3], type=A
+                          `> [22, 27] Identifier (x)
+                             definition: field defined at [7, 8], type=int

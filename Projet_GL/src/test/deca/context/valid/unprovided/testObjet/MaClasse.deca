@@ -1,0 +1,21 @@
+// Description:
+//   Définition d'une classe avec 2 méthodes
+//
+// Resultat:
+//    Aucune erreur attendue
+// 
+// Historique:
+//    cree le 18/01/2018
+
+class MaClasse {
+      protected int x;
+      protected float y = 9.0;
+
+      int getX() {
+      	     return x;
+	}
+
+      void setMultipleX(int n){
+      	   x = (n*x);
+      }
+}

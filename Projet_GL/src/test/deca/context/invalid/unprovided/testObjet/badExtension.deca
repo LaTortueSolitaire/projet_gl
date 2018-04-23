@@ -1,0 +1,23 @@
+// Description:
+//    Défintition d'une classe et d'une fille de cette classe
+//
+// Resultats:
+//    Ligne 18 : Une erreur est levée du fait de l'héritage d'une classe inconnue (MaClass au lieu de MaClasse) 
+//
+// Historique:
+//    cree le 18/01/2018
+
+class MaClasse {
+      protected int x;
+
+      int getX() {
+      	  return x;
+      }
+}
+
+class MaClasse2 extends MaClass {
+
+      int multiply(int n){
+      	  return x*n;
+      }
+}

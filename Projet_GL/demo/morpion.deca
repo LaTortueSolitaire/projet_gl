@@ -1,0 +1,315 @@
+class Plateau {
+  int case1;
+  int case2;
+  int case3;
+  int case4;
+  int case5;
+  int case6;
+  int case7;
+  int case8;
+  int case9;
+  int cptTour;
+
+  void setCase1(int valeur) {
+    if (this.case1 == 0) {
+      this.case1 = valeur;
+    } else {
+      this.decrementeCptTour();
+    }
+  }
+
+  void setCase2(int valeur) {
+    if (this.case2 == 0) {
+      this.case2 = valeur;
+    } else {
+      this.decrementeCptTour();
+    }
+  }
+
+  void setCase3(int valeur) {
+    if (this.case3 == 0) {
+      this.case3 = valeur;
+    } else {
+      this.decrementeCptTour();
+    }
+  }
+
+  void setCase4(int valeur) {
+    if (this.case4 == 0) {
+      this.case4 = valeur;
+    } else {
+      this.decrementeCptTour();
+    }
+  }
+
+  void setCase5(int valeur) {
+    if (this.case5 == 0) {
+      this.case5 = valeur;
+    } else {
+      this.decrementeCptTour();
+    }
+  }
+
+  void setCase6(int valeur) {
+    if (this.case6 == 0) {
+      this.case6 = valeur;
+    } else {
+      this.decrementeCptTour();
+    }
+  }
+
+  void setCase7(int valeur) {
+    if (this.case7 == 0) {
+      this.case7 = valeur;
+    } else {
+      this.decrementeCptTour();
+    }
+  }
+
+  void setCase8(int valeur) {
+    if (this.case8 == 0) {
+      this.case8 = valeur;
+    } else {
+      this.decrementeCptTour();
+    }
+  }
+
+  void setCase9(int valeur) {
+    if (this.case9 == 0) {
+      this.case9 = valeur;
+    } else {
+      this.decrementeCptTour();
+    }
+  }
+
+  void incrementeCptTour() {
+    this.cptTour = this.cptTour + 1;
+  }
+
+  void decrementeCptTour() {
+    this.cptTour = this.cptTour - 1;
+  }
+
+  int getCptTour() {
+    return this.cptTour;
+  }
+
+  void affichePlateau() {
+    if (this.case1 == -1) {
+      print("O");
+    } else if (this.case1 == 1) {
+      print("X");
+    } else {
+      print(".");
+    }
+    if (this.case2 == -1) {
+      print("O");
+    } else if (this.case2 == 1) {
+      print("X");
+    } else {
+      print(".");
+    }
+    if (this.case3 == -1) {
+      println("O");
+    } else if (this.case3 == 1) {
+      println("X");
+    } else {
+      println(".");
+    }
+    if (this.case4 == -1) {
+      print("O");
+    } else if (this.case4 == 1) {
+      print("X");
+    } else {
+      print(".");
+    }
+    if (this.case5 == -1) {
+      print("O");
+    } else if (this.case5 == 1) {
+      print("X");
+    } else {
+      print(".");
+    }
+    if (this.case6 == -1) {
+      println("O");
+    } else if (this.case6 == 1) {
+      println("X");
+    } else {
+      println(".");
+    }
+    if (this.case7 == -1) {
+      print("O");
+    } else if (this.case7 == 1) {
+      print("X");
+    } else {
+      print(".");
+    }
+    if (this.case8 == -1) {
+      print("O");
+    } else if (this.case8 == 1) {
+      print("X");
+    } else {
+      print(".");
+    }
+    if (this.case9 == -1) {
+      println("O");
+    } else if (this.case9 == 1) {
+      println("X");
+    } else {
+      println(".");
+    }
+  }
+}
+
+{
+  Plateau jeu = new Plateau();
+	int coupJoue;
+	boolean fin = false;
+	while (!fin) {
+		if (jeu.getCptTour() % 2 == 0) {
+      println("Au joueur 1 de jouer ! ");
+			coupJoue = readInt();
+			if (coupJoue == 1) {
+        jeu.setCase1(1);
+      } else if (coupJoue == 2) {
+        jeu.setCase2(1);
+      } else if (coupJoue == 3) {
+        jeu.setCase3(1);
+      } else if (coupJoue == 4) {
+        jeu.setCase4(1);
+      } else if (coupJoue == 5) {
+        jeu.setCase5(1);
+      } else if (coupJoue == 6) {
+        jeu.setCase6(1);
+      } else if (coupJoue == 7) {
+        jeu.setCase7(1);
+      } else if (coupJoue == 8) {
+        jeu.setCase8(1);
+      } else if (coupJoue == 9) {
+        jeu.setCase9(1);
+      } else {
+        jeu.decrementeCptTour();
+        println("Valeur incorrecte, rentrez une case entre 1 et 9.");
+      }
+		} else {
+      println("Au joueur 2 de jouer ! ");
+      coupJoue = readInt();
+      if (coupJoue == 1) {
+        jeu.setCase1(-1);
+      } else if (coupJoue == 2) {
+        jeu.setCase2(-1);
+      } else if (coupJoue == 3) {
+        jeu.setCase3(-1);
+      } else if (coupJoue == 4) {
+        jeu.setCase4(-1);
+      } else if (coupJoue == 5) {
+        jeu.setCase5(-1);
+      } else if (coupJoue == 6) {
+        jeu.setCase6(-1);
+      } else if (coupJoue == 7) {
+        jeu.setCase7(-1);
+      } else if (coupJoue == 8) {
+        jeu.setCase8(-1);
+      } else if (coupJoue == 9) {
+        jeu.setCase9(-1);
+      } else {
+        jeu.decrementeCptTour();
+        println("Valeur incorrecte, rentrez une case entre 1 et 9.");
+      }
+		}
+    jeu.affichePlateau();
+		jeu.incrementeCptTour();
+    if (jeu.case1 == jeu.case2 && jeu.case2 == jeu.case3) {
+      if (jeu.case1 == 1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 1 a gagne, well done ! ");
+      } else if (jeu.case1 == -1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 2 a gagne, well done ! ");
+      }
+    }
+    else if (jeu.case1 == jeu.case4 && jeu.case4 == jeu.case7) {
+      if (jeu.case1 == 1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 1 a gagne, well done ! ");
+      } else if (jeu.case1 == -1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 2 a gagne, well done ! ");
+      }
+    }
+    else if (jeu.case1 == jeu.case5 && jeu.case5 == jeu.case9) {
+      if (jeu.case1 == 1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 1 a gagne, well done ! ");
+      } else if (jeu.case1 == -1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 2 a gagne, well done ! ");
+      }
+    }
+    else if (jeu.case7 == jeu.case8 && jeu.case8 == jeu.case9) {
+      if (jeu.case7 == 1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 1 a gagne, well done ! ");
+      } else if (jeu.case7 == -1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 2 a gagne, well done ! ");
+      }
+    }
+    else if (jeu.case7 == jeu.case5 && jeu.case5 == jeu.case3) {
+      if (jeu.case7 == 1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 1 a gagne, well done ! ");
+      } else if (jeu.case7 == -1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 2 a gagne, well done ! ");
+      }
+    }
+    else if (jeu.case3 == jeu.case6 && jeu.case6 == jeu.case9) {
+      if (jeu.case3 == 1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 1 a gagne, well done ! ");
+      } else if (jeu.case3 == -1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 2 a gagne, well done ! ");
+      }
+    }
+    else if (jeu.case4 == jeu.case5 && jeu.case5 == jeu.case6) {
+      if (jeu.case4 == 1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 1 a gagne, well done ! ");
+      } else if (jeu.case4 == -1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 2 a gagne, well done ! ");
+      }
+    }
+    else if (jeu.case2 == jeu.case5 && jeu.case5 == jeu.case8) {
+      if (jeu.case2 == 1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 1 a gagne, well done ! ");
+      } else if (jeu.case2 == -1) {
+        fin = true;
+        println("C'est fini ! ");
+        println("Le joueur 2 a gagne, well done ! ");
+      }
+    }
+    else if (jeu.getCptTour() == 9) {
+      fin = true;
+      println("C'est un match nul, quel niveau ! ");
+    }
+	}
+}

@@ -1,0 +1,104 @@
+`> [1, 0] Program
+   +> [1, 0] ListDeclClass [List with 1 elements]
+   |  []> [1, 0] DeclClass
+   |      +> [1, 6] Identifier (A)
+   |      |  definition: type defined at [1, 0], type=A
+   |      +> [1, 8] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [2, 1] DeclMethod
+   |      |      +> [2, 1] Identifier (int)
+   |      |      |  definition: type (builtin), type=int
+   |      |      +> [2, 5] Identifier (fact)
+   |      |      |  definition: method defined at [2, 1], type=int
+   |      |      +> [2, 10] ListDeclParam [List with 1 elements]
+   |      |      |  []> [2, 10] DeclParam
+   |      |      |      +> [2, 10] Identifier (int)
+   |      |      |      |  definition: type (builtin), type=int
+   |      |      |      `> [2, 14] Identifier (n)
+   |      |      |         definition: parameter defined at [2, 10], type=int
+   |      |      +> [3, 2] ListDeclVar [List with 1 elements]
+   |      |      |  []> [3, 6] DeclVar
+   |      |      |      +> [3, 2] Identifier (int)
+   |      |      |      |  definition: type (builtin), type=int
+   |      |      |      +> [3, 6] Identifier (i)
+   |      |      |      |  definition: variable defined at [3, 6], type=int
+   |      |      |      `> [3, 6] NoInitialization
+   |      |      `> [4, 2] ListInst [List with 3 elements]
+   |      |         []> [4, 2] IfThenElse
+   |      |         ||  +> [4, 6] Or
+   |      |         ||  |  type: boolean
+   |      |         ||  |  +> [4, 6] Equals
+   |      |         ||  |  |  type: boolean
+   |      |         ||  |  |  +> [4, 6] Identifier (n)
+   |      |         ||  |  |  |  definition: parameter defined at [2, 10], type=int
+   |      |         ||  |  |  `> [4, 11] Int (0)
+   |      |         ||  |  |     type: int
+   |      |         ||  |  `> [4, 16] Equals
+   |      |         ||  |     type: boolean
+   |      |         ||  |     +> [4, 16] Identifier (n)
+   |      |         ||  |     |  definition: parameter defined at [2, 10], type=int
+   |      |         ||  |     `> [4, 21] Int (1)
+   |      |         ||  |        type: int
+   |      |         ||  +> [5, 3] ListInst [List with 1 elements]
+   |      |         ||  |  []> [5, 3] Return
+   |      |         ||  |      `> [5, 10] Int (1)
+   |      |         ||  |         type: int
+   |      |         ||  `> ListInst [List with 0 elements]
+   |      |         []> [7, 2] Assign
+   |      |         ||  type: int
+   |      |         ||  +> [7, 2] Identifier (i)
+   |      |         ||  |  definition: variable defined at [3, 6], type=int
+   |      |         ||  `> [7, 6] Multiply
+   |      |         ||     type: int
+   |      |         ||     +> [7, 6] Identifier (n)
+   |      |         ||     |  definition: parameter defined at [2, 10], type=int
+   |      |         ||     `> [7, 10] MethodCall (This,Identifier (fact))
+   |      |         ||        type: int
+   |      |         ||        +> [7, 10] This
+   |      |         ||        |  type: A
+   |      |         ||        +> [7, 10] Identifier (fact)
+   |      |         ||        |  definition: method defined at [2, 1], type=int
+   |      |         ||        `> [7, 15] ListExpr [List with 1 elements]
+   |      |         ||           []> [7, 15] Minus
+   |      |         ||               type: int
+   |      |         ||               +> [7, 15] Identifier (n)
+   |      |         ||               |  definition: parameter defined at [2, 10], type=int
+   |      |         ||               `> [7, 19] Int (1)
+   |      |         ||                  type: int
+   |      |         []> [8, 2] Return
+   |      |             `> [8, 9] Identifier (i)
+   |      |                definition: variable defined at [3, 6], type=int
+   |      `> ListFieldSet [List with 0 elements]
+   `> [12, 0] Main
+      +> [13, 1] ListDeclVar [List with 2 elements]
+      |  []> [13, 3] DeclVar
+      |  ||  +> [13, 1] Identifier (A)
+      |  ||  |  definition: type defined at [1, 0], type=A
+      |  ||  +> [13, 3] Identifier (a)
+      |  ||  |  definition: variable defined at [13, 3], type=A
+      |  ||  `> [13, 3] Initialization
+      |  ||     `> [13, 7] New
+      |  ||        type: A
+      |  ||        `> [13, 11] Identifier (A)
+      |  ||           definition: type defined at [1, 0], type=A
+      |  []> [14, 5] DeclVar
+      |      +> [14, 1] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [14, 5] Identifier (b)
+      |      |  definition: variable defined at [14, 5], type=int
+      |      `> [14, 5] Initialization
+      |         `> [14, 9] MethodCall (Identifier (a),Identifier (fact))
+      |            type: int
+      |            +> [14, 9] Identifier (a)
+      |            |  definition: variable defined at [13, 3], type=A
+      |            +> Identifier (fact)
+      |            |  definition: method defined at [2, 1], type=int
+      |            `> [14, 16] ListExpr [List with 1 elements]
+      |               []> [14, 16] Int (2)
+      |                   type: int
+      `> [15, 1] ListInst [List with 1 elements]
+         []> [15, 1] Println
+             `> [15, 9] ListExpr [List with 1 elements]
+                []> [15, 9] Identifier (b)
+                    definition: variable defined at [14, 5], type=int

@@ -1,0 +1,12 @@
+// Description:
+//    Déclaration d'un champs de type void
+//
+// Resultat: Ligne 11
+//    ContextualError : Unsupported type in field set: Field cannot be of type void
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+      void x;
+}

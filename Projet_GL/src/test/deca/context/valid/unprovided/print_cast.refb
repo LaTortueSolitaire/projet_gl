@@ -1,0 +1,13 @@
+`> [5, 0] Program
+   +> [5, 0] ListDeclClass [List with 0 elements]
+   `> [5, 0] Main
+      +> [6, 4] ListDeclVar [List with 0 elements]
+      `> [6, 4] ListInst [List with 1 elements]
+         []> [6, 4] Print
+             `> [6, 10] ListExpr [List with 1 elements]
+                []> [6, 10] Cast
+                    type: int
+                    +> [6, 17] Float (12.3)
+                    |  type: float
+                    `> [6, 11] Identifier (int)
+                       definition: type (builtin), type=int

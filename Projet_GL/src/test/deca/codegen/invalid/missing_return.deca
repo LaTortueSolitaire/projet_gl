@@ -1,0 +1,12 @@
+// PAs de return dans une méthode non void
+
+class Test{
+    int pasDeReturn(){
+        float a = 1.0;
+    }
+}
+
+{
+    Test t = new Test();
+    int b = t.pasDeReturn();
+}

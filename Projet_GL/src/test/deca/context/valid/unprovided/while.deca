@@ -1,0 +1,15 @@
+// Description:
+//    Test de la boucle while
+//
+// Resultats:
+//    Aucune erreur attendue
+// 
+// Historique:
+//    cree le 13/01/2018
+
+{
+   int a = 1;
+   while (a < 10){
+   	 a = a+1;
+   }
+}

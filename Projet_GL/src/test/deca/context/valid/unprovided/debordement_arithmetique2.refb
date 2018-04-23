@@ -1,0 +1,13 @@
+`> [1, 0] Program
+   +> [1, 0] ListDeclClass [List with 0 elements]
+   `> [1, 0] Main
+      +> [2, 1] ListDeclVar [List with 0 elements]
+      `> [2, 1] ListInst [List with 1 elements]
+         []> [2, 1] Println
+             `> [2, 9] ListExpr [List with 1 elements]
+                []> [2, 9] Plus
+                    type: int
+                    +> [2, 9] Int (1456736265)
+                    |  type: int
+                    `> [2, 20] Int (982635675)
+                       type: int

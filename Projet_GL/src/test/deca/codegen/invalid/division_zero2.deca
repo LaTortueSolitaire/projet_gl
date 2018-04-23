@@ -1,0 +1,9 @@
+// Test division zéro après opération
+
+{
+  int a = 1;
+  int b = 2;
+  int c = 2;
+  a = a/(b-c);
+  print(a);
+}

@@ -1,0 +1,65 @@
+`> [1, 0] Program
+   +> [1, 0] ListDeclClass [List with 1 elements]
+   |  []> [1, 0] DeclClass
+   |      +> [1, 6] Identifier (Q)
+   |      |  definition: type defined at [1, 0], type=Q
+   |      +> [1, 8] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [2, 1] DeclMethod
+   |      |      +> [2, 1] Identifier (float)
+   |      |      |  definition: type (builtin), type=float
+   |      |      +> [2, 7] Identifier (abs)
+   |      |      |  definition: method defined at [2, 1], type=float
+   |      |      +> [2, 11] ListDeclParam [List with 1 elements]
+   |      |      |  []> [2, 11] DeclParam
+   |      |      |      +> [2, 11] Identifier (float)
+   |      |      |      |  definition: type (builtin), type=float
+   |      |      |      `> [2, 17] Identifier (x)
+   |      |      |         definition: parameter defined at [2, 11], type=float
+   |      |      +> [3, 2] ListDeclVar [List with 0 elements]
+   |      |      `> [3, 2] ListInst [List with 1 elements]
+   |      |         []> [3, 2] IfThenElse
+   |      |             +> [3, 6] Lower
+   |      |             |  type: boolean
+   |      |             |  +> [3, 6] Identifier (x)
+   |      |             |  |  definition: parameter defined at [2, 11], type=float
+   |      |             |  `> [3, 10] Float (0.0)
+   |      |             |     type: float
+   |      |             +> [4, 3] ListInst [List with 1 elements]
+   |      |             |  []> [4, 3] Return
+   |      |             |      `> [4, 10] UnaryMinus
+   |      |             |         type: float
+   |      |             |         `> [4, 11] Identifier (x)
+   |      |             |            definition: parameter defined at [2, 11], type=float
+   |      |             `> ListInst [List with 1 elements]
+   |      |                []> [7, 2] Return
+   |      |                    `> [7, 9] Identifier (x)
+   |      |                       definition: parameter defined at [2, 11], type=float
+   |      `> ListFieldSet [List with 0 elements]
+   `> [11, 0] Main
+      +> [12, 0] ListDeclVar [List with 1 elements]
+      |  []> [12, 2] DeclVar
+      |      +> [12, 0] Identifier (Q)
+      |      |  definition: type defined at [1, 0], type=Q
+      |      +> [12, 2] Identifier (q)
+      |      |  definition: variable defined at [12, 2], type=Q
+      |      `> [12, 2] Initialization
+      |         `> [12, 6] New
+      |            type: Q
+      |            `> [12, 10] Identifier (Q)
+      |               definition: type defined at [1, 0], type=Q
+      `> [13, 0] ListInst [List with 1 elements]
+         []> [13, 0] Println
+             `> [13, 8] ListExpr [List with 1 elements]
+                []> [13, 8] MethodCall (Identifier (q),Identifier (abs))
+                    type: float
+                    +> [13, 8] Identifier (q)
+                    |  definition: variable defined at [12, 2], type=Q
+                    +> Identifier (abs)
+                    |  definition: method defined at [2, 1], type=float
+                    `> [13, 14] ListExpr [List with 1 elements]
+                       []> [13, 14] UnaryMinus
+                           type: float
+                           `> [13, 15] Float (2.3)
+                              type: float

@@ -1,0 +1,15 @@
+// test d'un identifier booleen dans un if directement
+// Resultat
+// je suis bon
+
+{
+    boolean b = false;
+
+    if(b){
+        println("je suis pas bon ");
+    }
+    else  {
+        println("je suis bon ");
+    }
+
+}

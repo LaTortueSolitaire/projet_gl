@@ -1,0 +1,14 @@
+/*Test de InstanceOf, asm, new, et cast*/
+
+class A{
+protected boolean a;
+protected float y;
+int function(int x)asm ("fonction de test asm");
+void convert(){
+x = (int) (y);
+}
+A newUse(){
+x = new A();
+return x;
+}
+}

@@ -1,0 +1,25 @@
+
+
+class TestAsm{
+   float doFMA(float a, float b, float c)
+  //   FMA dval, Rm : Rm <- V[Rm] * V[dval] + V[R1]
+     asm( "  LOAD -5(LB), R1
+   LOAD -4(LB), R0
+   FMA -3(LB), R0
+   LOAD R0, R1
+   RTS");
+
+
+  void testFMA(){
+    float a = 1;
+    float b = 2;
+    float c = 3;
+    a = this.doFMA(a, b, c); // a*b+c
+    print(a); // 6
+  }
+}
+
+{
+  TestAsm t = new TestAsm();
+  t.testFMA();
+}

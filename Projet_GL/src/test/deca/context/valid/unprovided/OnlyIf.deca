@@ -1,0 +1,11 @@
+/*test sur un if seul*/
+// Resultat
+// convertion en flottant ok ?
+
+{
+  int x = -2;
+  float y = 2.2;
+  if (x < 2.2 && y != 2){ //intervention de la convertion en flottant pour le int et le identifier
+    println("convertion en flottant ok ?");
+  }
+}

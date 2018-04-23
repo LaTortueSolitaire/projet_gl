@@ -1,0 +1,39 @@
+; start main program
+; Main program
+; Beginning of main instructions:
+	LOAD #3, R2
+	STORE R2, 3(GB)
+	BRA E_Cond_If.0
+E_Debut_If.0:
+	LOAD 3(GB), R2
+	LOAD #3, R3
+	REM R3, R2
+	STORE R2, 3(GB)
+	BRA E_Fin_If.0
+E_Sinon_If.0:
+	BRA E_Cond_If.1
+E_Debut_If.1:
+	LOAD 3(GB), R1
+	WINT
+	BRA E_Fin_If.1
+E_Sinon_If.1:
+	BRA E_Fin_If.1
+E_Cond_If.1:
+	LOAD 3(GB), R2
+	LOAD #4, R3
+	CMP R3, R2
+	BEQ E_Sinon_If.1
+	BRA E_Debut_If.1
+E_Fin_If.1:
+	BRA E_Fin_If.0
+E_Cond_If.0:
+	LOAD 3(GB), R2
+	LOAD #3, R3
+	CMP R3, R2
+	BNE E_Sinon_If.0
+	BRA E_Debut_If.0
+E_Fin_If.0:
+	HALT
+; Messages d'erreurs
+; Les debordements
+; end main program

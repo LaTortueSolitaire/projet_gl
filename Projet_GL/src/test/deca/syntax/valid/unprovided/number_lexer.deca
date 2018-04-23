@@ -1,0 +1,16 @@
+// Tests des floats hexa et decimaux
+
+12.3
+3.0
+3.1f
+2.2F
+13.1e-5
+43.4E600
+1.2e45
+43.4E600f
+43.4E600F
+11.1e+2
+0xABCD.33p4
+0x0AFB8.1A8p+5f
+0X0.9P-90F
+0X0.9P-90

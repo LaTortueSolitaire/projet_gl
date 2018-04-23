@@ -1,0 +1,67 @@
+`> [10, 0] Program
+   +> [10, 0] ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> [11, 1] ListDeclVar [List with 5 elements]
+      |  []> [11, 5] DeclVar
+      |  ||  +> [11, 1] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [11, 5] Identifier (n)
+      |  ||  |  definition: variable defined at [11, 5], type=int
+      |  ||  `> [11, 5] NoInitialization
+      |  []> [12, 7] DeclVar
+      |  ||  +> [12, 1] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [12, 7] Identifier (x1)
+      |  ||  |  definition: variable defined at [12, 7], type=float
+      |  ||  `> [12, 7] NoInitialization
+      |  []> [13, 7] DeclVar
+      |  ||  +> [13, 1] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [13, 7] Identifier (x2)
+      |  ||  |  definition: variable defined at [13, 7], type=float
+      |  ||  `> [13, 7] NoInitialization
+      |  []> [14, 8] DeclVar
+      |  ||  +> [14, 1] Identifier (string)
+      |  ||  |  definition: type (builtin), type=string
+      |  ||  +> [14, 8] Identifier (s)
+      |  ||  |  definition: variable defined at [14, 8], type=string
+      |  ||  `> [14, 8] NoInitialization
+      |  []> [15, 9] DeclVar
+      |      +> [15, 1] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [15, 9] Identifier (b)
+      |      |  definition: variable defined at [15, 9], type=boolean
+      |      `> [15, 9] NoInitialization
+      `> [17, 1] ListInst [List with 5 elements]
+         []> [17, 1] Assign
+         ||  type: int
+         ||  +> [17, 1] Identifier (n)
+         ||  |  definition: variable defined at [11, 5], type=int
+         ||  `> [17, 5] Int (1)
+         ||     type: int
+         []> [18, 1] Assign
+         ||  type: float
+         ||  +> [18, 1] Identifier (x1)
+         ||  |  definition: variable defined at [12, 7], type=float
+         ||  `> [18, 6] Float (1.0)
+         ||     type: float
+         []> [19, 1] Assign
+         ||  type: float
+         ||  +> [19, 1] Identifier (x2)
+         ||  |  definition: variable defined at [13, 7], type=float
+         ||  `> [19, 6] ConvFloat
+         ||     type: float
+         ||     `> [19, 6] Int (1)
+         ||        type: int
+         []> [20, 1] Assign
+         ||  type: string
+         ||  +> [20, 1] Identifier (s)
+         ||  |  definition: variable defined at [14, 8], type=string
+         ||  `> [20, 5] StringLiteral ("1")
+         ||     type: string
+         []> [21, 1] Assign
+             type: boolean
+             +> [21, 1] Identifier (b)
+             |  definition: variable defined at [15, 9], type=boolean
+             `> [21, 5] BooleanLiteral (true)
+                type: boolean

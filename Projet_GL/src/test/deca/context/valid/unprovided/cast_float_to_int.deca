@@ -1,0 +1,9 @@
+// Test du cast float to int
+// Resultat attendu: 12
+//OK
+
+{
+    float a = 12.43;
+    int b = (int) (a);
+    print(b);
+}

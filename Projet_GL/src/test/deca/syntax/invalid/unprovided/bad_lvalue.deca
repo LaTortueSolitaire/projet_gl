@@ -1,0 +1,8 @@
+// affectation au this en lvalue.
+
+class AssignToThis {
+	void m() {
+		AssignToThis test;
+		this = test;
+	}
+}

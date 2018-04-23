@@ -1,0 +1,6 @@
+{
+  boolean a = true && true;
+  if (a){
+    print("ok");
+  }
+}

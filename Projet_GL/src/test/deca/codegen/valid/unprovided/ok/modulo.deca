@@ -1,0 +1,14 @@
+// Test sur les modulos
+// Resultats
+// 1
+// 2
+// 2
+
+{
+    int x = 13%(63%5);
+    println(x);
+    x = (17%6)%3;
+    println(x);
+    x = 17%6%3;
+    println(x);
+}

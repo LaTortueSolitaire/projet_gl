@@ -1,0 +1,8 @@
+// Test des commentaires pour le lexeur
+// Commentaire une ligne
+
+/* Plusieurs
+lignes
+ici
+*/
+// On fini par un "commentaire" c'est cool

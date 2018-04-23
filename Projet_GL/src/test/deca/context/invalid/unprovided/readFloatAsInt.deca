@@ -1,0 +1,13 @@
+// Description:
+//    Appel d'un readFloat sur un int
+//
+// Resultat: Ligne 11
+//    COntextualError : Impossible intialization
+//
+// Historique:
+//    Créé le 24/01/2018
+
+{
+     int a = readFloat();
+}
+	

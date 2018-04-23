@@ -1,0 +1,22 @@
+// Description:
+//    Appel d'une méthode avec le mauvais nombre d'arguments
+//
+// Resultat: Ligne 20
+//    ContextualError : Wrong number of parameters in method signature
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+      int x;
+
+      int getX(){
+      	  return x;
+      }
+}
+
+{
+        A a = new A();
+	println(a.getX(1));
+}
+		

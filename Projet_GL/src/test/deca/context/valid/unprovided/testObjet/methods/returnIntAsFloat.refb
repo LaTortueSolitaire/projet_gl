@@ -1,0 +1,23 @@
+`> [9, 0] Program
+   +> [9, 0] ListDeclClass [List with 1 elements]
+   |  []> [9, 0] DeclClass
+   |      +> [9, 6] Identifier (A)
+   |      |  definition: type defined at [9, 0], type=A
+   |      +> [9, 8] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [10, 6] DeclMethod
+   |      |      +> [10, 6] Identifier (float)
+   |      |      |  definition: type (builtin), type=float
+   |      |      +> [10, 12] Identifier (m)
+   |      |      |  definition: method defined at [10, 6], type=float
+   |      |      +> ListDeclParam [List with 0 elements]
+   |      |      +> [11, 9] ListDeclVar [List with 0 elements]
+   |      |      `> [11, 9] ListInst [List with 1 elements]
+   |      |         []> [11, 9] Return
+   |      |             `> [11, 16] ConvFloat
+   |      |                type: float
+   |      |                `> [11, 16] Int (1)
+   |      |                   type: int
+   |      `> ListFieldSet [List with 0 elements]
+   `> EmptyMain

@@ -1,0 +1,30 @@
+`> [3, 0] Program
+   +> [3, 0] ListDeclClass [List with 0 elements]
+   `> [3, 0] Main
+      +> [4, 0] ListDeclVar [List with 1 elements]
+      |  []> [4, 4] DeclVar
+      |      +> [4, 0] Identifier (int)
+      |      +> [4, 4] Identifier (x)
+      |      `> [4, 4] Initialization
+      |         `> [4, 8] Int (3)
+      `> [5, 0] ListInst [List with 1 elements]
+         []> [5, 0] IfThenElse
+             +> [5, 4] Equals
+             |  +> [5, 4] Identifier (x)
+             |  `> [5, 9] Int (3)
+             +> [6, 0] ListInst [List with 1 elements]
+             |  []> [6, 0] Assign
+             |      +> [6, 0] Identifier (x)
+             |      `> [6, 4] Modulo
+             |         +> [6, 4] Identifier (x)
+             |         `> [6, 8] Int (3)
+             `> ListInst [List with 1 elements]
+                []> IfThenElse
+                    +> [8, 9] NotEquals
+                    |  +> [8, 9] Identifier (x)
+                    |  `> [8, 14] Int (4)
+                    +> [9, 0] ListInst [List with 1 elements]
+                    |  []> [9, 0] Print
+                    |      `> [9, 6] ListExpr [List with 1 elements]
+                    |         []> [9, 6] Identifier (x)
+                    `> ListInst [List with 0 elements]

@@ -1,0 +1,32 @@
+`> [9, 0] Program
+   +> [9, 0] ListDeclClass [List with 1 elements]
+   |  []> [9, 0] DeclClass
+   |      +> [9, 6] Identifier (A)
+   |      |  definition: type defined at [9, 0], type=A
+   |      +> [9, 7] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [12, 6] DeclMethod
+   |      |      +> [12, 6] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [12, 11] Identifier (grow)
+   |      |      |  definition: method defined at [12, 6], type=void
+   |      |      +> ListDeclParam [List with 0 elements]
+   |      |      +> [13, 10] ListDeclVar [List with 0 elements]
+   |      |      `> [13, 10] ListInst [List with 1 elements]
+   |      |         []> [13, 10] Assign
+   |      |             type: A
+   |      |             +> [13, 10] Identifier (parent)
+   |      |             |  definition: field defined at [10, 8], type=A
+   |      |             `> [13, 19] This
+   |      |                type: A
+   |      `> ListFieldSet [List with 1 elements]
+   |         []> [10, 6] DeclFieldSet
+   |             +> [10, 6] Identifier (A)
+   |             |  definition: type defined at [9, 0], type=A
+   |             `> ListFields [List with 1 elements]
+   |                []> [10, 8] DeclFields
+   |                    +> [10, 8] Identifier (parent)
+   |                    |  definition: field defined at [10, 8], type=A
+   |                    `> [10, 8] NoInitialization
+   `> EmptyMain

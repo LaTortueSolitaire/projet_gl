@@ -1,0 +1,10 @@
+/*Test sur un programme contenant uniquement un if.
+Test de InstanceOf, SLASH*/
+{
+  int x = 3;
+  int y = 4;
+  if (x instanceof int){
+  y = y / 2;
+  println("x ne vaut pas 2");
+  }
+}

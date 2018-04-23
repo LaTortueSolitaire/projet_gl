@@ -1,0 +1,29 @@
+// Description:
+//    Utilisation de new
+//
+// Resultats:
+//    ok
+
+class Platon {
+
+}
+
+class Socrate {
+	Platon p = new Platon();
+	Socrate s = new Socrate();
+
+	Platon retourneNewPlaton(){
+        return new Platon();
+	}
+
+	Socrate retourneNewSocr(){
+	    return new Socrate();
+	}
+}
+
+{
+    Socrate s = new Socrate();
+    Platon p = s.retourneNewPlaton();
+    s = s.retourneNewSocr();
+    print("ok");
+}

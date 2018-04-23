@@ -1,0 +1,71 @@
+`> [11, 0] Program
+   +> [11, 0] ListDeclClass [List with 2 elements]
+   |  []> [11, 0] DeclClass
+   |  ||  +> [11, 6] Identifier (A)
+   |  ||  |  definition: type defined at [11, 0], type=A
+   |  ||  +> [11, 8] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 1 elements]
+   |  ||  |  []> [15, 6] DeclMethod
+   |  ||  |      +> [15, 6] Identifier (void)
+   |  ||  |      |  definition: type (builtin), type=void
+   |  ||  |      +> [15, 11] Identifier (setFils)
+   |  ||  |      |  definition: method defined at [15, 6], type=void
+   |  ||  |      +> [15, 19] ListDeclParam [List with 1 elements]
+   |  ||  |      |  []> [15, 19] DeclParam
+   |  ||  |      |      +> [15, 19] Identifier (A)
+   |  ||  |      |      |  definition: type defined at [11, 0], type=A
+   |  ||  |      |      `> [15, 21] Identifier (a)
+   |  ||  |      |         definition: parameter defined at [15, 19], type=A
+   |  ||  |      +> [16, 10] ListDeclVar [List with 0 elements]
+   |  ||  |      `> [16, 10] ListInst [List with 1 elements]
+   |  ||  |         []> [16, 10] Assign
+   |  ||  |             type: A
+   |  ||  |             +> [16, 10] Identifier (fils)
+   |  ||  |             |  definition: field defined at [13, 8], type=A
+   |  ||  |             `> [16, 17] Identifier (a)
+   |  ||  |                definition: parameter defined at [15, 19], type=A
+   |  ||  `> ListFieldSet [List with 1 elements]
+   |  ||     []> [13, 6] DeclFieldSet
+   |  ||         +> [13, 6] Identifier (A)
+   |  ||         |  definition: type defined at [11, 0], type=A
+   |  ||         `> ListFields [List with 1 elements]
+   |  ||            []> [13, 8] DeclFields
+   |  ||                +> [13, 8] Identifier (fils)
+   |  ||                |  definition: field defined at [13, 8], type=A
+   |  ||                `> [13, 8] NoInitialization
+   |  []> [19, 0] DeclClass
+   |      +> [19, 6] Identifier (B)
+   |      |  definition: type defined at [19, 0], type=B
+   |      +> [19, 8] Identifier (A)
+   |      |  definition: type defined at [11, 0], type=A
+   |      +> ListDeclMethod [List with 0 elements]
+   |      `> ListFieldSet [List with 0 elements]
+   `> [21, 0] Main
+      +> [22, 8] ListDeclVar [List with 1 elements]
+      |  []> [22, 10] DeclVar
+      |      +> [22, 8] Identifier (A)
+      |      |  definition: type defined at [11, 0], type=A
+      |      +> [22, 10] Identifier (a)
+      |      |  definition: variable defined at [22, 10], type=A
+      |      `> [22, 10] Initialization
+      |         `> [22, 14] New
+      |            type: A
+      |            `> [22, 18] Identifier (A)
+      |               definition: type defined at [11, 0], type=A
+      `> [23, 1] ListInst [List with 1 elements]
+         []> [23, 1] MethodCall (Identifier (a),Identifier (setFils))
+             type: void
+             +> [23, 1] Identifier (a)
+             |  definition: variable defined at [22, 10], type=A
+             +> Identifier (setFils)
+             |  definition: method defined at [15, 6], type=void
+             `> [23, 11] ListExpr [List with 1 elements]
+                []> [23, 11] Cast
+                    type: A
+                    +> [23, 11] New
+                    |  type: B
+                    |  `> [23, 15] Identifier (B)
+                    |     definition: type defined at [19, 0], type=B
+                    `> Identifier (A)
+                       definition: type defined at [11, 0], type=A

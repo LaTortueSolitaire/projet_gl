@@ -1,0 +1,26 @@
+// Description:
+//   Définition d'une classe avec une méthode et manipulation dans le main
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 22/01/2018
+
+class A {
+
+      protected int x;
+
+      void setX(int n){
+      	   x = n;
+      }
+}
+
+class B extends A {
+}
+
+{
+	B b = new B();
+	b.setX(1);
+}
+	  

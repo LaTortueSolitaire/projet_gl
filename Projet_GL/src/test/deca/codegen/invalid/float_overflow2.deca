@@ -1,0 +1,9 @@
+//Overflow d'un float
+
+{
+    float gros = -32523452345634564563456323.0;
+    while(true){
+        gros= gros+gros;
+    }
+
+}

@@ -1,0 +1,113 @@
+`> [8, 0] Program
+   +> [8, 0] ListDeclClass [List with 0 elements]
+   `> [8, 0] Main
+      +> [9, 4] ListDeclVar [List with 3 elements]
+      |  []> [9, 8] DeclVar
+      |  ||  +> [9, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [9, 8] Identifier (i)
+      |  ||  |  definition: variable defined at [9, 8], type=int
+      |  ||  `> [9, 8] Initialization
+      |  ||     `> [9, 12] Minus
+      |  ||        type: int
+      |  ||        +> [9, 12] Plus
+      |  ||        |  type: int
+      |  ||        |  +> [9, 12] Int (3)
+      |  ||        |  |  type: int
+      |  ||        |  `> [9, 14] Int (2)
+      |  ||        |     type: int
+      |  ||        `> [9, 16] Int (9)
+      |  ||           type: int
+      |  []> [10, 8] DeclVar
+      |  ||  +> [10, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [10, 8] Identifier (u)
+      |  ||  |  definition: variable defined at [10, 8], type=int
+      |  ||  `> [10, 8] Initialization
+      |  ||     `> [10, 12] Int (3)
+      |  ||        type: int
+      |  []> [11, 8] DeclVar
+      |      +> [11, 4] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [11, 8] Identifier (v)
+      |      |  definition: variable defined at [11, 8], type=int
+      |      `> [11, 8] NoInitialization
+      `> [12, 4] ListInst [List with 3 elements]
+         []> [12, 4] Assign
+         ||  type: int
+         ||  +> [12, 4] Identifier (v)
+         ||  |  definition: variable defined at [11, 8], type=int
+         ||  `> [12, 8] Minus
+         ||     type: int
+         ||     +> [12, 8] Identifier (i)
+         ||     |  definition: variable defined at [9, 8], type=int
+         ||     `> [12, 10] Identifier (u)
+         ||        definition: variable defined at [10, 8], type=int
+         []> [14, 5] While
+         ||  +> [14, 12] Lower
+         ||  |  type: boolean
+         ||  |  +> [14, 12] Identifier (i)
+         ||  |  |  definition: variable defined at [9, 8], type=int
+         ||  |  `> [14, 16] Identifier (u)
+         ||  |     definition: variable defined at [10, 8], type=int
+         ||  `> [16, 9] ListInst [List with 2 elements]
+         ||     []> [15, 9] Assign
+         ||     ||  type: int
+         ||     ||  +> [15, 9] Identifier (i)
+         ||     ||  |  definition: variable defined at [9, 8], type=int
+         ||     ||  `> [15, 13] Plus
+         ||     ||     type: int
+         ||     ||     +> [15, 13] Identifier (i)
+         ||     ||     |  definition: variable defined at [9, 8], type=int
+         ||     ||     `> [15, 15] Int (1)
+         ||     ||        type: int
+         ||     []> [16, 9] Println
+         ||         `> [16, 17] ListExpr [List with 1 elements]
+         ||            []> [16, 17] Identifier (i)
+         ||                definition: variable defined at [9, 8], type=int
+         []> [19, 4] While
+             +> [19, 11] Or
+             |  type: boolean
+             |  +> [19, 11] Greater
+             |  |  type: boolean
+             |  |  +> [19, 11] Identifier (i)
+             |  |  |  definition: variable defined at [9, 8], type=int
+             |  |  `> [19, 15] Identifier (u)
+             |  |     definition: variable defined at [10, 8], type=int
+             |  `> [19, 20] LowerOrEqual
+             |     type: boolean
+             |     +> [19, 20] Plus
+             |     |  type: int
+             |     |  +> [19, 21] Identifier (u)
+             |     |  |  definition: variable defined at [10, 8], type=int
+             |     |  `> [19, 23] Identifier (v)
+             |     |     definition: variable defined at [11, 8], type=int
+             |     `> [19, 30] UnaryMinus
+             |        type: int
+             |        `> [19, 30] Int (7)
+             |           type: int
+             `> [22, 8] ListInst [List with 3 elements]
+                []> [20, 8] Assign
+                ||  type: int
+                ||  +> [20, 8] Identifier (i)
+                ||  |  definition: variable defined at [9, 8], type=int
+                ||  `> [20, 12] Plus
+                ||     type: int
+                ||     +> [20, 12] Identifier (i)
+                ||     |  definition: variable defined at [9, 8], type=int
+                ||     `> [20, 14] Int (1)
+                ||        type: int
+                []> [21, 8] Assign
+                ||  type: int
+                ||  +> [21, 8] Identifier (u)
+                ||  |  definition: variable defined at [10, 8], type=int
+                ||  `> [21, 12] Plus
+                ||     type: int
+                ||     +> [21, 12] Identifier (u)
+                ||     |  definition: variable defined at [10, 8], type=int
+                ||     `> [21, 16] Int (1)
+                ||        type: int
+                []> [22, 8] Println
+                    `> [22, 16] ListExpr [List with 1 elements]
+                       []> [22, 16] Identifier (i)
+                           definition: variable defined at [9, 8], type=int

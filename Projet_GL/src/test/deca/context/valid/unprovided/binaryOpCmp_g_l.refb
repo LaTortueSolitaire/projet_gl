@@ -1,0 +1,65 @@
+`> [10, 0] Program
+   +> [10, 0] ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> [11, 1] ListDeclVar [List with 2 elements]
+      |  []> [11, 5] DeclVar
+      |  ||  +> [11, 1] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [11, 5] Identifier (a)
+      |  ||  |  definition: variable defined at [11, 5], type=int
+      |  ||  `> [11, 5] Initialization
+      |  ||     `> [11, 9] Int (5)
+      |  ||        type: int
+      |  []> [12, 7] DeclVar
+      |      +> [12, 1] Identifier (float)
+      |      |  definition: type (builtin), type=float
+      |      +> [12, 7] Identifier (b)
+      |      |  definition: variable defined at [12, 7], type=float
+      |      `> [12, 7] Initialization
+      |         `> [12, 11] Float (3.5)
+      |            type: float
+      `> [14, 1] ListInst [List with 4 elements]
+         []> [14, 1] IfThenElse
+         ||  +> [14, 5] LowerOrEqual
+         ||  |  type: boolean
+         ||  |  +> ConvFloat
+         ||  |  |  type: float
+         ||  |  |  `> [14, 5] Identifier (a)
+         ||  |  |     definition: variable defined at [11, 5], type=int
+         ||  |  `> [14, 10] Identifier (b)
+         ||  |     definition: variable defined at [12, 7], type=float
+         ||  +> ListInst [List with 0 elements]
+         ||  `> ListInst [List with 0 elements]
+         []> [17, 1] IfThenElse
+         ||  +> [17, 5] Lower
+         ||  |  type: boolean
+         ||  |  +> ConvFloat
+         ||  |  |  type: float
+         ||  |  |  `> [17, 5] Identifier (a)
+         ||  |  |     definition: variable defined at [11, 5], type=int
+         ||  |  `> [17, 9] Identifier (b)
+         ||  |     definition: variable defined at [12, 7], type=float
+         ||  +> ListInst [List with 0 elements]
+         ||  `> ListInst [List with 0 elements]
+         []> [20, 1] IfThenElse
+         ||  +> [20, 5] GreaterOrEqual
+         ||  |  type: boolean
+         ||  |  +> ConvFloat
+         ||  |  |  type: float
+         ||  |  |  `> [20, 5] Identifier (a)
+         ||  |  |     definition: variable defined at [11, 5], type=int
+         ||  |  `> [20, 10] Identifier (b)
+         ||  |     definition: variable defined at [12, 7], type=float
+         ||  +> ListInst [List with 0 elements]
+         ||  `> ListInst [List with 0 elements]
+         []> [23, 1] IfThenElse
+             +> [23, 5] Greater
+             |  type: boolean
+             |  +> ConvFloat
+             |  |  type: float
+             |  |  `> [23, 5] Identifier (a)
+             |  |     definition: variable defined at [11, 5], type=int
+             |  `> [23, 9] Identifier (b)
+             |     definition: variable defined at [12, 7], type=float
+             +> ListInst [List with 0 elements]
+             `> ListInst [List with 0 elements]

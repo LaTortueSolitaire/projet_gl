@@ -1,0 +1,7 @@
+// Test division zéro
+
+{
+  int notzero = 1;
+  int zero = 0;
+  int res = notzero/zero;
+}

@@ -1,0 +1,17 @@
+// Description:
+//   Définition d'un champ ayant le même nom qu'une méthode de la classe parente
+//
+// Resultat: Ligne 15
+//    ContextualError : Method already declared as field in super class
+//
+// Historique:
+//    cree le 24/01/2018
+
+class A{
+      int m;
+}
+
+class B extends A{
+      void m(){
+      }
+}

@@ -1,0 +1,7 @@
+// Test avec juste Hello World
+
+{
+	print("Hello World");
+	println("Hello World");
+	print("Hello");
+}

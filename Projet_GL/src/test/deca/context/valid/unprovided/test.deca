@@ -1,0 +1,19 @@
+class A{
+    int x=2;
+    void calc(int i){
+        x = x + i;
+    }
+
+}
+
+{
+  A p1;
+  A p2;
+  
+  p1 = new A();
+  p1.calc(3);
+
+	p2 = p1;
+  println(p1.x);
+  println(p2.x);
+}

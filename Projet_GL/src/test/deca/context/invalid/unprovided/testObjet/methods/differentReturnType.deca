@@ -1,0 +1,14 @@
+// Description:
+//
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 22/01/2018
+
+class A{
+      void get(){
+      	   return null;
+      }
+}

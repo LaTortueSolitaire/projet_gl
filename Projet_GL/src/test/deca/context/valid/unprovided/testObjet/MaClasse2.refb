@@ -1,0 +1,103 @@
+`> [10, 0] Program
+   +> [10, 0] ListDeclClass [List with 2 elements]
+   |  []> [10, 0] DeclClass
+   |  ||  +> [10, 6] Identifier (MaClasse)
+   |  ||  |  definition: type defined at [10, 0], type=MaClasse
+   |  ||  +> [10, 15] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 2 elements]
+   |  ||  |  []> [13, 6] DeclMethod
+   |  ||  |  ||  +> [13, 6] Identifier (int)
+   |  ||  |  ||  |  definition: type (builtin), type=int
+   |  ||  |  ||  +> [13, 10] Identifier (getX)
+   |  ||  |  ||  |  definition: method defined at [13, 6], type=int
+   |  ||  |  ||  +> ListDeclParam [List with 0 elements]
+   |  ||  |  ||  +> [14, 12] ListDeclVar [List with 0 elements]
+   |  ||  |  ||  `> [14, 12] ListInst [List with 1 elements]
+   |  ||  |  ||     []> [14, 12] Return
+   |  ||  |  ||         `> [14, 19] Identifier (x)
+   |  ||  |  ||            definition: field defined at [11, 20], type=int
+   |  ||  |  []> [17, 6] DeclMethod
+   |  ||  |      +> [17, 6] Identifier (void)
+   |  ||  |      |  definition: type (builtin), type=void
+   |  ||  |      +> [17, 11] Identifier (setMultipleX)
+   |  ||  |      |  definition: method defined at [17, 6], type=void
+   |  ||  |      +> [17, 24] ListDeclParam [List with 1 elements]
+   |  ||  |      |  []> [17, 24] DeclParam
+   |  ||  |      |      +> [17, 24] Identifier (int)
+   |  ||  |      |      |  definition: type (builtin), type=int
+   |  ||  |      |      `> [17, 28] Identifier (n)
+   |  ||  |      |         definition: parameter defined at [17, 24], type=int
+   |  ||  |      +> [18, 10] ListDeclVar [List with 0 elements]
+   |  ||  |      `> [18, 10] ListInst [List with 1 elements]
+   |  ||  |         []> [18, 10] Assign
+   |  ||  |             type: int
+   |  ||  |             +> [18, 10] Identifier (x)
+   |  ||  |             |  definition: field defined at [11, 20], type=int
+   |  ||  |             `> [18, 14] Multiply
+   |  ||  |                type: int
+   |  ||  |                +> [18, 14] Identifier (n)
+   |  ||  |                |  definition: parameter defined at [17, 24], type=int
+   |  ||  |                `> [18, 16] Identifier (x)
+   |  ||  |                   definition: field defined at [11, 20], type=int
+   |  ||  `> ListFieldSet [List with 1 elements]
+   |  ||     []> [11, 6] DeclFieldSet
+   |  ||         +> [11, 16] Identifier (int)
+   |  ||         |  definition: type (builtin), type=int
+   |  ||         `> ListFields [List with 1 elements]
+   |  ||            []> [11, 20] DeclFields
+   |  ||                +> [11, 20] Identifier (x)
+   |  ||                |  definition: field defined at [11, 20], type=int
+   |  ||                `> [11, 20] NoInitialization
+   |  []> [22, 0] DeclClass
+   |      +> [22, 6] Identifier (MaClasse2)
+   |      |  definition: type defined at [22, 0], type=MaClasse2
+   |      +> [22, 16] Identifier (MaClasse)
+   |      |  definition: type defined at [10, 0], type=MaClasse
+   |      +> ListDeclMethod [List with 2 elements]
+   |      |  []> [24, 6] DeclMethod
+   |      |  ||  +> [24, 6] Identifier (void)
+   |      |  ||  |  definition: type (builtin), type=void
+   |      |  ||  +> [24, 11] Identifier (setMultipleX)
+   |      |  ||  |  definition: method defined at [24, 6], type=void
+   |      |  ||  +> [24, 24] ListDeclParam [List with 1 elements]
+   |      |  ||  |  []> [24, 24] DeclParam
+   |      |  ||  |      +> [24, 24] Identifier (int)
+   |      |  ||  |      |  definition: type (builtin), type=int
+   |      |  ||  |      `> [24, 28] Identifier (n)
+   |      |  ||  |         definition: parameter defined at [24, 24], type=int
+   |      |  ||  +> [25, 1] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [25, 1] ListInst [List with 1 elements]
+   |      |  ||     []> [25, 1] Assign
+   |      |  ||         type: int
+   |      |  ||         +> [25, 1] Identifier (x)
+   |      |  ||         |  definition: field defined at [11, 20], type=int
+   |      |  ||         `> [25, 5] Multiply
+   |      |  ||            type: int
+   |      |  ||            +> [25, 5] Multiply
+   |      |  ||            |  type: int
+   |      |  ||            |  +> [25, 5] Identifier (n)
+   |      |  ||            |  |  definition: parameter defined at [24, 24], type=int
+   |      |  ||            |  `> [25, 7] Identifier (n)
+   |      |  ||            |     definition: parameter defined at [24, 24], type=int
+   |      |  ||            `> [25, 9] Identifier (x)
+   |      |  ||               definition: field defined at [11, 20], type=int
+   |      |  []> [28, 6] DeclMethod
+   |      |      +> [28, 6] Identifier (int)
+   |      |      |  definition: type (builtin), type=int
+   |      |      +> [28, 10] Identifier (coucou)
+   |      |      |  definition: method defined at [28, 6], type=int
+   |      |      +> [28, 17] ListDeclParam [List with 1 elements]
+   |      |      |  []> [28, 17] DeclParam
+   |      |      |      +> [28, 17] Identifier (int)
+   |      |      |      |  definition: type (builtin), type=int
+   |      |      |      `> [28, 21] Identifier (a)
+   |      |      |         definition: parameter defined at [28, 17], type=int
+   |      |      +> [29, 9] ListDeclVar [List with 0 elements]
+   |      |      `> [29, 9] ListInst [List with 1 elements]
+   |      |         []> [29, 9] Print
+   |      |             `> [29, 15] ListExpr [List with 1 elements]
+   |      |                []> [29, 15] StringLiteral ("coucou")
+   |      |                    type: string
+   |      `> ListFieldSet [List with 0 elements]
+   `> EmptyMain

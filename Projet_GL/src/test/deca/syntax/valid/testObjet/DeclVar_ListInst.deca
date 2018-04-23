@@ -1,0 +1,11 @@
+/* Test des premières fonctionnalitées :
+un programme avec uniquement des déclarations et instructions*/
+
+
+
+{
+int x;
+
+float z, y;
+x = 3;
+}

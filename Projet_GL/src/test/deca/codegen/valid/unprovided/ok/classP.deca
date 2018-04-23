@@ -1,0 +1,18 @@
+class P {
+	int x;
+	int y;
+
+	void move(int a, int b) {
+		x = x + a;
+		y = y + b;
+	}
+}
+
+{
+P p;
+//println(p.x, p.y);
+p = new P();
+println(p.x, p.y);
+p.move(2,3);
+println(p.x, p.y);
+}

@@ -1,0 +1,9 @@
+// Test conversion int to float;
+// Resultat attendu 1.20000e+01
+//OK
+
+{
+    int a = 12;
+    float b = (float) (a);
+    print(b);
+}

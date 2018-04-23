@@ -1,0 +1,20 @@
+// Description:
+//    Déclaration de deux méthodes du même nom
+//
+// Resultat: Ligne 17
+//    ContextualError : Method already defined in current class
+//
+// Historique:
+//    Créé le 24/01/2018
+
+class A{
+      int x;
+
+      int getX(){
+      	  return x;
+      }
+      
+      int getX(){
+      	  return 1;
+      }
+}

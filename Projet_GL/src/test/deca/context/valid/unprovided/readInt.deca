@@ -1,0 +1,13 @@
+// Description:
+//    Appel d'un readInt
+//
+// Resultat:
+//    En fonction de la valeur entrée
+//
+// Historique:
+//    Créé le 24/01/2018
+
+{
+     int a = readInt();
+}
+	

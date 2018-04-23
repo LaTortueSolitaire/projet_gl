@@ -1,0 +1,56 @@
+`> [5, 0] Program
+   +> [5, 0] ListDeclClass [List with 1 elements]
+   |  []> [5, 0] DeclClass
+   |      +> [5, 6] Identifier (A)
+   |      |  definition: type defined at [5, 0], type=A
+   |      +> [5, 8] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 0 elements]
+   |      `> ListFieldSet [List with 2 elements]
+   |         []> [6, 1] DeclFieldSet
+   |         ||  +> [6, 1] Identifier (int)
+   |         ||  |  definition: type (builtin), type=int
+   |         ||  `> ListFields [List with 1 elements]
+   |         ||     []> [6, 5] DeclFields
+   |         ||         +> [6, 5] Identifier (field1)
+   |         ||         |  definition: field defined at [6, 5], type=int
+   |         ||         `> [6, 5] Initialization
+   |         ||            `> [6, 14] Int (11)
+   |         ||               type: int
+   |         []> [7, 1] DeclFieldSet
+   |             +> [7, 1] Identifier (float)
+   |             |  definition: type (builtin), type=float
+   |             `> ListFields [List with 1 elements]
+   |                []> [7, 7] DeclFields
+   |                    +> [7, 7] Identifier (field2)
+   |                    |  definition: field defined at [7, 7], type=float
+   |                    `> [7, 7] Initialization
+   |                       `> [7, 16] Float (3.1)
+   |                          type: float
+   `> [10, 0] Main
+      +> [11, 1] ListDeclVar [List with 1 elements]
+      |  []> [11, 3] DeclVar
+      |      +> [11, 1] Identifier (A)
+      |      |  definition: type defined at [5, 0], type=A
+      |      +> [11, 3] Identifier (b)
+      |      |  definition: variable defined at [11, 3], type=A
+      |      `> [11, 3] Initialization
+      |         `> [11, 7] New
+      |            type: A
+      |            `> [11, 11] Identifier (A)
+      |               definition: type defined at [5, 0], type=A
+      `> [12, 1] ListInst [List with 1 elements]
+         []> [12, 1] Print
+             `> [12, 16] ListExpr [List with 2 elements]
+                []> [12, 7] Selection Attribut
+                ||  type: int
+                ||  +> [12, 7] Identifier (b)
+                ||  |  definition: variable defined at [11, 3], type=A
+                ||  `> [12, 9] Identifier (field1)
+                ||     definition: field defined at [6, 5], type=int
+                []> [12, 16] Selection Attribut
+                    type: float
+                    +> [12, 16] Identifier (b)
+                    |  definition: variable defined at [11, 3], type=A
+                    `> [12, 18] Identifier (field2)
+                       definition: field defined at [7, 7], type=float

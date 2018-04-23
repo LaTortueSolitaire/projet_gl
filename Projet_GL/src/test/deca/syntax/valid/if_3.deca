@@ -1,0 +1,7 @@
+// Test 3 comparaison dans if
+
+{
+    if( 1 < 2 < 3){
+        print(2);
+    }
+}

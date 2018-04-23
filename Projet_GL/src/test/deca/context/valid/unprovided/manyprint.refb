@@ -1,0 +1,47 @@
+`> [1, 0] Program
+   +> [1, 0] ListDeclClass [List with 0 elements]
+   `> [1, 0] Main
+      +> [2, 1] ListDeclVar [List with 3 elements]
+      |  []> [2, 5] DeclVar
+      |  ||  +> [2, 1] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [2, 5] Identifier (x)
+      |  ||  |  definition: variable defined at [2, 5], type=int
+      |  ||  `> [2, 5] Initialization
+      |  ||     `> [2, 9] Int (1)
+      |  ||        type: int
+      |  []> [3, 5] DeclVar
+      |  ||  +> [3, 1] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [3, 5] Identifier (y)
+      |  ||  |  definition: variable defined at [3, 5], type=int
+      |  ||  `> [3, 5] Initialization
+      |  ||     `> [3, 9] Int (2)
+      |  ||        type: int
+      |  []> [4, 5] DeclVar
+      |      +> [4, 1] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [4, 5] Identifier (z)
+      |      |  definition: variable defined at [4, 5], type=int
+      |      `> [4, 5] Initialization
+      |         `> [4, 9] Int (3)
+      |            type: int
+      `> [5, 1] ListInst [List with 2 elements]
+         []> [5, 1] Print
+         ||  `> [5, 13] ListExpr [List with 3 elements]
+         ||     []> [5, 7] Identifier (x)
+         ||     ||  definition: variable defined at [2, 5], type=int
+         ||     []> [5, 10] Identifier (y)
+         ||     ||  definition: variable defined at [3, 5], type=int
+         ||     []> [5, 13] Identifier (z)
+         ||         definition: variable defined at [4, 5], type=int
+         []> [6, 1] Println
+             `> [6, 31] ListExpr [List with 4 elements]
+                []> [6, 9] StringLiteral ("salut")
+                ||  type: string
+                []> [6, 18] StringLiteral ("on")
+                ||  type: string
+                []> [6, 24] StringLiteral ("est")
+                ||  type: string
+                []> [6, 31] StringLiteral ("la")
+                    type: string

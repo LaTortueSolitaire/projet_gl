@@ -1,0 +1,11 @@
+/*Test sur un if/ElseIf
+Test sur EQEQ, PERCENT, NEQ*/
+{
+int x = 3;
+if (x == 3){
+x = x % 3;
+}
+else if (x != 4){
+print(x);
+}
+}

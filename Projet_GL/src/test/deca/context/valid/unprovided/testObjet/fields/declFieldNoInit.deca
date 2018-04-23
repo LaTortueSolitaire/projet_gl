@@ -1,0 +1,14 @@
+// Description:
+//   Définition d'une classe avec 2 champs non initialisés
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 22/01/2018
+
+class A{
+
+      protected int x;
+      float y;
+}

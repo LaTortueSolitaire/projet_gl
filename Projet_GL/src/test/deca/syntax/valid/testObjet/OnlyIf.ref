@@ -1,0 +1,29 @@
+`> [3, 0] Program
+   +> [3, 0] ListDeclClass [List with 0 elements]
+   `> [3, 0] Main
+      +> [4, 2] ListDeclVar [List with 2 elements]
+      |  []> [4, 6] DeclVar
+      |  ||  +> [4, 2] Identifier (int)
+      |  ||  +> [4, 6] Identifier (x)
+      |  ||  `> [4, 6] Initialization
+      |  ||     `> [4, 10] Int (3)
+      |  []> [5, 6] DeclVar
+      |      +> [5, 2] Identifier (int)
+      |      +> [5, 6] Identifier (y)
+      |      `> [5, 6] Initialization
+      |         `> [5, 10] Int (4)
+      `> [6, 2] ListInst [List with 1 elements]
+         []> [6, 2] IfThenElse
+             +> [6, 6] InstanceOf
+             |  +> [6, 6] Identifier (x)
+             |  `> [6, 19] Identifier (int)
+             +> [8, 2] ListInst [List with 2 elements]
+             |  []> [7, 2] Assign
+             |  ||  +> [7, 2] Identifier (y)
+             |  ||  `> [7, 6] Divide
+             |  ||     +> [7, 6] Identifier (y)
+             |  ||     `> [7, 10] Int (2)
+             |  []> [8, 2] Println
+             |      `> [8, 10] ListExpr [List with 1 elements]
+             |         []> [8, 10] StringLiteral ("x ne vaut pas 2")
+             `> ListInst [List with 0 elements]

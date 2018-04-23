@@ -1,0 +1,13 @@
+// Description:
+//    Appel de not sur un int
+//
+// Resultat: Ligne 12
+//    ContextualError: Unsupported type for this operation: Operand must be of type boolean
+//
+// Historique:
+//    cree le 24/01/2018
+
+{
+	int a;
+	boolean b = !a;
+}

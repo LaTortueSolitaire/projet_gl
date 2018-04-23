@@ -1,0 +1,21 @@
+`> [10, 0] Program
+   +> [10, 0] ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> [11, 1] ListDeclVar [List with 2 elements]
+      |  []> [11, 9] DeclVar
+      |  ||  +> [11, 1] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [11, 9] Identifier (a)
+      |  ||  |  definition: variable defined at [11, 9], type=boolean
+      |  ||  `> [11, 9] NoInitialization
+      |  []> [12, 9] DeclVar
+      |      +> [12, 1] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [12, 9] Identifier (b)
+      |      |  definition: variable defined at [12, 9], type=boolean
+      |      `> [12, 9] Initialization
+      |         `> [12, 13] Not
+      |            type: boolean
+      |            `> [12, 14] Identifier (a)
+      |               definition: variable defined at [11, 9], type=boolean
+      `> [13, 0] ListInst [List with 0 elements]

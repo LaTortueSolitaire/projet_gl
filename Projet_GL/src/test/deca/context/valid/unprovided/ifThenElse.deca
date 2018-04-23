@@ -1,0 +1,27 @@
+// Description:
+//    Essai du if/then/else; opération de comparaison entre int et float
+//
+// Resultats:
+//    Ligne :
+// 
+// Historique:
+//    cree le 13/01/2018
+
+{
+   float x = 3.14;
+   
+   if (x < 3.0) {
+      x = 2%3;
+   }
+
+   //ConvFloat entre en jeu
+   else if (x < 4) {
+      x = 4;
+      print(x);	
+   }
+   
+   else {
+      println("Fin!");
+   }
+
+}

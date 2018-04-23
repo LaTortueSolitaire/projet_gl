@@ -1,0 +1,7 @@
+// Description: print d'un cast 2
+// Resultat attendu:  2.10000e+01
+
+
+{
+    print((float) (21));
+}

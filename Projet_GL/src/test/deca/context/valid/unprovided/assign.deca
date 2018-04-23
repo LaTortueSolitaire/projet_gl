@@ -1,0 +1,22 @@
+// Description:
+//   Différentes affectations
+//
+// Resultats:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 24/01/2018
+
+{
+	int n;
+	float x1;
+	float x2;
+	string s;
+	boolean b;
+
+	n = 1;
+	x1 = 1.0;
+	x2 = 1; // Intervention de ConvFloat
+	s = "1";
+	b = true;
+}

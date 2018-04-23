@@ -1,0 +1,14 @@
+// Description: test inégalité
+// Resultat attendu: Ok
+
+{
+    int x = 13;
+    int y = 6;
+    int z = 7;
+    if( (y+z) != x ){
+        print("non");
+    }else{
+        print("ok");
+    }
+
+}

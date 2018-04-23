@@ -1,0 +1,22 @@
+// Description:
+//   Définition de trois classes liées et appels de champs protected
+//
+// Resultat:
+//    Aucune erreur attendue
+//
+// Historique:
+//    cree le 22/01/2018
+
+class A {
+
+      	protected int x;
+	
+
+     	B newB(){
+             B b = new B();
+	     b.x = 1;
+	}
+}
+
+class B extends A{
+}

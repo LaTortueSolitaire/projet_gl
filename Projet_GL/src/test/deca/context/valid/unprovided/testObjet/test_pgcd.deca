@@ -1,0 +1,48 @@
+// Description:
+//	Ecriture d'un programme complet pour calcul de pgcd
+//
+// Resultat:
+//	Aucune erreur attendue
+//
+// Historique:
+//	Créé le 27/01/2018
+class PGCD{
+      protected int a;
+      protected int b;
+
+      void setA(int a){
+      	   this.a = a;
+      }
+
+      int getA(){
+      	  return a;
+      }
+      
+      void setB(int b){
+      	   this.b = b;
+      }
+
+      int getB(){
+      	  return b;
+      }
+
+      int calcPGCD(){
+      	int a = this.a;
+	int b = this.b;
+	int c = 1;
+	while (c != 0){
+	      c = a%b;
+	      a = b;
+	      b = c;
+	}
+	return a;
+      }
+}
+{
+	PGCD p = new PGCD();
+	int pgcd;
+	p.setA(123567891);
+	p.setB(46);
+	pgcd = p.calcPGCD();
+	println("Le pgcd de ", p.getA(), " et ", p.getB(), " vaut ", pgcd);
+}

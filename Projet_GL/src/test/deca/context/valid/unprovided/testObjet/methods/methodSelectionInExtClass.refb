@@ -1,0 +1,74 @@
+`> [10, 0] Program
+   +> [10, 0] ListDeclClass [List with 2 elements]
+   |  []> [10, 0] DeclClass
+   |  ||  +> [10, 6] Identifier (A)
+   |  ||  |  definition: type defined at [10, 0], type=A
+   |  ||  +> [10, 8] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 1 elements]
+   |  ||  |  []> [14, 6] DeclMethod
+   |  ||  |      +> [14, 6] Identifier (void)
+   |  ||  |      |  definition: type (builtin), type=void
+   |  ||  |      +> [14, 11] Identifier (setX)
+   |  ||  |      |  definition: method defined at [14, 6], type=void
+   |  ||  |      +> [14, 16] ListDeclParam [List with 1 elements]
+   |  ||  |      |  []> [14, 16] DeclParam
+   |  ||  |      |      +> [14, 16] Identifier (int)
+   |  ||  |      |      |  definition: type (builtin), type=int
+   |  ||  |      |      `> [14, 20] Identifier (n)
+   |  ||  |      |         definition: parameter defined at [14, 16], type=int
+   |  ||  |      +> [15, 17] ListDeclVar [List with 0 elements]
+   |  ||  |      `> [15, 17] ListInst [List with 1 elements]
+   |  ||  |         []> [15, 17] Assign
+   |  ||  |             type: int
+   |  ||  |             +> [15, 17] Identifier (x)
+   |  ||  |             |  definition: field defined at [12, 20], type=int
+   |  ||  |             `> [15, 21] Identifier (n)
+   |  ||  |                definition: parameter defined at [14, 16], type=int
+   |  ||  `> ListFieldSet [List with 1 elements]
+   |  ||     []> [12, 6] DeclFieldSet
+   |  ||         +> [12, 16] Identifier (int)
+   |  ||         |  definition: type (builtin), type=int
+   |  ||         `> ListFields [List with 1 elements]
+   |  ||            []> [12, 20] DeclFields
+   |  ||                +> [12, 20] Identifier (x)
+   |  ||                |  definition: field defined at [12, 20], type=int
+   |  ||                `> [12, 20] NoInitialization
+   |  []> [19, 0] DeclClass
+   |      +> [19, 6] Identifier (B)
+   |      |  definition: type defined at [19, 0], type=B
+   |      +> [19, 7] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [22, 6] DeclMethod
+   |      |      +> [22, 6] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [22, 11] Identifier (SetAFieldX)
+   |      |      |  definition: method defined at [22, 6], type=void
+   |      |      +> [22, 22] ListDeclParam [List with 1 elements]
+   |      |      |  []> [22, 22] DeclParam
+   |      |      |      +> [22, 22] Identifier (int)
+   |      |      |      |  definition: type (builtin), type=int
+   |      |      |      `> [22, 26] Identifier (x)
+   |      |      |         definition: parameter defined at [22, 22], type=int
+   |      |      +> [23, 9] ListDeclVar [List with 0 elements]
+   |      |      `> [23, 9] ListInst [List with 1 elements]
+   |      |         []> [23, 9] MethodCall (Identifier (aField),Identifier (setX))
+   |      |             type: void
+   |      |             +> [23, 9] Identifier (aField)
+   |      |             |  definition: field defined at [20, 8], type=A
+   |      |             +> Identifier (setX)
+   |      |             |  definition: method defined at [14, 6], type=void
+   |      |             `> [23, 21] ListExpr [List with 1 elements]
+   |      |                []> [23, 21] Identifier (x)
+   |      |                    definition: parameter defined at [22, 22], type=int
+   |      `> ListFieldSet [List with 1 elements]
+   |         []> [20, 6] DeclFieldSet
+   |             +> [20, 6] Identifier (A)
+   |             |  definition: type defined at [10, 0], type=A
+   |             `> ListFields [List with 1 elements]
+   |                []> [20, 8] DeclFields
+   |                    +> [20, 8] Identifier (aField)
+   |                    |  definition: field defined at [20, 8], type=A
+   |                    `> [20, 8] NoInitialization
+   `> EmptyMain

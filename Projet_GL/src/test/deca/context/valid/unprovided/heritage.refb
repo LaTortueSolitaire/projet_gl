@@ -1,0 +1,101 @@
+`> [7, 0] Program
+   +> [7, 0] ListDeclClass [List with 2 elements]
+   |  []> [7, 0] DeclClass
+   |  ||  +> [7, 6] Identifier (A)
+   |  ||  |  definition: type defined at [7, 0], type=A
+   |  ||  +> [7, 8] Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclMethod [List with 2 elements]
+   |  ||  |  []> [10, 1] DeclMethod
+   |  ||  |  ||  +> [10, 1] Identifier (void)
+   |  ||  |  ||  |  definition: type (builtin), type=void
+   |  ||  |  ||  +> [10, 6] Identifier (monPrint)
+   |  ||  |  ||  |  definition: method defined at [10, 1], type=void
+   |  ||  |  ||  +> ListDeclParam [List with 0 elements]
+   |  ||  |  ||  +> [11, 2] ListDeclVar [List with 0 elements]
+   |  ||  |  ||  `> [11, 2] ListInst [List with 1 elements]
+   |  ||  |  ||     []> [11, 2] Println
+   |  ||  |  ||         `> [11, 10] ListExpr [List with 1 elements]
+   |  ||  |  ||            []> [11, 10] Identifier (a)
+   |  ||  |  ||                definition: field defined at [8, 5], type=int
+   |  ||  |  []> [14, 1] DeclMethod
+   |  ||  |      +> [14, 1] Identifier (void)
+   |  ||  |      |  definition: type (builtin), type=void
+   |  ||  |      +> [14, 6] Identifier (monDeuxiemePrint)
+   |  ||  |      |  definition: method defined at [14, 1], type=void
+   |  ||  |      +> ListDeclParam [List with 0 elements]
+   |  ||  |      +> [15, 2] ListDeclVar [List with 0 elements]
+   |  ||  |      `> [15, 2] ListInst [List with 1 elements]
+   |  ||  |         []> [15, 2] Println
+   |  ||  |             `> [15, 18] ListExpr [List with 2 elements]
+   |  ||  |                []> [15, 10] StringLiteral ("a : ")
+   |  ||  |                ||  type: string
+   |  ||  |                []> [15, 18] Identifier (a)
+   |  ||  |                    definition: field defined at [8, 5], type=int
+   |  ||  `> ListFieldSet [List with 1 elements]
+   |  ||     []> [8, 1] DeclFieldSet
+   |  ||         +> [8, 1] Identifier (int)
+   |  ||         |  definition: type (builtin), type=int
+   |  ||         `> ListFields [List with 1 elements]
+   |  ||            []> [8, 5] DeclFields
+   |  ||                +> [8, 5] Identifier (a)
+   |  ||                |  definition: field defined at [8, 5], type=int
+   |  ||                `> [8, 5] Initialization
+   |  ||                   `> [8, 8] Int (1)
+   |  ||                      type: int
+   |  []> [19, 0] DeclClass
+   |      +> [19, 6] Identifier (B)
+   |      |  definition: type defined at [19, 0], type=B
+   |      +> [19, 8] Identifier (A)
+   |      |  definition: type defined at [7, 0], type=A
+   |      +> ListDeclMethod [List with 1 elements]
+   |      |  []> [22, 1] DeclMethod
+   |      |      +> [22, 1] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [22, 6] Identifier (monPrint)
+   |      |      |  definition: method defined at [22, 1], type=void
+   |      |      +> ListDeclParam [List with 0 elements]
+   |      |      +> [23, 2] ListDeclVar [List with 0 elements]
+   |      |      `> [23, 2] ListInst [List with 1 elements]
+   |      |         []> [23, 2] Println
+   |      |             `> [23, 10] ListExpr [List with 1 elements]
+   |      |                []> [23, 10] StringLiteral ("hehehe")
+   |      |                    type: string
+   |      `> ListFieldSet [List with 1 elements]
+   |         []> [20, 1] DeclFieldSet
+   |             +> [20, 1] Identifier (int)
+   |             |  definition: type (builtin), type=int
+   |             `> ListFields [List with 1 elements]
+   |                []> [20, 5] DeclFields
+   |                    +> [20, 5] Identifier (a)
+   |                    |  definition: field defined at [20, 5], type=int
+   |                    `> [20, 5] Initialization
+   |                       `> [20, 9] Int (6)
+   |                          type: int
+   `> [31, 0] Main
+      +> [32, 1] ListDeclVar [List with 1 elements]
+      |  []> [32, 3] DeclVar
+      |      +> [32, 1] Identifier (B)
+      |      |  definition: type defined at [19, 0], type=B
+      |      +> [32, 3] Identifier (b)
+      |      |  definition: variable defined at [32, 3], type=B
+      |      `> [32, 3] Initialization
+      |         `> [32, 7] New
+      |            type: B
+      |            `> [32, 11] Identifier (B)
+      |               definition: type defined at [19, 0], type=B
+      `> [33, 1] ListInst [List with 2 elements]
+         []> [33, 1] MethodCall (Identifier (b),Identifier (monPrint))
+         ||  type: void
+         ||  +> [33, 1] Identifier (b)
+         ||  |  definition: variable defined at [32, 3], type=B
+         ||  +> Identifier (monPrint)
+         ||  |  definition: method defined at [22, 1], type=void
+         ||  `> ListExpr [List with 0 elements]
+         []> [34, 1] MethodCall (Identifier (b),Identifier (monDeuxiemePrint))
+             type: void
+             +> [34, 1] Identifier (b)
+             |  definition: variable defined at [32, 3], type=B
+             +> Identifier (monDeuxiemePrint)
+             |  definition: method defined at [14, 1], type=void
+             `> ListExpr [List with 0 elements]

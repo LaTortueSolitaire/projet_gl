@@ -1,0 +1,6 @@
+
+- varGlobale, nombre de variables globales utilisées, permet de savoir à combien mettre le ADDSP au début du main
+- maxTempo, permet de savoir combien de registres temporaires on utilise au maximum dans le main, avec le varGlobale permet de mettre le TSTO au début du main
+- regDebutBloc et regFinBloc permettent de savoir pour les méthodes quels registres sont utilisés pour pouvoir les PUSH au début du bloc de la méthode et les POP à la fin, regDebutBloc est défini au début du bloc et regFinBloc est incrémenter lors des LOAD
+- varLocal correspond au nombre de variables locales d'un méthode, nécessaire pour déclarer le TSTO et le ADDSP des méthodes
+

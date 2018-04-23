@@ -1,0 +1,34 @@
+{
+	int min = 0;
+	int max = 20;
+	int middle = 10;
+	int answer = 0;
+	int before = middle;
+	println("Pensez tres fort a un nombre entre 0 et 19...");
+	while (answer != 2 && answer != 3) {
+		println("Est-ce ", middle, "?");
+		println("Dites moi juste 0 si c'est moins, 1 si c'est plus et 2 si c'est le bon ! ");
+		answer = readInt();
+		if (answer == 0) {
+			max = middle;
+		}
+		else {
+			min = middle;
+		}
+		if (min < max) {
+			middle = (min + max) / 2;
+			if (before == middle) {
+				answer = 3;
+			} else {
+				before = middle;
+			}
+		} else {
+			answer = 3;
+		}
+	}
+	if (answer == 2) {
+		println("Facile !");
+	} else {
+		println("Mmmhmmh il me semble que vous me faites tourner en bourrique");
+	}
+}

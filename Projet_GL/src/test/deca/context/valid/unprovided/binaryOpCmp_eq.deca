@@ -1,0 +1,18 @@
+// Description:
+//   Test des opération de comparaison exacte entre int et float
+//
+// Resultats:
+//    Aucune erreur attendue
+// 
+// Historique:
+//    cree le 13/01/2018
+
+{
+	int a = 5;
+	float b = 5.0;
+	boolean c;
+	
+	c = (a == b);
+	c = (a != b);
+	
+}

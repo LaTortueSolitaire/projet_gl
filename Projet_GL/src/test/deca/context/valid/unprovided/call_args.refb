@@ -1,0 +1,135 @@
+`> [4, 0] Program
+   +> [4, 0] ListDeclClass [List with 1 elements]
+   |  []> [4, 0] DeclClass
+   |      +> [4, 6] Identifier (PrintArg)
+   |      |  definition: type defined at [4, 0], type=PrintArg
+   |      +> [4, 14] Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclMethod [List with 4 elements]
+   |      |  []> [6, 4] DeclMethod
+   |      |  ||  +> [6, 4] Identifier (void)
+   |      |  ||  |  definition: type (builtin), type=void
+   |      |  ||  +> [6, 9] Identifier (printArgFloat)
+   |      |  ||  |  definition: method defined at [6, 4], type=void
+   |      |  ||  +> [6, 23] ListDeclParam [List with 1 elements]
+   |      |  ||  |  []> [6, 23] DeclParam
+   |      |  ||  |      +> [6, 23] Identifier (float)
+   |      |  ||  |      |  definition: type (builtin), type=float
+   |      |  ||  |      `> [6, 29] Identifier (flo)
+   |      |  ||  |         definition: parameter defined at [6, 23], type=float
+   |      |  ||  +> [7, 8] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [7, 8] ListInst [List with 1 elements]
+   |      |  ||     []> [7, 8] Print
+   |      |  ||         `> [7, 14] ListExpr [List with 1 elements]
+   |      |  ||            []> [7, 14] Identifier (flo)
+   |      |  ||                definition: parameter defined at [6, 23], type=float
+   |      |  []> [10, 4] DeclMethod
+   |      |  ||  +> [10, 4] Identifier (void)
+   |      |  ||  |  definition: type (builtin), type=void
+   |      |  ||  +> [10, 9] Identifier (printArgInt)
+   |      |  ||  |  definition: method defined at [10, 4], type=void
+   |      |  ||  +> [10, 21] ListDeclParam [List with 1 elements]
+   |      |  ||  |  []> [10, 21] DeclParam
+   |      |  ||  |      +> [10, 21] Identifier (int)
+   |      |  ||  |      |  definition: type (builtin), type=int
+   |      |  ||  |      `> [10, 25] Identifier (a)
+   |      |  ||  |         definition: parameter defined at [10, 21], type=int
+   |      |  ||  +> [11, 8] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [11, 8] ListInst [List with 1 elements]
+   |      |  ||     []> [11, 8] Print
+   |      |  ||         `> [11, 14] ListExpr [List with 1 elements]
+   |      |  ||            []> [11, 14] Identifier (a)
+   |      |  ||                definition: parameter defined at [10, 21], type=int
+   |      |  []> [14, 4] DeclMethod
+   |      |  ||  +> [14, 4] Identifier (void)
+   |      |  ||  |  definition: type (builtin), type=void
+   |      |  ||  +> [14, 9] Identifier (printArgSelf)
+   |      |  ||  |  definition: method defined at [14, 4], type=void
+   |      |  ||  +> [14, 22] ListDeclParam [List with 1 elements]
+   |      |  ||  |  []> [14, 22] DeclParam
+   |      |  ||  |      +> [14, 22] Identifier (PrintArg)
+   |      |  ||  |      |  definition: type defined at [4, 0], type=PrintArg
+   |      |  ||  |      `> [14, 31] Identifier (arg)
+   |      |  ||  |         definition: parameter defined at [14, 22], type=PrintArg
+   |      |  ||  +> [15, 8] ListDeclVar [List with 0 elements]
+   |      |  ||  `> [15, 8] ListInst [List with 1 elements]
+   |      |  ||     []> [15, 8] Print
+   |      |  ||         `> [15, 14] ListExpr [List with 1 elements]
+   |      |  ||            []> [15, 14] StringLiteral ("laa")
+   |      |  ||                type: string
+   |      |  []> [19, 4] DeclMethod
+   |      |      +> [19, 4] Identifier (void)
+   |      |      |  definition: type (builtin), type=void
+   |      |      +> [19, 9] Identifier (printMultiArg)
+   |      |      |  definition: method defined at [19, 4], type=void
+   |      |      +> [19, 23] ListDeclParam [List with 2 elements]
+   |      |      |  []> [19, 23] DeclParam
+   |      |      |  ||  +> [19, 23] Identifier (int)
+   |      |      |  ||  |  definition: type (builtin), type=int
+   |      |      |  ||  `> [19, 27] Identifier (a)
+   |      |      |  ||     definition: parameter defined at [19, 23], type=int
+   |      |      |  []> [19, 29] DeclParam
+   |      |      |      +> [19, 29] Identifier (float)
+   |      |      |      |  definition: type (builtin), type=float
+   |      |      |      `> [19, 35] Identifier (b)
+   |      |      |         definition: parameter defined at [19, 29], type=float
+   |      |      +> [20, 8] ListDeclVar [List with 0 elements]
+   |      |      `> [20, 8] ListInst [List with 1 elements]
+   |      |         []> [20, 8] Print
+   |      |             `> [20, 16] ListExpr [List with 2 elements]
+   |      |                []> [20, 14] Identifier (a)
+   |      |                ||  definition: parameter defined at [19, 23], type=int
+   |      |                []> [20, 16] Identifier (b)
+   |      |                    definition: parameter defined at [19, 29], type=float
+   |      `> ListFieldSet [List with 0 elements]
+   `> [23, 0] Main
+      +> [24, 4] ListDeclVar [List with 1 elements]
+      |  []> [24, 13] DeclVar
+      |      +> [24, 4] Identifier (PrintArg)
+      |      |  definition: type defined at [4, 0], type=PrintArg
+      |      +> [24, 13] Identifier (arg)
+      |      |  definition: variable defined at [24, 13], type=PrintArg
+      |      `> [24, 13] Initialization
+      |         `> [24, 19] New
+      |            type: PrintArg
+      |            `> [24, 23] Identifier (PrintArg)
+      |               definition: type defined at [4, 0], type=PrintArg
+      `> [25, 4] ListInst [List with 4 elements]
+         []> [25, 4] MethodCall (Identifier (arg),Identifier (printArgInt))
+         ||  type: void
+         ||  +> [25, 4] Identifier (arg)
+         ||  |  definition: variable defined at [24, 13], type=PrintArg
+         ||  +> Identifier (printArgInt)
+         ||  |  definition: method defined at [10, 4], type=void
+         ||  `> [25, 20] ListExpr [List with 1 elements]
+         ||     []> [25, 20] Int (5)
+         ||         type: int
+         []> [26, 4] MethodCall (Identifier (arg),Identifier (printArgSelf))
+         ||  type: void
+         ||  +> [26, 4] Identifier (arg)
+         ||  |  definition: variable defined at [24, 13], type=PrintArg
+         ||  +> Identifier (printArgSelf)
+         ||  |  definition: method defined at [14, 4], type=void
+         ||  `> [26, 21] ListExpr [List with 1 elements]
+         ||     []> [26, 21] Identifier (arg)
+         ||         definition: variable defined at [24, 13], type=PrintArg
+         []> [27, 4] MethodCall (Identifier (arg),Identifier (printMultiArg))
+         ||  type: void
+         ||  +> [27, 4] Identifier (arg)
+         ||  |  definition: variable defined at [24, 13], type=PrintArg
+         ||  +> Identifier (printMultiArg)
+         ||  |  definition: method defined at [19, 4], type=void
+         ||  `> [27, 24] ListExpr [List with 2 elements]
+         ||     []> [27, 22] Int (3)
+         ||     ||  type: int
+         ||     []> [27, 24] Float (3.3)
+         ||         type: float
+         []> [28, 4] MethodCall (Identifier (arg),Identifier (printArgFloat))
+             type: void
+             +> [28, 4] Identifier (arg)
+             |  definition: variable defined at [24, 13], type=PrintArg
+             +> Identifier (printArgFloat)
+             |  definition: method defined at [6, 4], type=void
+             `> [28, 22] ListExpr [List with 1 elements]
+                []> [28, 22] Float (2.4)
+                    type: float

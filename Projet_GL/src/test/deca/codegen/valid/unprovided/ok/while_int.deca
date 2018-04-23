@@ -1,0 +1,25 @@
+// While sur des int
+//
+// Resultat :
+//  -3-2-10123
+// Puis -3
+//
+
+{
+    int i = 3+2-9;
+    int u = 3;
+    int v;
+    v = i-u;
+
+     while( i < u){
+         i = i+1;
+         println(i);
+     }
+
+    while( i > u || (u+v) <= -7){
+        i = i+1;
+        u = u + 1;
+        println(i);
+    }
+
+}

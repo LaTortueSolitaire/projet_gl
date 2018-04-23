@@ -1,0 +1,15 @@
+/*Test sur un IfElse classique*/
+// Resultat
+// C'est tout bon!
+
+{
+  int x = 2;
+  float y = 3.0;
+  x = x + 2;
+  if (x == 4 && y != 2.0){
+    println("C'est tout bon!");
+  }
+  else{
+    println("Aie, il y a un problème!");
+  }
+}
